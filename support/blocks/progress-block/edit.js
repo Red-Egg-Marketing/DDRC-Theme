@@ -191,7 +191,7 @@ const EditProgress = ( { attributes, setAttributes, clientId } ) => {
 															tagName="h4"
 															value={ stepTitle }
 															className="step-title"
-															placeholder={__('Step Title...', 'providence')}
+															placeholder={__('Step Title...', 'DDRC')}
 															onChange={ updateStepTitle }
 															unstableOnFocus={ () => {
 					 												setRownumber(index);
@@ -203,7 +203,7 @@ const EditProgress = ( { attributes, setAttributes, clientId } ) => {
 															value={ stepContent }
 															multiline="p"
 															className="step-content"
-															placeholder={__('Step Content...', 'providence')}
+															placeholder={__('Step Content...', 'DDRC')}
 															onChange={ updateStepContent }
 															unstableOnFocus={ () => {
 					 												setRownumber(index);

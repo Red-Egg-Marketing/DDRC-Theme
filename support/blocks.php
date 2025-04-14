@@ -28,7 +28,7 @@ function ddrc_theme_enqueue_block_editor_assets() {
         );
         wp_localize_script(
            'wp-core-blocks-js',
-           'providence',
+           'DDRC',
            [
                'template_directory' => get_template_directory_uri()
            ]

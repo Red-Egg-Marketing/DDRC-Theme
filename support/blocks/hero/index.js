@@ -7,7 +7,7 @@ import save from './save';
 
 registerBlockType( 'providence/hero', {
 	apiVersion: 2,
-	title: __( 'Hero', 'providence' ),
+	title: __( 'Hero', 'DDRC' ),
 	icon: 'id',
 	category: 'layout',
 	attributes: {

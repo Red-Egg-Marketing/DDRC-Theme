@@ -48,7 +48,7 @@ const EditFeaturedLink = ( { attributes, setAttributes } ) => {
 								title={ supTitle }
 								updateProp={ "supTitle" }
 								setAttributes={ setAttributes }
-								placeholder={__('Super Title...', 'providence')}
+								placeholder={__('Super Title...', 'DDRC')}
 								classProp="sup-title"
 							/>
 							<Header
@@ -56,7 +56,7 @@ const EditFeaturedLink = ( { attributes, setAttributes } ) => {
 								title={ mainTitle }
 								updateProp={ "mainTitle" }
 								setAttributes={ setAttributes }
-								placeholder={__('Featured Title...', 'providence')}
+								placeholder={__('Featured Title...', 'DDRC')}
 								classProp="main-title"
 							/>
 						</div>
@@ -76,7 +76,7 @@ const EditFeaturedLink = ( { attributes, setAttributes } ) => {
 								title={ title }
 								allowedFormats={['']}
 								setAttributes={ setAttributes }
-								placeholder={__('Featured Description...', 'providence')}
+								placeholder={__('Featured Description...', 'DDRC')}
 							/>
 						</div>
 					</div>

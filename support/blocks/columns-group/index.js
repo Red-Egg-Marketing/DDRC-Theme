@@ -6,8 +6,8 @@ import edit from './edit';
 import save from './save';
 
 registerBlockType( 'ddrc-theme-blocks/columns-group', {
-	title: __( 'Columns Group', 'providence' ),
-	description: __( 'Group of columns with optional header intro', 'providence' ),
+	title: __( 'Columns Group', 'DDRC' ),
+	description: __( 'Group of columns with optional header intro', 'DDRC' ),
 	apiVersion: 2,
 	icon: 'grid-view',
 	category: 'layout',

@@ -25,9 +25,9 @@ if ( ! function_exists( 'ddrc_theme_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Providence, use a find and replace
-		 * to change 'providence' to the name of your theme in all the template files.
+		 * to change 'DDRC' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'providence', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'DDRC', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -50,12 +50,12 @@ if ( ! function_exists( 'ddrc_theme_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'providence' ),
-				'menu-2' => esc_html__( 'Secondary - Column 1', 'providence' ),
-				'menu-3' => esc_html__( 'Secondary - Column 2', 'providence' ),
-				'menu-12' => esc_html__( 'Secondary/Footer - Column 1', 'providence' ),
-				'menu-14' => esc_html__( 'Secondary/Footer - Column 2', 'providence' ),
-				'menu-15' => esc_html__( 'Tertiary/Footer', 'providence' )
+				'menu-1' => esc_html__( 'Primary', 'DDRC' ),
+				'menu-2' => esc_html__( 'Secondary - Column 1', 'DDRC' ),
+				'menu-3' => esc_html__( 'Secondary - Column 2', 'DDRC' ),
+				'menu-12' => esc_html__( 'Secondary/Footer - Column 1', 'DDRC' ),
+				'menu-14' => esc_html__( 'Secondary/Footer - Column 2', 'DDRC' ),
+				'menu-15' => esc_html__( 'Tertiary/Footer', 'DDRC' )
 			)
 		);
 
@@ -129,9 +129,9 @@ add_action( 'after_setup_theme', 'ddrc_theme_content_width', 0 );
 function ddrc_theme_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'providence' ),
+			'name'          => esc_html__( 'Sidebar', 'DDRC' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'providence' ),
+			'description'   => esc_html__( 'Add widgets here.', 'DDRC' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',

@@ -131,7 +131,7 @@ const EditSection = ( { attributes, setAttributes } ) => {
 						initialOpen={ true }
 					>
 						<ToggleControl
-							label={ __('Margin Top?', 'providence') }
+							label={ __('Margin Top?', 'DDRC') }
 							onChange={ () => {
 								let newMargin = JSON.parse(JSON.stringify(margin));
 								newMargin.margintop = !margin.margintop
@@ -142,7 +142,7 @@ const EditSection = ( { attributes, setAttributes } ) => {
 							checked={ margin.margintop }
 						/>
 						<ToggleControl
-							label={ __('Margin Bottom?', 'providence') }
+							label={ __('Margin Bottom?', 'DDRC') }
 							onChange={ () => {
 								let newMargin = JSON.parse(JSON.stringify(margin));
 								newMargin.marginbottom= !margin.marginbottom

@@ -95,13 +95,13 @@ const EditContactContent = ( { attributes, setAttributes } ) => {
 					<Header
 						tag="h2"
 						title={ title }
-						placeholder={__('Contact Section Header...', 'providence')}
+						placeholder={__('Contact Section Header...', 'DDRC')}
 						setAttributes={ setAttributes }
 					/>
 					<Content 
 						tag="div"
 						content={ content }
-						placeholder={__('Contact Section Description...', 'providence')}
+						placeholder={__('Contact Section Description...', 'DDRC')}
 						multiline="p"
 						classProp="content"
 						setAttributes={ setAttributes }
@@ -109,7 +109,7 @@ const EditContactContent = ( { attributes, setAttributes } ) => {
 					<Header
 						tag="h4"
 						title={ subtitle }
-						placeholder={__('Contact Section SubHeader...', 'providence')}
+						placeholder={__('Contact Section SubHeader...', 'DDRC')}
 						setAttributes={ setAttributes }
 						updateProp="subtitle"
 						classProp="header-suptitle"

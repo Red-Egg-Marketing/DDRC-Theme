@@ -32,7 +32,7 @@ const Header = (props) => {
 				tagName={ tag }
 				className={ updateClass }
 				value={ title }
-				placeholder={ __(place, 'providence') }
+				placeholder={ __(place, 'DDRC') }
 				onChange={ onChangeHeader }
 				allowedFormats={ allowedFormats }
 			/>

@@ -35,7 +35,7 @@ if (function_exists('get_field')) {
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'providence' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'DDRC' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="main-content-nav">
@@ -69,7 +69,7 @@ if (function_exists('get_field')) {
 					);
 				
 				?>
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'providence' ); ?></button>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'DDRC' ); ?></button>
 
 				<div class="hide-away-menu">
 					<div class="wrapper">

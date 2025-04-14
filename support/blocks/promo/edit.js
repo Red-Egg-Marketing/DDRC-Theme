@@ -91,7 +91,7 @@ const EditPromo = ( { attributes, setAttributes } ) => {
 								tag="h2"
 								title={ title }
 								setAttributes={ setAttributes }
-								placeholder={__('Promo Header...', 'providence')}
+								placeholder={__('Promo Header...', 'DDRC')}
 							/>
 							<Content 
 								tag="div"
@@ -99,7 +99,7 @@ const EditPromo = ( { attributes, setAttributes } ) => {
 								multiline="p"
 								classProp="content"
 								setAttributes={ setAttributes }
-								placeholder={__('Promo Content...', 'providence')}
+								placeholder={__('Promo Content...', 'DDRC')}
 							/>
 							<InnerBlocks 
 								allowedBlocks={ ["gravityforms/form", "core/paragraph"] }

@@ -149,7 +149,7 @@ const EditResources = ( { attributes, setAttributes } ) => {
 										tag="h2"
 										title={ mainTitle }
 										updateProp="mainTitle"
-										placeholder={ __('Title...', 'providence')}
+										placeholder={ __('Title...', 'DDRC')}
 										setAttributes={ setAttributes }
 									/>
 								</header>
