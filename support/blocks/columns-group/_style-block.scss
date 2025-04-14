@@ -1,0 +1,95 @@
+.wp-block.columns-group {
+  width: 100%;
+  max-width: 100%;
+}
+
+.columns-group .header-intro-block {
+	padding-bottom: 0;
+	@media screen and (min-width: $small-width) {
+		padding-bottom: 0;
+	}
+}
+
+.columns-group .header-intro-block + .image-columns {
+	padding-top: 0;
+	@media screen and (min-width: $small-width) {
+		padding-top: 0;
+	}
+}
+
+.columns-group.blue {
+	background: $blue-gradient-bottom;
+}
+
+.wp-block-ddrc-theme-blocks-columns-group {
+	position: relative;
+	overflow: hidden;
+}
+
+.light {
+    position: absolute;
+    width: 0px;
+    background-color: white;
+    box-shadow: #e9f1f1 0px 0px 20px 2px;
+    opacity: 0;
+    top: 100vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+.x1{
+  animation: floatUp 4s infinite linear;
+  transform: scale(1.0);
+}
+
+.x2{
+  animation: floatUp 7s infinite linear;
+  transform: scale(1.6);
+  left: 15%;
+}
+
+.x3{
+  animation: floatUp 2.5s infinite linear;
+  transform: scale(.5);
+  left: -15%;
+}
+
+.x4{
+  animation: floatUp 4.5s infinite linear;
+  transform: scale(1.2);
+  left: -34%;
+}
+
+.x5{
+  animation: floatUp 8s infinite linear;
+  transform: scale(2.2);
+  left: -57%;
+}
+
+.x6{
+  animation: floatUp 3s infinite linear;
+  transform: scale(.8);
+  left: -81%;
+}
+
+.x7{
+  animation: floatUp 5.3s infinite linear;
+  transform: scale(3.2);
+  left: 37%;
+}
+
+.x8{
+  animation: floatUp 4.7s infinite linear;
+  transform: scale(1.7);
+  left: 62%;
+}
+
+.x9{
+  animation: floatUp 4.1s infinite linear;
+  transform: scale(0.9);
+  left: 85%;
+}
+
+

@@ -1,0 +1,1514 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"re",
+				"resourcelist"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"new",
+				"newElement"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"p",
+				"pause"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"vi",
+				"vidOrImg"
+			],
+			[
+				"set",
+				"setImg"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"sele",
+				"selectTax"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"back",
+				"background-position"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"fot",
+				"font-family"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"m",
+				"margin-bottom"
+			],
+			[
+				"col",
+				"columnwidth"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"pro",
+				"progress"
+			],
+			[
+				"quer",
+				"querySelector"
+			],
+			[
+				"Scr",
+				"ScrollTrigger"
+			],
+			[
+				"add",
+				"addLabel"
+			],
+			[
+				"query",
+				"querySelector"
+			],
+			[
+				"small-w",
+				"small-med-width"
+			],
+			[
+				"med",
+				"med-small-width"
+			],
+			[
+				"client",
+				"clientWidth"
+			],
+			[
+				"inn",
+				"innerWidth"
+			],
+			[
+				"bo",
+				"border-top"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"bg",
+				"bg-color-5"
+			],
+			[
+				"tot",
+				"totalSavings"
+			],
+			[
+				"cont",
+				"contWrap"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"sc",
+				"scene"
+			],
+			[
+				"cns",
+				"console"
+			],
+			[
+				"inner",
+				"innerWidth"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"bre",
+				"breakpoints"
+			],
+			[
+				"Cat",
+				"Category"
+			],
+			[
+				"paddin",
+				"padding-right"
+			],
+			[
+				"ste",
+				"stepImg"
+			],
+			[
+				"cate",
+				"categories"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"bloc",
+				"block_attributes"
+			],
+			[
+				"ta",
+				"taxonomies"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"Res",
+				"ResponsiveWrapper"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"data",
+				"data-category"
+			],
+			[
+				"on",
+				"onRepeat"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"valu",
+				"valueArray"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"act",
+				"active"
+			],
+			[
+				"for",
+				"for"
+			],
+			[
+				"tri",
+				"triggerHook"
+			],
+			[
+				"time",
+				"timeProgress"
+			],
+			[
+				"cur",
+				"current"
+			],
+			[
+				"req",
+				"required"
+			],
+			[
+				"clas",
+				"className"
+			],
+			[
+				"elem",
+				"elemTop"
+			],
+			[
+				"is",
+				"isVisible"
+			],
+			[
+				"win",
+				"winHeight"
+			],
+			[
+				"el",
+				"elemTop"
+			],
+			[
+				"off",
+				"offsetTop"
+			],
+			[
+				"ent",
+				"entries"
+			],
+			[
+				"inter",
+				"interval"
+			],
+			[
+				"has",
+				"hasInterval"
+			],
+			[
+				"cl",
+				"clearInterval"
+			],
+			[
+				"par",
+				"parseFloat"
+			],
+			[
+				"no",
+				"noShowSavings"
+			],
+			[
+				"av",
+				"averagePerPat"
+			],
+			[
+				"formu",
+				"formulateForSavings"
+			],
+			[
+				"ac",
+				"activeIntervals"
+			],
+			[
+				"a",
+				"activeIntervals"
+			],
+			[
+				"letter",
+				"letterCounter"
+			],
+			[
+				"let",
+				"letterCounter"
+			],
+			[
+				"u",
+				"uString"
+			],
+			[
+				"word",
+				"wordCounter"
+			],
+			[
+				"wo",
+				"wordArray"
+			],
+			[
+				"wor",
+				"wordArray"
+			],
+			[
+				"up",
+				"upload"
+			],
+			[
+				"se",
+				"searchActive"
+			],
+			[
+				"t",
+				"tempValue"
+			],
+			[
+				"temp",
+				"tempProp"
+			],
+			[
+				"row",
+				"rowIndex"
+			],
+			[
+				"upload",
+				"uploadActive"
+			],
+			[
+				"tem",
+				"tempValue"
+			],
+			[
+				"sear",
+				"searchActive"
+			],
+			[
+				"onc",
+				"onClick"
+			],
+			[
+				"baac",
+				"background-repeat"
+			],
+			[
+				"en",
+				"entries"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"current",
+				"currentTarget"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"bg-",
+				"bg-color-5"
+			],
+			[
+				"cal",
+				"calculateSavings"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"tr",
+				"translateY"
+			],
+			[
+				"sav",
+				"savings"
+			],
+			[
+				"yos",
+				"yosi-health-blocks"
+			],
+			[
+				"do",
+				"doctors"
+			],
+			[
+				"y",
+				"yosi-health-blocks"
+			],
+			[
+				"get_cu",
+				"get_current_screen"
+			],
+			[
+				"o",
+				"offsetTop"
+			],
+			[
+				"nav",
+				"navHeight"
+			],
+			[
+				"fn",
+				"font-weight"
+			],
+			[
+				"padi",
+				"padding-left"
+			],
+			[
+				"na",
+				"navWrapper"
+			],
+			[
+				"s",
+				"scrollY"
+			],
+			[
+				"addEve",
+				"addEventListener"
+			],
+			[
+				"tra",
+				"translateX"
+			],
+			[
+				"chil",
+				"children_elements"
+			],
+			[
+				"chi",
+				"child_array"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"colu",
+				"columns"
+			],
+			[
+				"curr",
+				"currentCats"
+			],
+			[
+				"post",
+				"post_type"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/inc/custom-endpoints.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/gs-team/gs-team-layout-filter-2.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/functions.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/inc/menu-functions.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/components/Icons.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/node_modules/lord-icon-element/package.json",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/selected-case-study/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/text-card/_style-block.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/contact/_style-block.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/contact-content/index.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/contact-content/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/inc/jetpack.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/inc/media.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/inc/template-functions.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/inc/options.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/scss/_variables.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/icon-cta/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/js/forms.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-includes/blocks.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/selected-case-study/selected-case-studies.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/selected-case-study/index.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/selected-case-studies/index.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/selected-case-studies/selected-case-studies.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/progress-block/scroll-v2.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/front-end.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/progress-block/scroll.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/index.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/footer.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/gs-team/gs-team-layout-popup.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/image-text-columns/index.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/image-text-columns/save.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/image-text-columns/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/header-intro/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/header-intro-column/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/hero/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/hero/save.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/savings-calculator/savings.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/scss/_block-base.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/grid-icons/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/grid-icons/index.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/grid-icons/_style-block.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/case-study/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/selected-case-studies/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/scss/_bios.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/plugins/gs-team-members-premium/templates/gs-team-layout-filter.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/plugins/gs-team-members-premium/includes/gs-team-template-loader.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/plugins/gs-team-members-premium/templates/gs-team-layout-filter-2.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/gs-team/gs-team-layout-filter-2-fuck.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/plugins/gs-team-members-premium/templates/popups/gs-team-layout-popup.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/index-post.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/js-compile/filter-resources.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/filter-resources/_style-block.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/js-compile/background.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/scss/_fonts.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/scss/_navigation.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/filter-resources/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/selected-projects/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/core/button.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/icon-cta/index.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/columns-list/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/header.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/progress-block/save.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/js-compile/mobile-video.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/progress-block/concero-example.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/progress-block/_style-block.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/progress-block/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/progress-block/index.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/hero/index.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/components/BackgroundColor.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/header-intro/index.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/scss/_single.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/blocks.editor.css",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/style.css",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/hero/hero.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/bios/_style-block.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/feature-section/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/contact/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/selected-case-study/save.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/selected-projects/save.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/selected-projects/index.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/featured-link/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/image-text-columns/_style-block.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/scss/_forms.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/js-compile/filter-posts.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/selected-projects/selected-projects.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/case-study/save.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/components/ImageComp.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-admin/media.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/case-study/index.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/selected-case-studies/save.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/scss/style.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/image-text-columns/scrolling.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/assets/js/main.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/scss/_buttons.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/scss/_base.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/home.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/category.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/tag.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/inc/custom-walker.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/twentytwentyone/inc/menu-functions.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/js/navigation.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/header-intro/_style-block.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/feature-section/_style-block.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/savings-calculator/_style-block.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/selected-case-study/_style-block.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/selected-case-studies/_style-block.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/scss/_default-blocks.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/scss/_animations.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/feature-section/scrolling.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/components/Columns-Widths.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/feature-section/index.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/feature-section/save.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/components/Columns.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/scss/editor.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/plugins/gs-team-members-premium/includes/gs-team-functions.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/gs-team/gs-team-layout-flip.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/gs-team/gs-team-layout-popup-2.php",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/scss/_footer.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/text-card/save.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/text-cards-grid/_style-block.scss",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/text-cards-grid/text-cards.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/stat-callout/stat-callout.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/js-compile/stat-callout.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/js-compile/words.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/js-compile/scroll.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/blocks/text-card/edit.js",
+		"/Users/jacoblang/Local Sites/yosi-health/app/public/wp-content/themes/Yosi/support/package.json"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 98.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "providence.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"custom-en",
+				"app/public/wp-content/themes/Yosi/inc/custom-endpoints.php"
+			],
+			[
+				"lord-icon",
+				"app/public/wp-content/themes/Yosi/support/node_modules/lord-icon-element/package.json"
+			],
+			[
+				"_var",
+				"app/public/wp-content/themes/Yosi/support/scss/_variables.scss"
+			],
+			[
+				"blocks.php",
+				"app/public/wp-content/themes/Yosi/support/blocks.php"
+			],
+			[
+				"bloc",
+				"app/public/wp-includes/blocks.php"
+			],
+			[
+				"funct",
+				"app/public/wp-content/themes/Yosi/functions.php"
+			],
+			[
+				"footer",
+				"app/public/wp-content/themes/Yosi/footer.php"
+			],
+			[
+				"block-bas",
+				"app/public/wp-content/themes/Yosi/support/scss/_block-base.scss"
+			],
+			[
+				"_block",
+				"app/public/wp-content/themes/Yosi/support/scss/_block-base.scss"
+			],
+			[
+				"gs-team-lay",
+				"app/public/wp-content/plugins/gs-team-members-premium/templates/gs-team-layout-filter.php"
+			],
+			[
+				"function",
+				"app/public/wp-content/themes/Yosi/functions.php"
+			],
+			[
+				"custom-endo",
+				"app/public/wp-content/themes/Yosi/inc/custom-endpoints.php"
+			],
+			[
+				"_font",
+				"app/public/wp-content/themes/Yosi/support/scss/_fonts.scss"
+			],
+			[
+				"_na",
+				"app/public/wp-content/themes/Yosi/support/scss/_navigation.scss"
+			],
+			[
+				"_nav",
+				"app/public/wp-content/themes/Yosi/support/scss/_navigation.scss"
+			],
+			[
+				"head",
+				"app/public/wp-content/themes/Yosi/header.php"
+			],
+			[
+				"foot",
+				"app/public/wp-content/themes/Yosi/footer.php"
+			],
+			[
+				"_blo",
+				"app/public/wp-content/themes/Yosi/support/scss/_block-base.scss"
+			],
+			[
+				"_bl",
+				"app/public/wp-content/themes/Yosi/support/scss/_block-base.scss"
+			],
+			[
+				"_form",
+				"app/public/wp-content/themes/Yosi/support/scss/_forms.scss"
+			],
+			[
+				"func",
+				"app/public/wp-content/themes/Yosi/functions.php"
+			],
+			[
+				"media.php",
+				"app/public/wp-content/themes/Yosi/inc/media.php"
+			],
+			[
+				"imageco",
+				"app/public/wp-content/themes/Yosi/support/components/ImageComp.js"
+			],
+			[
+				"media.",
+				"app/public/wp-content/themes/Yosi/inc/media.php"
+			],
+			[
+				"medi",
+				"app/public/wp-admin/media.php"
+			],
+			[
+				"imagecom",
+				"app/public/wp-content/themes/Yosi/support/components/ImageComp.js"
+			],
+			[
+				"main.js",
+				"app/public/wp-content/themes/Yosi/support/assets/js/main.js"
+			],
+			[
+				"_bu",
+				"app/public/wp-content/themes/Yosi/support/scss/_buttons.scss"
+			],
+			[
+				"_b",
+				"app/public/wp-content/themes/Yosi/support/scss/_base.scss"
+			],
+			[
+				"_v",
+				"app/public/wp-content/themes/Yosi/support/scss/_variables.scss"
+			],
+			[
+				"home",
+				"app/public/wp-content/themes/Yosi/home.php"
+			],
+			[
+				"header",
+				"app/public/wp-content/themes/Yosi/header.php"
+			],
+			[
+				"menu-fu",
+				"app/public/wp-content/themes/Yosi/inc/menu-functions.php"
+			],
+			[
+				"menu",
+				"app/public/wp-content/themes/twentytwentyone/inc/menu-functions.php"
+			],
+			[
+				"nav",
+				"app/public/wp-content/themes/Yosi/js/navigation.js"
+			],
+			[
+				"navig",
+				"app/public/wp-content/themes/Yosi/js/navigation.js"
+			],
+			[
+				"_n",
+				"app/public/wp-content/themes/Yosi/support/scss/_navigation.scss"
+			],
+			[
+				"_for",
+				"app/public/wp-content/themes/Yosi/support/scss/_forms.scss"
+			],
+			[
+				"_fo",
+				"app/public/wp-content/themes/Yosi/support/scss/_forms.scss"
+			],
+			[
+				"navigat",
+				"app/public/wp-content/themes/Yosi/js/navigation.js"
+			],
+			[
+				"_va",
+				"app/public/wp-content/themes/Yosi/support/scss/_variables.scss"
+			],
+			[
+				"fun",
+				"app/public/wp-content/themes/Yosi/functions.php"
+			],
+			[
+				"_sing",
+				"app/public/wp-content/themes/Yosi/support/scss/_single.scss"
+			],
+			[
+				"filter-icon",
+				"app/public/wp-content/themes/Yosi/img/filter-icon.svg"
+			],
+			[
+				"block",
+				"app/public/wp-includes/blocks.php"
+			],
+			[
+				"_",
+				"app/public/wp-content/themes/Yosi/support/scss/_buttons.scss"
+			],
+			[
+				"custom-",
+				"app/public/wp-content/themes/Yosi/inc/custom-endpoints.php"
+			],
+			[
+				"_sn",
+				"app/public/wp-content/themes/Yosi/support/scss/_single.scss"
+			],
+			[
+				"_sin",
+				"app/public/wp-content/themes/Yosi/support/scss/_single.scss"
+			],
+			[
+				"single",
+				"app/public/wp-content/themes/Yosi/single.php"
+			],
+			[
+				"custom-end",
+				"app/public/wp-content/themes/Yosi/inc/custom-endpoints.php"
+			],
+			[
+				"_f",
+				"app/public/wp-content/themes/Yosi/support/scss/_forms.scss"
+			],
+			[
+				"_but",
+				"app/public/wp-content/themes/Yosi/support/scss/_buttons.scss"
+			],
+			[
+				"content",
+				"template-parts/content-videos.php"
+			],
+			[
+				"content-vid",
+				"template-parts/content-videos.php"
+			],
+			[
+				"conten",
+				"app/public/wp-content/themes/Yosi/template-parts/content-videos.php"
+			],
+			[
+				"_bi",
+				"app/public/wp-content/themes/Yosi/support/scss/_bios.scss"
+			],
+			[
+				"blo",
+				"app/public/wp-includes/blocks.php"
+			],
+			[
+				"scroll",
+				"app/public/wp-content/themes/Yosi/support/blocks/progress-block/scroll.js"
+			],
+			[
+				"hea",
+				"app/public/wp-content/themes/Yosi/header.php"
+			],
+			[
+				"_bio",
+				"app/public/wp-content/themes/Yosi/support/scss/_bios.scss"
+			],
+			[
+				"Header",
+				"app/public/wp-content/themes/Yosi/support/components/Header.js"
+			],
+			[
+				"_bas",
+				"app/public/wp-content/themes/Yosi/support/scss/_base.scss"
+			],
+			[
+				"foo",
+				"app/public/wp-content/themes/Yosi/footer.php"
+			],
+			[
+				"template",
+				"app/public/wp-content/themes/Yosi/inc/template-functions.php"
+			],
+			[
+				"scro",
+				"app/public/wp-content/themes/Yosi/support/blocks/progress-block/scroll.js"
+			],
+			[
+				"words-",
+				"app/public/wp-content/themes/Yosi/support/js-compile/words-old.js"
+			],
+			[
+				"wor",
+				"app/public/wp-content/themes/Yosi/support/js-compile/words.js"
+			],
+			[
+				"words-o",
+				"app/public/wp-content/themes/Yosi/support/js-compile/words-old.js"
+			],
+			[
+				"words",
+				"app/public/wp-content/themes/Yosi/support/js-compile/words.js"
+			],
+			[
+				"word",
+				"app/public/wp-content/themes/Yosi/support/js-compile/words.js"
+			],
+			[
+				"_footer",
+				"app/public/wp-content/themes/Yosi/support/scss/_footer.scss"
+			],
+			[
+				"navigation",
+				"app/public/wp-content/themes/Yosi/js/navigation.js"
+			],
+			[
+				"_an",
+				"app/public/wp-content/themes/Yosi/support/scss/_animations.scss"
+			],
+			[
+				"icons",
+				"app/public/wp-content/themes/Yosi/support/components/Icons.js"
+			],
+			[
+				"Icons",
+				"app/public/wp-content/themes/Yosi/support/components/Icons.js"
+			],
+			[
+				"icons.j",
+				"app/public/wp-content/themes/Yosi/support/components/Icons.js"
+			],
+			[
+				"Icons.",
+				"app/public/wp-content/themes/Yosi/support/components/Icons.js"
+			],
+			[
+				"personbreasfee",
+				"app/public/wp-content/themes/Yosi/support/node_modules/@fortawesome/pro-regular-svg-icons/faPersonBreastfeeding.js"
+			],
+			[
+				"_base",
+				"app/public/wp-content/themes/Yosi/support/scss/_base.scss"
+			],
+			[
+				"menu-functions.php",
+				"app/public/wp-content/themes/Yosi/inc/menu-functions.php"
+			],
+			[
+				"menu-func",
+				"app/public/wp-content/themes/twentytwentyone/inc/menu-functions.php"
+			],
+			[
+				"navigation.j",
+				"app/public/wp-content/themes/Yosi/js/navigation.js"
+			],
+			[
+				"_ba",
+				"app/public/wp-content/themes/Yosi/support/node_modules/lodash/_baseAggregator.js"
+			],
+			[
+				"resou",
+				"app/public/wp-content/themes/Yosi/support/components/ResourceCard.js"
+			],
+			[
+				"templ",
+				"app/public/wp-content/themes/Yosi/inc/template-functions.php"
+			],
+			[
+				" blocks.php",
+				"app/public/wp-content/plugins/advanced-custom-fields-pro/pro/blocks.php"
+			],
+			[
+				"template-fun",
+				"app/public/wp-content/themes/Yosi/inc/template-functions.php"
+			],
+			[
+				"f",
+				"app/public/wp-includes/functions.php"
+			],
+			[
+				"_fon",
+				"app/public/wp-content/themes/Yosi/support/scss/_fonts.scss"
+			],
+			[
+				"Header.js",
+				"app/public/wp-content/themes/Yosi/support/components/Header.js"
+			],
+			[
+				"temp",
+				"app/public/wp-content/themes/Yosi/inc/template-functions.php"
+			],
+			[
+				"left",
+				"app/public/wp-content/themes/Yosi/img/left-chevron.svg"
+			],
+			[
+				"right",
+				"app/public/wp-content/themes/Yosi/img/right-chevron.svg"
+			],
+			[
+				"right-",
+				"app/public/wp-content/themes/Yosi/img/right-chevron.svg"
+			],
+			[
+				"_button",
+				"app/public/wp-content/themes/Yosi/support/scss/_buttons.scss"
+			],
+			[
+				"_foo",
+				"app/public/wp-content/themes/Yosi/support/scss/_footer.scss"
+			],
+			[
+				"Background.js",
+				"app/public/wp-content/themes/Yosi/support/components/BackgroundColor.js"
+			],
+			[
+				"template-func",
+				"app/public/wp-content/themes/Yosi/inc/template-functions.php"
+			],
+			[
+				"_nv",
+				"app/public/wp-content/themes/Piper-Electric/support/node_modules/core-js/modules/_a-number-value.js"
+			],
+			[
+				"navi",
+				"app/public/wp-content/themes/Piper-Electric/js/navigation.js"
+			],
+			[
+				"_butt",
+				"app/public/wp-content/themes/Piper-Electric/support/scss/_buttons.scss"
+			],
+			[
+				"_pa",
+				"app/public/wp-content/themes/Piper-Electric/support/scss/_page.scss"
+			],
+			[
+				"_page",
+				"app/public/wp-content/themes/Piper-Electric/support/scss/_page.scss"
+			],
+			[
+				"Icon",
+				"app/public/wp-content/themes/Piper-Electric/support/components/Icons.js"
+			],
+			[
+				"icons.sv",
+				"app/public/wp-content/themes/Piper-Electric/support/node_modules/@fortawesome/fontawesome-pro/svgs/duotone/icons.svg"
+			],
+			[
+				"_vas",
+				"app/public/wp-admin/css/colors/_variables.scss"
+			],
+			[
+				"blok",
+				"app/public/wp-includes/blocks.php"
+			],
+			[
+				"media",
+				"app/public/wp-content/themes/Piper-Electric/inc/media.php"
+			],
+			[
+				"custom-wal",
+				"app/public/wp-content/themes/Piper-Electric/inc/custom-walker.php"
+			],
+			[
+				"heade",
+				"app/public/wp-content/themes/Piper-Electric/header.php"
+			],
+			[
+				"custom-walk",
+				"app/public/wp-content/themes/Piper-Electric/inc/custom-walker.php"
+			],
+			[
+				"wp-c",
+				"app/public/wp-config.php"
+			],
+			[
+				"_vr",
+				"app/public/wp-content/themes/Piper-Electric/support/scss/_variables.scss"
+			],
+			[
+				"web",
+				"app/public/wp-content/themes/morgan-rosel/support/webpack.config.js"
+			],
+			[
+				"med",
+				"app/public/wp-content/themes/morgan-rosel/inc/media.php"
+			],
+			[
+				"editor.sc",
+				"app/public/wp-content/themes/morgan-rosel/support/scss/editor.scss"
+			],
+			[
+				"webpac",
+				"app/public/wp-content/themes/morgan-rosel/support/webpack.config.js"
+			],
+			[
+				"swiper-bundle.min.css",
+				"app/public/wp-content/themes/morgan-rosel/support/node_modules/swiper/swiper-bundle.min.css"
+			],
+			[
+				"page",
+				"app/public/wp-content/themes/morgan-rosel/page.php"
+			],
+			[
+				"content-whi",
+				"app/public/wp-content/themes/morgan-rosel/template-parts/content-whitepaper.php"
+			],
+			[
+				"footer-post",
+				"app/public/wp-content/themes/morgan-rosel/template-parts/footer-post.php"
+			],
+			[
+				"cont",
+				"app/public/wp-content/themes/morgan-rosel/template-parts/content.php"
+			],
+			[
+				"content.php",
+				"app/public/wp-content/themes/morgan-rosel/template-parts/content.php"
+			],
+			[
+				"media.p",
+				"app/public/wp-content/themes/morgan-rosel/inc/media.php"
+			],
+			[
+				"he",
+				"app/public/wp-content/themes/concero-theme/header.php"
+			],
+			[
+				"arch",
+				"wp-content/themes/red-egg/app/Controllers/ArchiveCaseStudy.php"
+			],
+			[
+				"setup.php",
+				"wp-content/themes/red-egg/app/setup.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "re",
+		"selected_items":
+		[
+			[
+				"re",
+				"~/Local Sites/red-egg-production/red-egg-prod.sublime-project"
+			],
+			[
+				"pip",
+				"~/Local Sites/piper-electric/piper-electric.sublime-project"
+			],
+			[
+				"",
+				"~/Local Sites/yosi/yosi-health.sublime-project"
+			],
+			[
+				"as",
+				"~/Local Sites/aspire/aspire.sublime-project"
+			],
+			[
+				"aspi",
+				"~/Local Sites/aspire/aspire.sublime-project"
+			],
+			[
+				"pain",
+				"~/Local Sites/paint-denver/paint-denver.sublime-project"
+			],
+			[
+				"h1",
+				"~/Local Sites/h1h2-capital/h1h2.sublime-project"
+			],
+			[
+				"ba",
+				"~/Local Sites/base-camp-cyclery-new/basecamp-2022.sublime-project"
+			],
+			[
+				"epi",
+				"~/Local Sites/epicity/epicity.sublime-project"
+			],
+			[
+				"rest",
+				"~/Local Sites/restricted-stock-clone/restricted-stock-new.sublime-project"
+			],
+			[
+				"red",
+				"~/Local Sites/red-egg-marketing/red-egg-marketing.sublime-workspace"
+			],
+			[
+				"car",
+				"~/Local Sites/car-test/car-test.sublime-project"
+			],
+			[
+				"la",
+				"~/Local Sites/latitude-fullsite/latitude-fullsite.sublime-project"
+			],
+			[
+				"agi",
+				"~/Local Sites/agility-cio/agility-cio.sublime-project"
+			],
+			[
+				"5280",
+				"~/Local Sites/5280-associates/5280.sublime-project"
+			],
+			[
+				"mo",
+				"~/Local Sites/morgan-rosel/morgan-rosel-live.sublime-project"
+			],
+			[
+				"betto",
+				"~/Local Sites/bettor-wisdom-latest-version/bettor-wisdom.sublime-project"
+			],
+			[
+				"mor",
+				"~/Local Sites/morgan-rosel-v2/morgan-rosel.sublime-workspace"
+			],
+			[
+				"y",
+				"~/Local Sites/yosi/yosi-health.sublime-project"
+			],
+			[
+				"p",
+				"~/Local Sites/piper-electric/piper-electric.sublime-project"
+			],
+			[
+				"pi",
+				"~/Local Sites/piper-electric/piper-electric.sublime-project"
+			],
+			[
+				"con",
+				"/Applications/MAMP/htdocs/concero/concero.sublime-project"
+			],
+			[
+				"conc",
+				"~/Local Sites/concero-v3/concero-local.sublime-workspace"
+			],
+			[
+				"bas",
+				"~/Local Sites/base-camp-cyclery-new/basecamp-2022.sublime-project"
+			],
+			[
+				"yo",
+				"~/Local Sites/yosi/yosi-health.sublime-project"
+			],
+			[
+				"res",
+				"~/Local Sites/restricted-stock/Restricted-Stock.sublime-project"
+			],
+			[
+				"comn",
+				"/Applications/MAMP/htdocs/concero/concero.sublime-project"
+			],
+			[
+				"pa",
+				"~/Local Sites/paint-denver/paint-denver.sublime-project"
+			],
+			[
+				"be",
+				"~/Local Sites/bettor-wisdom-latest-version/bettor-wisdom.sublime-project"
+			],
+			[
+				"denv",
+				"~/Local Sites/denver-legal/denver-legal-goup.sublime-project"
+			],
+			[
+				"new",
+				"~/Local Sites/new-mexico-legal-group/new-mexico-legal.sublime-project"
+			],
+			[
+				"sla",
+				"/Applications/MAMP/htdocs/slack-duplicate/slack.sublime-project"
+			],
+			[
+				"am",
+				"~/Local Sites/amwa/amwa.sublime-project"
+			],
+			[
+				"pai",
+				"~/Local Sites/paint-denver/paint-denver.sublime-project"
+			],
+			[
+				"bett",
+				"~/Local Sites/bettor-wisdom/app/public/wp-content/themes/Bettor-Wisdom/bettor-wisdom.sublime-project"
+			],
+			[
+				"resou",
+				"~/Local Sites/ero-resources/ero-resources.sublime-workspace"
+			],
+			[
+				"piper",
+				"~/Local Sites/piper-electric/piper-electric.sublime-project"
+			],
+			[
+				"rm",
+				"~/Local Sites/rmlefcu/rmlefcu.sublime-project"
+			],
+			[
+				"ag",
+				"~/Local Sites/agentsync/agent-sync.sublime-project"
+			],
+			[
+				"bet",
+				"~/Local Sites/bettor-wisdom/app/public/wp-content/themes/Bettor-Wisdom/bettor-wisdom.sublime-project"
+			],
+			[
+				"rar",
+				"~/Local Sites/rarewaters/rarewaters.sublime-workspace"
+			],
+			[
+				"ra",
+				"~/Local Sites/rarewaters/rarewaters.sublime-workspace"
+			],
+			[
+				"rare",
+				"~/Local Sites/rarewaters/rarewaters.sublime-workspace"
+			],
+			[
+				"a",
+				"~/Local Sites/agentsync/agent-sync.sublime-project"
+			],
+			[
+				"r",
+				"/Applications/MAMP/htdocs/redegg/redd-egg.sublime-project"
+			],
+			[
+				"reg",
+				"~/Local Sites/red-egg-marketing/red-egg-marketing.sublime-workspace"
+			],
+			[
+				"v",
+				"~/Local Sites/vdk-tools-clone/vdk-clone.sublime-project"
+			],
+			[
+				"emu",
+				"/Applications/MAMP/htdocs/emulate-bio/emulate.sublime-project"
+			],
+			[
+				"gl",
+				"/Applications/MAMP/htdocs/glance-networks-master/glance-master.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 413.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,19 @@
+import "./js-compile/filter-posts.js";
+import "./js-compile/video.js";
+import "./blocks/hero/hero.js";
+import "./blocks/faq/faq.js";
+import "./blocks/tabs/tabs.js";
+import "./blocks/image-links/images.js";
+// import "./blocks/selected-projects/selected-projects.js";
+import "./blocks/selected-insights/selected-insights.js";
+import "./blocks/progress-block/scroll.js";
+import "./blocks/contact/contact.js";
+import "./blocks/savings-calculator/savings.js";
+import "./blocks/feature-section/scrolling.js";
+import "./blocks/text-cards-grid/text-cards.js";
+import "./js-compile/fancybox-settings.js";
+import "./js-compile/words.js";
+import "./js-compile/background.js";
+import "./js-compile/stat-callout.js";
+import "./js-compile/filter-resources.js";
+

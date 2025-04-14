@@ -1,0 +1,399 @@
+@font-face {
+    font-family: 'retroicaregular';
+    src: url('fonts/retroica-webfont.woff2') format('woff2'),
+         url('fonts/retroica-webfont.woff') format('woff'),
+         url('fonts/retroica-webfont.ttf') format('truetype'),
+         url('fonts/retroica-webfont.svg#retroicaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.gs-sin-mem-desig,
+.gs_team p, .gs_team li,
+.edit-post-visual-editor__content-area p, .entry-content p,
+.edit-post-visual-editor__content-area li, .entry-content li,
+.edit-post-visual-editor__content-area dl, .entry-content dl,
+.edit-post-visual-editor__content-area dd, .entry-content dd {
+	font-family: $font-body;
+	font-size: 18px;
+	line-height: 25px;
+	color: $head-color;
+	font-weight: 300;
+	@media screen and (min-width: $small-width) {
+		font-size: 22px;
+		line-height: 36px;
+	}
+}
+
+.gs-sin-mem-desig,
+.gs_team b {
+	font-weight: bold;
+}
+
+.gstm-details span {
+	font-family: $font-body;
+	font-size: 16px;
+	line-height: 22px;
+	color: $head-color;
+	font-weight: 300;
+	@media screen and (min-width: $small-width) {
+		font-size: 18px;
+		line-height: 25px;
+	}
+}
+
+.edit-post-visual-editor__content-area a, .entry-content a {
+	color: $head-color;
+}
+
+.edit-post-visual-editor__content-area strong,.entry-content strong {
+	font-weight: bold;
+}
+
+.edit-post-visual-editor__content-area ul.has-large-font-size li, .entry-content ul.has-large-font-size li,
+.edit-post-visual-editor__content-area p.has-large-font-size, .entry-content p.has-large-font-size {
+	font-size: 24px !important;
+	line-height: 34px;
+	color: $bg-color-7;
+	@media screen and (min-width: $small-width) {
+		font-size: 30px !important;
+		line-height: 42px;
+	}
+}
+
+
+.edit-post-visual-editor__content-area ul, .entry-content ul {
+	margin: 0;
+}
+
+.edit-post-visual-editor__content-area li, .page .entry-content li,
+.post .post-content li {
+	position: relative;
+	margin-bottom: 5px;
+	@media screen and (min-width: $small-width) {
+		margin-bottom: 10px;
+	}
+}
+
+
+.edit-post-visual-editor__content-area li, .page .entry-content li {
+	font-size: 18px;
+	line-height: 30px;
+	color: $body-color;
+	@media screen and (min-width: $small-width) {
+		font-size: 23px;
+		line-height: 32px;
+	}
+}
+
+.page .entry-content > ul {
+	padding-left: 2.25rem;
+	@media screen and (min-width: $small-width) {
+		padding-left: 2.5rem;
+	}
+}
+
+.page .entry-content > ul li {
+	list-style-type: disc;
+}
+
+.gs_team h1,
+.edit-post-visual-editor__content-area h1, .entry-content h1 {
+	color: $green;
+	font-size: 42px;
+	line-height: 50px;
+	font-family: $font-head;
+	font-weight: 500;
+	text-transform: none;
+	@media screen and (min-width: $small-width) {
+		font-size: 65px;
+		line-height: 82px;
+	}
+}
+
+.gs_team h2,
+.edit-post-visual-editor__content-area h2, .entry-content h2 {
+	font-size: 35px;
+	line-height: 42px;
+	color: $green;
+	margin-top: 2rem;
+	font-family: $font-head;
+	text-transform: none;
+	font-weight: 700;
+	@media screen and (min-width: $small-width) {
+		font-size: 50px;
+		line-height: 60px;
+		margin-top: 3rem;
+	}
+}
+
+
+.main-navigation h3,
+.gs_team h3,
+.edit-post-visual-editor__content-area h3, .entry-content h3 {
+	color: $blue;
+	font-size: 28px;
+	line-height: 36px;
+	font-family: $font-head;
+	@media screen and (min-width: $small-width) {
+		font-size: 34px;
+		line-height: 44px;
+	}
+}
+
+.gs_team h4,
+.edit-post-visual-editor__content-area h4, .entry-content h4 {
+	color: $blue;
+	line-height: 22px;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-family: $font-head;
+	@media screen and (min-width: $small-width) {
+		font-size: 18px;
+		line-height: 27px;
+	}
+}
+
+.gs_team h5, 
+.edit-post-visual-editor__content-area h5, .entry-content h5 {
+	color: $blue;
+	line-height: 19px;
+	font-size: 14px;
+	font-family: $font-body;
+	@media screen and (min-width: $small-width) {
+		font-size: 16px;
+		line-height: 25px;
+	}
+}
+
+.gs_team h6,
+.edit-post-visual-editor__content-area h6, .entry-content h6 {
+	color: $blue;
+	line-height: 18px;
+	font-size: 14px;
+	font-weight: 700;
+	font-family: $font-body;
+	@media screen and (min-width: $small-width) {
+		font-size: 15px;
+		line-height: 21px;
+	}
+}
+
+.entry-content h3 + h2,
+.edit-post-visual-editor__content-area h3 + h2 {
+	margin-top: 0;
+}
+
+.blue h1,
+.blue h2,
+.blue h3,
+.blue h4,
+.blue h5,
+.blue h6,
+.blue td,
+.blue th,
+.blue p {
+	color: white;
+}
+
+.has-white-color p,
+.has-white-color 
+.entry-content .has-white-color, 
+{
+	color: white;
+}
+
+.rigid {
+	font-family: $font-head !important;
+}
+
+.industry {
+	font-family: $font-head-2 !important;
+}
+
+.has-green-color p,
+.has-green-color,
+.entry-content .has-blue-green-color {
+	color: $green;
+}
+
+.has-red-color p,
+.has-red-color,
+.entry-content .has-red-color {
+	color: $red;
+}
+
+.has-teal-color p,
+.has-teal-color,
+.entry-content .has-teal-color {
+	color: $teal;
+	
+}
+
+.has-purple-color p,
+.has-purple-color,
+.entry-content .has-purple-color {
+	color: $purple;
+}
+
+.has-orange-color p,
+.has-orange-color,
+.entry-content .has-orange-color {
+	color: $orange;
+}
+
+.has-light-orange-color p,
+.has-light-orange-color,
+.entry-content .has-light-orange-color {
+	color: $light-orange;
+}
+
+background {
+	background: linear-gradient(to bottom, $light-blue 25%, transparent 25% );
+	background-size: 200% 200%;
+	background-position: 0 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: -10px;
+}
+
+background.active {
+	animation: backgroundShift 3s ease forwards;
+}
+
+.light-grey background,
+.peach background,
+.light-blue background {
+	background: linear-gradient(to bottom, white 25%, transparent 25% );
+	background-size: 200% 200%;
+	background-position: 0 100%;
+}
+
+.contact-section background,
+.teal-gradient background {
+	background: linear-gradient(to bottom, rgba(25, 48, 63, .2) 25%, transparent 25% );
+	background-size: 200% 200%;
+	background-position: 0 100%;
+}
+
+words {
+	font-weight: bold;
+	color: $bg-color-5;
+	display: inline;
+	white-space: nowrap;
+	position: relative;
+	padding-right: 3px;
+}
+
+words.highlight {
+	background: $bg-color-5;
+	color: white;
+}
+
+words:after {
+	content: "";
+	background: black;
+	width: 1px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	display: inline-block;
+}
+words:before {
+	content: "";
+	width: 50px;
+}
+
+words.highlight:after {
+	background: white;
+}
+
+words.waiting:after {
+	animation: opacityChange 0.5s infinite;
+}
+
+block {
+	display: block;
+	margin-top: 25px
+}
+
+a block {
+	color: $bg-color-5;
+	text-decoration: none;
+}
+
+a block:after,
+block a:after {
+	content: "";
+	background: url(img/right-chevron-yellow.svg) no-repeat center center / 100%;
+	width: 9px;
+	height: 14px;
+	display: inline-block;
+	margin-left: 8px;
+}
+
+.entry-content block a {
+	color: $bg-color-5;
+	text-decoration: none;
+}
+
+
+.entry-content p.has-medium-font-size {
+	font-size: 20px !important;
+	line-height: 29px;
+	@media screen and (min-width: $small-width) {
+		font-size: 22px !important;
+		line-height: 34px;
+	}
+}
+
+.entry-content p.has-large-font-size {
+	font-size: 24px !important;
+	line-height: 36px;
+	@media screen and (min-width: $small-width) {
+		font-size: 30px !important;
+		line-height: 42px;
+	}
+}
+
+
+/* arrows */
+arrow:after {
+	content: "";
+	display: inline-block;
+	background: url(img/right-arrow-green.svg) no-repeat center center / 100%;
+	width: 22px;
+	height: 18px;
+	margin-left: 10px;
+	@media screen and (min-width: $small-width) {
+		width: 30px;
+		height: 25px;
+		margin-left: 15px;
+	}
+}
+
+.has-teal-color > arrow:after {
+	background-image: url(img/right-arrow-teal.svg);
+}
+
+.has-green-color > arrow:after {
+	background-image: url(img/right-arrow-green.svg);
+}
+
+.has-orange-color > arrow:after {
+	background-image: url(img/right-arrow-orange.svg);
+}
+
+.has-light-orange-color > arrow:after {
+	background-image: url(img/right-arrow-light-orange.svg);
+}
+
+.has-red-color > arrow:after {
+	background-image: url(img/right-arrow-red.svg);
+}
+
+.has-purple-color > arrow:after {
+	background-image: url(img/right-arrow-purple.svg);
+}
+

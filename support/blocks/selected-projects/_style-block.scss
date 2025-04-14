@@ -1,0 +1,149 @@
+.wp-block.selected-case-studies-grid {
+	width: 100%;
+	max-width: 100%;
+	padding-top: 4.5rem;
+	padding-bottom: 4.5rem;
+	@media screen and (min-width: $small-width) {
+		padding-top: 7.3125rem;
+		padding-bottom: 7.3125rem;
+	}
+}
+
+.resources-block .block-wrapper {
+	width: 100%;
+	max-width: $max-cont-w + 200px;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	margin: 0 auto;
+}
+
+.resources-block .resources-slides {
+	position: relative;
+	width: calc(100% - 4rem);
+	margin-left: 2em;
+	margin-right: 2rem;
+	@media screen and (min-width: $small-width) {
+		width: calc(100% - 5rem);
+		margin-left: 2.5rem;
+		margin-right: 2.5rem;
+	}
+}
+
+.resources-block .header-title {
+	margin-top: 0;
+}
+
+.selected-case-studies-grid {
+	margin-bottom: 2.5rem;
+	padding-top: 4.25rem;
+	padding-bottom: 4.25rem;
+	@media screen and (min-width: $small-width) {
+		margin-bottom: 3.15em;
+		padding-top: 6.75rem;
+		padding-bottom: 6.75rem;
+	}
+}
+
+.selected-case-studies-grid:last-child {
+	margin-bottom: 0;
+	@media screen and (min-width: $small-width) {
+		margin-bottom: 0;
+	}
+}
+
+.selected-case-studies-grid header.section-header {
+	padding-top: 0;
+}
+
+.selected-case-studies-grid .wp-block-buttons {
+	justify-content: center;
+	margin-top: 35px;
+	@media screen and (min-width: $small-width) {
+		margin-top: 50px;
+	}
+}
+
+.title-pagination {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	grid-column-gap: 1.25rem;
+	@media screen and (min-width: $small-width) {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-column-gap: 2.5rem;
+	}
+}
+
+.title-pagination .swiper-pagination-bullet {
+	width: 100%;
+	height: auto;
+	background: transparent;
+	border-radius: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.title-pagination .swiper-pagination-bullet:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2px;
+	content: "";
+	display: block;
+	width: 100%;
+	background: $light-grey;
+}
+
+.title-pagination .swiper-pagination-bullet:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	content: "";
+	display: block;
+}
+
+.title-pagination .resource-card {
+	padding-top: 1.25rem;
+	@media screen and (min-width: $small-width) {
+		padding-top: 36px;
+	}
+}
+
+.wp-block-ddrc-theme-blocks-selected-projects .cont-wrap {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 1.25rem;
+	@media screen and (min-width: $small-width) {
+		grid-column-gap: 2.5rem;
+	}
+}
+
+.wp-block-ddrc-theme-blocks-selected-projects .image-cont {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.swiper-pagination-bullet-active:after {
+	background-color: $blue;
+	animation: slide-progress 2s cubic-bezier(.3,0,.3,1) forwards;	
+	.swiper-paused & {
+		// opacity: 0;
+		animation-play-state: paused;
+	}
+}
+
+.resource-card {
+	background: $grey-2;
+	margin-top: 0;
+}
+
+.resource-card .content {
+	padding: 0 20px;
+	margin-top: 0;
+	@media screen and (min-width: $small-width) {
+		padding: 0 40px;
+	}
+}

@@ -1,0 +1,49 @@
+$font-head: "Aleo", serif;
+$font-body: "Noto Sans", sans-serif;
+$font-head-2: $font-head;
+
+$head-color: #19303F;
+$body-color: #707070;
+$border-color: #F6AD42;
+$border-color-2: #4d5057;
+$bg-color-1: #3bc24a; // green
+$bg-color-1: #3bc24a; // green
+$bg-color-2: #F0F0F0; // grey
+$bg-color-3: #3bc24a; // lime green
+$bg-color-4: #4d4d4d; // dark grey
+$bg-color-5: #FEBF2D; // yellow
+$bg-color-6: #ffffff; // white
+$bg-color-7: #004F66; // blue
+$navy: #0D2133;
+$light-grey: #E5ECEE;
+$orange: #F57F2D;
+$light-orange: #FEBF2D;
+$dark-grey: #878787;
+$light-blue: #EDF5FF;
+$peach: #FDEFE8;
+$light-brown: #F0E8D7;
+$button-color-1: #F8AE2B;
+$head-color-2: $bg-color-3;
+$grey-2: #E7E9EB;
+$teal-blue: #008FA0;
+$blue: #51B3A8;
+$green: #004F66;
+$yellow: #FEBF2D;
+$red: #E03B45;
+$purple: #7E3380;
+$teal: #51B3A8;
+$blue-gradient: linear-gradient(to right, $blue 0, $green 50%, $blue 100%);
+$blue-gradient-bottom: linear-gradient(to bottom, $green 0, $blue 33.333%, $green 66.66666%, $blue 100%);
+
+$med-width: 1200px;
+$med-small-width: 1080px;
+$small-med-width: 875px;
+$small-width: 768px;
+$form-width: 641px;
+$xs-width: 480px;
+$xx-width: 395px;
+$arrow: 'data:image/svg+xml,%3Csvg%20id%3D%22Group_74%22%20data-name%3D%22Group%2074%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2229.154%22%20height%3D%2225%22%20viewBox%3D%220%200%2029.154%2025%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CclipPath%20id%3D%22clip-path%22%3E%0A%20%20%20%20%20%20%3Crect%20id%3D%22Rectangle_166%22%20data-name%3D%22Rectangle%20166%22%20width%3D%2229.154%22%20height%3D%2225%22%20fill%3D%22%23e03b45%22%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Cg%20id%3D%22Group_73%22%20data-name%3D%22Group%2073%22%20clip-path%3D%22url(%23clip-path)%22%3E%0A%20%20%20%20%3Cpath%20id%3D%22Path_28%22%20data-name%3D%22Path%2028%22%20d%3D%22M28.544%2C13.971a2.086%2C2.086%2C0%2C0%2C0%2C0-2.948L18.131.61a2.085%2C2.085%2C0%2C1%2C0-2.948%2C2.948l6.866%2C6.859H2.083a2.083%2C2.083%2C0%2C0%2C0%2C0%2C4.165h19.96l-6.853%2C6.859a2.085%2C2.085%2C0%2C0%2C0%2C2.948%2C2.948L28.55%2C13.977Z%22%20fill%3D%22%23e03b45%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A';
+
+$wp-min-width: 600px;
+
+$max-cont-w : 1480px;

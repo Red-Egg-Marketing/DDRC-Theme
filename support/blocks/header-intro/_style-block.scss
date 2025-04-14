@@ -1,0 +1,108 @@
+.wp-block.header-intro-block {
+	max-width: 100%;
+	width: 100%;
+}
+
+.header-intro-block .block-wrapper {
+	max-width: $max-cont-w;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+}
+
+.header-intro-block h3 {
+	margin-bottom: 15px;
+}
+
+.header-intro-block h3 + h2 { 
+	margin-top: 0;
+}
+
+.header-intro-block .block-content {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.header-intro-block .block-content:before,
+.header-intro-block .block-content:after {
+	content: "";
+	background: $light-grey;
+	height: 3px;
+	flex: 1;
+}
+
+.light-brown .header-intro-block .block-content:before,
+.light-brown .header-intro-block .block-content:after {
+	background: white;
+}
+
+.header-intro-block .block-content > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block {
+	max-width: 100%;
+}
+
+.header-intro-block .wp-block-heading {
+	margin-bottom: 15px;
+	margin-top: 0;
+	margin-left: 1.25rem;
+	margin-right: 1.25rem;
+	display: inline-block;
+	@media screen and (min-width: $small-width) {
+		margin-bottom: 25px;
+	}
+}
+
+.header-intro-block ul {
+	text-align: left;
+}
+
+
+.header-intro-block {
+	padding-top: 3.875rem;
+	padding-bottom: 3.875rem;
+	@media screen and (min-width: $small-width) {
+		padding-bottom: 6.75rem;
+		padding-top: 6.75rem;
+	}
+}
+
+.header-intro-block .block-content p {
+	font-weight: 300;
+	font-family: $font-body;
+}
+
+.header-intro-block .block-content .wp-block-buttons + p {
+	margin-top: 35px;
+	@media screen and (min-width: $small-width) {
+		margin-top: 65px;
+	}
+}
+
+.header-intro-block .block-content p:last-of-type {
+	margin-bottom: 0;
+}
+
+.header-intro-block .block-content {
+	margin: 0 auto;
+}
+
+.header-intro-block .block-wrapper.with-bg {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	@media screen and (min-width: $small-width) {
+		padding-top: 55px;
+		padding-bottom: 55px;
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+}
+
+.editor-styles-wrapper .header-intro-block .wp-block-buttons,
+.header-intro-block .wp-block-buttons {
+ 	margin-top: 35px;
+ 	@media screen and (min-width: $small-width) {
+ 		margin-top: 55px;
+ 	}
+}

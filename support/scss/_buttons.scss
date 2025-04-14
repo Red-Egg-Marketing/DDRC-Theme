@@ -1,0 +1,205 @@
+#CybotCookiebotDialogBodyButtonAccept,
+.buddypress .buddypress-wrap input[type=button],
+.buddypress .buddypress-wrap .button,
+.wp-block-button__link,
+a.wp-block-button__link,
+input[type="submit"],
+button.wp-button {
+	background: $green;
+	color: white;
+	font-family: $font-body;
+	font-size: 15px;
+	line-height: 21px;
+	padding: 11px 25px 11px;
+	text-transform: uppercase;
+	border: none;
+	cursor: pointer;
+	border: none;
+	transition-property: all;
+	transition-duration: .25s;
+	text-decoration: none;
+	border-radius: 30px;
+	font-weight: 500;
+	&.is-small {
+		@media screen and (min-width: $small-width) {
+			font-size: 17px;
+			line-height: 19px;
+			padding: 15px 22px 11px;
+		}
+	}
+	&.bp-secondary-action, &.wp-cancel-pw {
+		background: none;
+		&:hover {
+			background: none;
+			color: white;
+		}
+	}
+	@media screen and (min-width: $small-width) {
+		font-size: 19px;
+		line-height: 22px;
+		padding: 15px 35px 15px;
+	}
+	&:hover {
+		background-position: 100px 0;
+		color: white;
+	}
+	&:visited {
+		background-position: -100px 0;
+		color: $green;
+	}
+	&[disabled] {
+		opacity: .5;
+		cursor: not-allowed;
+	}
+}
+
+body.buddypress .buddypress-wrap input[type=submit].auto {
+	background: $yellow;
+	color: white;
+	font-family: $font-head;
+	text-transform: uppercase;
+	border: none;
+	padding: 15px 15px 10px;
+}
+
+.fixed-buttons {
+	position: relative;
+	@media screen and (min-width: $med-small-width) {
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		margin: 0;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		z-index: 9999;
+	}
+}
+
+.fixed-buttons .fixed-wrapper {
+	max-width: $max-cont-w;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: end;
+	padding-left: 0;
+	padding-right: 0;
+	pointer-events: none;
+	@media screen and (min-width: $med-small-width) {
+		padding-right: 1.25rem;
+		padding-bottom: 1.25rem;
+		padding-left: 1.25rem;
+	}
+}
+
+.fixed-buttons .fixed-wrapper a.wp-block-button__link {
+	font-size: 14px;
+	line-height: 18px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 15px;
+	padding-right: 15px;
+	pointer-events: auto;
+	@media screen and (min-width: $small-width) {
+		font-size: 16px;
+		line-height: 20px;
+		padding: 13px 25px 13px;
+	}
+}
+
+.wp-button.is-style-solid-white,
+.wp-block-button.is-style-solid-white .wp-block-button__link {
+	background: white;
+}
+
+.wp-button.is-style-solid-green,
+.wp-block-button.is-style-solid-green .wp-block-button__link {
+	background: $green;
+}
+
+.wp-button.is-style-solid-yellow,
+.wp-block-button.is-style-solid-yellow .wp-block-button__link {
+	background: $bg-color-5;
+	color: $head-color;
+}
+
+.wp-block-button__link.is-style-solid-blue-green,
+.wp-button.is-style-solid-blue-green,
+.wp-block-button.is-style-solid-blue-green .wp-block-button__link {
+	background: $teal-blue;
+	color: white;
+	&:hover {
+		color: $navy;
+		background: $orange;
+	}
+}
+
+.wp-block-button__link.is-style-solid-navy,
+.wp-button.is-style-solid-navy,
+.wp-block-button.is-style-solid-navy .wp-block-button__link {
+	background: $navy;
+	color: white;
+	&:hover {
+		color: white;
+		background: $bg-color-7;
+	}
+}
+
+.wp-block-button__link.is-style-text-yellow-arrow,
+.wp-button.is-style-text-yellow-arrow,
+.wp-block-button.is-style-text-yellow-arrow .wp-block-button__link {
+	background: none;
+	color: $bg-color-5;
+	padding: 0;
+	border-radius: 0;
+	&:hover {
+		color: $bg-color-5;
+		box-shadow: none;
+	}
+}
+.wp-block-button.is-style-text-yellow-arrow .wp-block-button__link:after {
+	content: "";
+	display: inline-block;
+	background: url(img/right-chevron-yellow.svg) no-repeat center center / 100%;
+	width: 9px;
+	height: 14px;
+	margin-left: 8px;
+	transition-property: transform;
+	transition-duration: .3s;
+}
+
+.wp-button.is-style-text-yellow-arrow:hover:after,
+.wp-block-button.is-style-text-yellow-arrow .wp-block-button__link:hover:after {
+	transform: translateX(5px);
+}
+
+.wp-button.is-style-outline,
+.wp-block-button.is-style-outline .wp-block-button__link,
+.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color)
+ {
+	border: 2px solid white;
+	color: white;
+	padding: 17px 25px 13px;
+	&:hover {
+		background: white;
+		color: black;
+	}
+	&:visited {
+		color: white;
+	}
+	@media screen and (min-width: $small-width) {
+		font-size: 18px;
+		line-height: 22px;
+		padding: 15px 35px 15px;
+	}
+}
+
+a[download] {
+	@extend .wp-block-button__link;
+	display: inline-block;
+	text-decoration: none;
+	border-radius: 0;
+}

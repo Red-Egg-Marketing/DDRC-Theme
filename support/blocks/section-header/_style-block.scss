@@ -1,0 +1,35 @@
+.section-header, 
+.wp-block.section-header {
+	width: 100%;
+	max-width: 100%;
+}
+
+.section-header * {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 700;
+	@media screen and (min-width: $small-width) {
+		font-size: 30px;
+		line-height: 38px;
+	}
+}
+
+.section-header {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	@media screen and (min-width: $small-width) {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+}
+
+.section-header .block-wrapper {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}

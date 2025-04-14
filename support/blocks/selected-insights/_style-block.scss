@@ -1,0 +1,90 @@
+.wp-block.selected-resources {
+	width: 100%;
+	max-width: 100%;
+	padding-top: 8.125rem;
+	padding-bottom: 8.125rem;
+}
+
+.resources-block {
+	padding-top: 4.25rem;
+	padding-bottom: 4.25rem;
+	@media screen and (min-width: $small-width) {
+		padding-top: 6.75rem;
+		padding-bottom: 6.75rem;
+	}
+}
+
+.resources-block .header {
+	text-align: center;
+	padding-top: 2rem;
+	padding-bottom: 0.5rem;
+	@media screen and (min-width: $small-width) {
+		padding-top: 3.675rem;
+		padding-bottom: 1rem;
+	}
+}
+
+.resources-block .block-wrapper {
+	width: 100%;
+	max-width: $max-cont-w + 200px;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	margin: 0 auto;
+	@media screen and (min-width: $small-width) {
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+	}
+}
+
+.resources-block .resources-slides {
+	position: relative;
+	width: calc(100% - 4rem);
+	margin-left: 2em;
+	margin-right: 2rem;
+	@media screen and (min-width: $small-width) {
+		width: calc(100% - 5rem);
+		margin-left: 2.5rem;
+		margin-right: 2.5rem;
+	}
+}
+
+.resources-block .header-title {
+	margin-top: 0;
+}
+
+// .selected-resources {
+// 	margin-bottom: 2.5rem;
+// 	@media screen and (min-width: $small-width) {
+// 		margin-bottom: 3.5em;
+// 	}
+// }
+
+.selected-resources:last-child {
+	margin-bottom: 0;
+	@media screen and (min-width: $small-width) {
+		margin-bottom: 0;
+	}
+}
+
+.selected-resources header.section-header {
+	padding-top: 0;
+}
+
+.selected-resources .wp-block-buttons {
+	justify-content: center;
+	margin-top: 35px;
+	@media screen and (min-width: $small-width) {
+		margin-top: 50px;
+	}
+}
+
+.selected-resources .resource-col {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.selected-resources .resource-col .resource-card:last-of-type {
+	align-self: flex-end;
+}
+

@@ -1,0 +1,278 @@
+.wp-block.image-columns {
+	max-width: 100%;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.image-columns {
+	width: 100%;
+}
+
+.image-columns:not(.full-width) {
+	width: 100%;
+	padding-top: 3.125rem;
+	padding-bottom: 3.125rem;
+	@media screen and (min-width: $small-width) {
+		padding-top: 6.75rem;
+		padding-bottom: 6.75rem;
+	}
+}
+
+.image-columns + .image-columns {
+	padding-top: 0;
+	@media screen and (min-width: $small-width) {
+		padding-top: 0;
+	}
+}
+
+.image-columns.full-width .block-wrapper {
+	max-width: 100%;
+}
+
+.image-columns.full-width .content-columns {
+	@media screen and (min-width: $small-width) {
+		max-width: ($max-cont-w + 200px)/2;
+		width: 50%;
+	}
+}
+
+.image-columns.full-width .img-right .content-columns {
+	@media screen and (min-width: $small-width) {
+		margin-left: auto;
+		padding-left: 1.25rem;
+	}
+}
+
+.image-columns .img-container {
+	overflow: hidden;
+}
+
+.image-columns .img-container {
+	border-radius: 20px;
+}
+
+.image-columns:not(.full-width) .block-wrapper {
+	max-width: $max-cont-w + 200px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.image-columns > .block-wrapper > .block-content {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.image-columns .faq:last-of-type {
+	margin-bottom: 0;
+}
+
+.image-columns .content-columns {
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: 25px;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	@media screen and (min-width: $small-width) {
+		width: 50%;
+		padding-left: 2.5rem;
+		margin-top: 0;
+	}
+}
+
+.image-columns .image-col {
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	align-items: stretch;
+	@media screen and (min-width: $small-width) {
+		width: 50%;
+		max-width: 50%;
+		padding-right: 2.5rem;
+	}
+}
+
+.image-columns .img-container {
+	display: flex;
+	align-items: stretch;
+}
+
+.img-container img {
+	display: block;
+	margin: 0 auto;
+}
+
+.image-columns .img-container img {
+	object-fit: cover;
+}
+
+.image-columns.img-right .content-columns {
+	margin-top: 25px;
+	@media screen and (min-width: $small-width) {
+		padding-left: 0;
+		padding-right: 2.5rem;
+		margin-top: 0;
+	}
+}
+
+.image-columns.img-right.no-ds .content-columns {
+	@media screen and (min-width: $small-width) {
+		padding-left: 2.5rem;
+	}
+}
+
+// .image-columns.img-right .image-col {
+// 	box-shadow: 18px 18px 0 0 $light-blue;
+// 	@media screen and (min-width: $small-width) and (max-width: $med-small-width) {
+// 		box-shadow: 15px 15px 0 0 $light-blue;
+// 		margin-right: 15px;
+// 	}
+// 	@media screen and (min-width: $med-small-width) and (max-width: $med-width) {
+// 		box-shadow: 20px 20px 0 0 $light-blue;
+// 		margin-right: 20px;
+// 	}
+// 	@media screen and (min-width: $med-width) {
+// 		box-shadow: 36px 36px 0 0 $light-blue;
+// 		margin-right: 36px;
+// 	}
+// }
+
+
+// .image-columns.img-left .image-col {
+// 	box-shadow: -18px 18px 0 0 $light-blue;
+// 	@media screen and (min-width: $small-width) and (max-width: $med-small-width) {
+// 		box-shadow: -15px 15px 0 0 $light-blue;
+// 		margin-left: 15px;
+// 		padding-right: 1.25rem;
+// 	}
+// 	@media screen and (min-width: $med-small-width) and (max-width: $med-width) {
+// 		box-shadow: -20px 20px 0 0 $light-blue;
+// 		margin-left: 20px;
+// 		padding-right: 1.25rem;
+// 	}
+// 	@media screen and (min-width: $med-width) {
+// 		box-shadow: -36px 36px 0 0 $light-blue;
+// 		margin-left: 36px;
+// 		padding-right: 2.5rem;
+// 	}
+// }
+
+.image-columns.no-ds .image-col {
+	box-shadow: none;
+}
+
+.image-columns .image-comp {
+	margin-bottom: 1.25rem;
+	@media screen and (min-width: $small-width) {
+		margin-bottom: 0;
+	}
+}
+
+.image-columns .content-columns br {
+	display: block;
+	@media screen and (min-width: $xx-width) and (max-width: $small-width) {
+		display: none;
+	}
+	@media screen and (min-width: $small-width) and (max-width: $small-med-width) {
+		display: block;
+	}
+	@media screen and (min-width: $small-med-width) and (max-width: $med-small-width) {
+		display: block;
+	}
+	@media screen and (min-width: $med-small-width) and (max-width: $med-width) {
+		display: block;
+	}
+	@media screen and (min-width: $med-width) and (max-width: $max-cont-w) { 
+		display: none;
+	}
+	@media screen and (min-width: $max-cont-w) {
+		display: block;
+	}
+}
+
+
+.image-columns .wrap > *:first-child {
+	margin-top: 0;
+	margin-bottom: 15px;
+	@media screen and (min-width: $small-width) {
+		margin-bottom: 20px;
+	}
+}
+
+
+.image-columns .wrap h1 {
+	font-size: 32px;
+	line-height: 44px;
+	letter-spacing: 0.4px;
+	@media screen and (min-width: $small-width) {
+		font-size: 40px;
+		line-height: 53px;
+		letter-spacing: 0.5px;
+	}
+}
+
+.image-columns .wrap h2 {
+	font-size: 29px;
+	line-height: 40px;
+	@media screen and (min-width: $small-width) {
+		font-size: 34px;
+		line-height: 50px;
+	}
+}
+
+.image-columns video {
+	max-width: 100%;
+	display: block;
+	height: auto;
+	border-radius: 10px;
+}
+
+.image-columns .wp-block-buttons  {
+	margin-top: 25px;
+	@media screen and (min-width: $small-width) {
+		margin-top: 60px;
+	}
+}
+
+.image-columns.img-right .image-col {
+	order: 1;
+	padding-right: 0;
+	@media screen and (min-width: $small-width) {
+		order: 2;
+		padding-left: 2.5rem;
+	}
+}
+
+.image-columns.img-right .content-columns {
+	order: 2;
+	@media screen and (min-width: $small-width) {
+		order: 1;
+	}
+}
+
+
+.playing .custom-video-button {
+	display: none;
+}
+
+.custom-video-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	background: url(img/play-button.svg) no-repeat center center  / 100%;
+	text-indent: -10000px;
+	border-radius: 0;
+	border: none;
+	z-index: 2;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	@media screen and (min-width: $small-width) {
+		width: 100px;
+		height: 100px;
+	}
+}
