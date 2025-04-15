@@ -12,11 +12,11 @@ import MarginSelector from '../../components/Margin.js';
 
 const SaveCTA = ( { attributes } ) => {
 		const {
-			content, footer, padding, blockId, margin
+			padding, blockId, margin, bgColor, bgSlug
 		} = attributes;
 
 		const blockProps = useBlockProps.save({
-			className: 'cta',
+			className: 'cta' + (bgSlug != '' ? ' ' + bgSlug + ' with-bg' : ''),
 			id: blockId
 		});
 	
@@ -33,16 +33,6 @@ const SaveCTA = ( { attributes } ) => {
 				<div {...blockProps}>
 					<div className="block-wrapper">
 						<div className="block-content">
-							<Header.View
-								tag="h3"
-								title={ content }
-							/>
-							<Content.View
-								tag="div"
-								content={ footer }
-								multiline="p"
-								classProp="content-footer"
-							/>
 							<InnerBlocks.Content />
 						</div>
 					</div>

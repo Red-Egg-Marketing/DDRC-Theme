@@ -6,12 +6,12 @@ const { __ } = wp.i18n;
 
 const columnsArray = [
 	{
-		label: __('Two Columns'),
-		value: '2'
-	},
-	{
 		label: __('Three Columns'),
 		value: '3'
+	},
+	{
+		label: __('Four Columns'),
+		value: '4'
 	}
 ];
 
@@ -24,7 +24,7 @@ const Columns = (props) => {
 		<Fragment>
 			<PanelBody
 				title={__('Columns')}
-				initialOpen={ true }
+				initialOpen={ false }
 			>
 				<SelectControl
 					label={ __( 'Select Column Width' ) }

@@ -38,6 +38,10 @@ registerBlockType( 'ddrc-theme-blocks/cards-grid', {
 		},
 		blockId: {
 			type: 'string'
+		},
+		bg: {
+			type: 'string',
+			default: ''
 		}
 	},
 	icon: 'grid-view',

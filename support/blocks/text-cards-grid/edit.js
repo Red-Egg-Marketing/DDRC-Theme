@@ -5,6 +5,7 @@ const { Button, PanelBody, SelectControl, ColorPalette, ToggleControl, RangeCont
 const { __ } = wp.i18n;
 import Content from '../../components/Content.js';
 import BackgroundColor from '../../components/BackgroundColor.js';
+import CustomBG from '../../components/CustomBG.js';
 import Columns from '../../components/Columns.js';
 import PaddingSelector from '../../components/Padding.js';
 import MarginSelector from '../../components/Margin.js';
@@ -19,7 +20,7 @@ const template = [
 const EditCTAGrid = ( { attributes, setAttributes, clientId } ) => {
 
 		const {
-			columns, bgColor, bgSlug, color, padding, blockId, margin
+			columns, bgColor, bgSlug, color, padding, blockId, margin, bg
 		} = attributes;
 
 		const onChangeContent = (value) => {
@@ -29,7 +30,7 @@ const EditCTAGrid = ( { attributes, setAttributes, clientId } ) => {
 		}
 
 		const blockProps = useBlockProps({
-			className: 'text-cards-grid' + ' columns-' + columns + (bgSlug != '' ? ' ' + bgSlug + ' with-bg' : '')
+			className: 'text-cards-grid' + ' columns-' + columns + (bgSlug != '' ? ' ' + bgSlug + ' with-bg' : '') + (bg != '' ? ' ' + bg : '')
 		});	
 
 		React.useEffect( () => {
@@ -60,13 +61,17 @@ const EditCTAGrid = ( { attributes, setAttributes, clientId } ) => {
 						setAttributes={ setAttributes }
 						columns={ columns }
 					/>
+					<CustomBG
+						setAttributes={ setAttributes }
+						bg={ bg }
+					/>
 				</InspectorControls>
 				<div {...blockProps}>
 					<div className="block-wrapper">
 						<div className="block-content">							
 							<InnerBlocks
 								template={ template }
-								allowedBlocks={ ['ddrc-theme-blocks/text-card', 'ddrc-theme-blocks/header-intro'] }
+								allowedBlocks={ ['ddrc-theme-blocks/text-card', 'ddrc-theme-blocks/header-intro', 'core/heading'] }
 							/>
 						</div>
 					</div>

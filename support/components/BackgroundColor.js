@@ -45,7 +45,7 @@ const BackgroundColor = (props) => {
 		<Fragment>
 			<PanelBody
 				title={__( settitle )}
-				initialOpen={ true }
+				initialOpen={ false }
 			>
 				<ColorPalette
             		colors={ customColors }

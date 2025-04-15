@@ -167,7 +167,7 @@ const EditCTA = ( { attributes, setAttributes } ) => {
 						bgColor={ bgColor }
 						bgSlug={ bgSlug }
 						setAttributes={ setAttributes }
-						title="Image Border Color"
+						title="Image Border & Background Color"
 					/>
 				</InspectorControls>
 				<div 
@@ -201,7 +201,7 @@ const EditCTA = ( { attributes, setAttributes } ) => {
 
 							<InnerBlocks
 								template={ template }
-								templateLock="all"
+								templateLock={ false }
 								allowedBlocks={ ['core/heading', 'core/paragraph', 'core/buttons', 'core/image'] }
 							/>
 						</div>

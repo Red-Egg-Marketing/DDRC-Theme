@@ -13,12 +13,12 @@ import MarginSelector from '../../components/Margin.js';
 const SaveCTAGrid = ( { attributes } ) => {
 
 		const {
-			columns, bgColor, bgSlug, color, padding, blockId, margin
+			columns, bgColor, bgSlug, color, padding, blockId, margin, bg
 		} = attributes;
 		
 		const blockProps = useBlockProps.save({
 			id: blockId,
-			className: 'text-cards-grid' + ' columns-' + columns + (bgSlug != '' ? ' ' + bgSlug + ' with-bg' : '')
+			className: 'text-cards-grid' + ' columns-' + columns + (bgSlug != '' ? ' ' + bgSlug + ' with-bg' : '') + (bg != '' ? ' ' + bg : '')
 		});
 		
 		return (

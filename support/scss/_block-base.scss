@@ -146,22 +146,27 @@ h4 {
 
 .border-red figure {
 	border-color: $red !important;
+	background: $red !important;
 }
 
 .border-orange figure {
 	border-color: $orange !important;
+	background: $orange !important;
 }
 
 .border-light-orange figure {
 	border-color: $light-orange !important;
+	background: $light-orange !important;
 }
 
 .border-teal figure {
 	border-color: $teal !important;
+	background: $teal !important;
 }
 
 .border-purple figure {
 	border-color: $purple !important;
+	background: $purple !important;
 }
 
 .underline {
@@ -653,8 +658,6 @@ div#CybotCookiebotDialog {
 }
 
 .block-wrapper {
-	display: flex;
-	flex-wrap: wrap;
 	max-width: $max-cont-w + 200px;
 	width: 100%;
 	margin: 0 auto;
