@@ -112,7 +112,7 @@ const MarginSelector = (props, clientId) => {
             <InspectorControls>
 			<PanelBody
 					title={__('Margin')}
-					initialOpen={true}
+					initialOpen={false}
 				>
                     <Flex>
                     <FlexItem>

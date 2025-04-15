@@ -10,17 +10,28 @@
 	}
 }
 
+.stat-callout {
+	background-image: url(img/pinwheel-pattern.svg);
+	background-repeat: repeat;
+	background-size: 200px;
+	@media screen and (min-width: $small-width) {
+		background-size: 275px;
+	}
+}
+
 .stat-callout .block-wrapper {
-	max-width: $max-cont-w;
+	max-width: $max-cont-w - 400px;
 	margin: 0 auto;
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	grid-column-gap: 20px;
 	@media screen and (min-width: $small-width) {
 		padding-left: 2.5rem;
 		padding-right: 2.5rem;
+		grid-column-gap: 40px;
 	}
 }
 
@@ -28,9 +39,12 @@
 	flex: 0 100%;
 	max-width: 100%;
 	box-sizing: border-box;
+	text-align: center;
+	margin-top: 30px;
 	@media screen and (min-width: $small-width) {
-		flex: 0 33.3333%;
-		max-width: 33.3333%;
+		margin-top: 0;
+		text-align: left;
+		flex: 1;
 	}
 }
 
@@ -39,36 +53,51 @@
 	max-width: 100%;
 	box-sizing: border-box;
 	@media screen and (min-width: $small-width) {
-		flex: 0 66.666667%;
-		max-width: 66.666667%;
+		flex: 1;
 	}
 }
 
 .stat {
-	background: $light-blue;
-	border-radius: 10px;
-	text-align: center;
-	padding: 1.25rem;
+	text-align: left;
 }
 
 .stat p {
-	color: $bg-color-7;
-	font-weight: 600;
-	font-size: 16px;
-	line-height: 19px;
-	margin-top: 0;
+	color: white;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 26px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	margin-top: 15px;
 	@media screen and (min-width: $small-width) {
-		font-size: 20px;
-		line-height: 31px;
+		letter-spacing: 2px;
+		font-size: 30px;
+		line-height: 42px;
+		margin-top: 40px;
 	}
+}
+
+.stat p:last-of-type {
+	margin-bottom: 0;
 }
 
 .stat-description {
-	@media screen and (min-width: $small-width) {
-		padding-left: 5rem;
-	}
+	border-bottom: 3px solid $green;
 }
 
+.stat-description .wp-block-heading {
+	font-size: 42px;
+	line-height: 50px;
+	font-style: italic;
+	color: white;
+	margin-top: 0;
+	text-align: center;
+	@media screen and (min-width: $small-width) {
+		text-align: left;
+		font-size: 65px;
+		line-height: 82px;
+	}
+}
 
 .wp-block.stat-callout .header-title {
 	opacity: 1;
@@ -94,13 +123,15 @@
 }
 
 .stat .header-title {
-	font-size: 36px;
-	line-height: 49px;
-	color: $bg-color-7;
-	font-weight: 700;
+	font-size: 65px;
+	line-height: 65px;
+	color: $green;
+	margin-top: 0;
+	font-weight: 900;
 	margin-bottom: 0;
+	font-family: $font-body;
 	@media screen and (min-width: $small-width) {
-		font-size: 52px;
-		line-height: 70px;
+		font-size: 110px;
+		line-height: 110px;
 	}
 }

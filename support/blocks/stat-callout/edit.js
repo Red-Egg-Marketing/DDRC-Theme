@@ -3,6 +3,7 @@ const { Fragment } = wp.element;
 const { RichText, MediaUpload, InnerBlocks, InspectorControls, useBlockProps } = wp.blockEditor;
 const { Button, PanelBody, SelectControl, ColorPalette, ToggleControl, RangeControl } = wp.components;
 const { __ } = wp.i18n;
+import BackgroundColor from '../../components/BackgroundColor.js';
 import Content from '../../components/Content.js';
 import Header from '../../components/Header.js';
 import PaddingSelector from '../../components/Padding.js';
@@ -15,12 +16,12 @@ const template = [
 
 const EditCTA = ( { attributes, setAttributes, clientId } ) => {
 		const {
-			content, title, padding, blockId, margin
+			content, title, padding, blockId, margin, bgColor, bgSlug
 		} = attributes;
 
 
 		const blockProps = useBlockProps({
-			className: 'stat-callout'
+			className: 'stat-callout' + (bgSlug != '' ? ' ' + bgSlug + ' with-bg' : '')
 		});
 
 		React.useEffect( () => {
@@ -41,6 +42,11 @@ const EditCTA = ( { attributes, setAttributes, clientId } ) => {
 						setAttributes={ setAttributes }
 						margin={ margin }
 						id={ 'block-' + clientId }
+					/>
+					<BackgroundColor
+						bgColor={ bgColor }
+						bgSlug={ bgSlug }
+						setAttributes={ setAttributes }
 					/>
 				</InspectorControls>
 				<div {...blockProps}>

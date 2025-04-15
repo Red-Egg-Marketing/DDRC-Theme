@@ -12,12 +12,12 @@ import MarginSelector from '../../components/Margin.js';
 
 const SaveCTA = ( { attributes } ) => {
 		const {
-			content, title, padding, blockId, margin 
+			bgColor, bgSlug, content, title, padding, blockId, margin 
 		} = attributes;
 
 		const blockProps = useBlockProps.save({
 			id: blockId,
-			className: 'stat-callout'
+			className: 'stat-callout' + (bgSlug != '' ? ' ' + bgSlug + ' with-bg' : '')
 		});
 	
 		return (

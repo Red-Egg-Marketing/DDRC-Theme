@@ -36,7 +36,15 @@ registerBlockType( 'ddrc-theme-blocks/stat-callout', {
 		},
 		blockId: {
 			type: 'string'
-		}
+		},
+		bgColor: {
+			type: 'string',
+			default: ''
+		},
+		bgSlug: {
+			type: 'string',
+			default: ''
+		},
 	},
 	edit: edit,
 	save: save,

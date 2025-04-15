@@ -112,7 +112,7 @@ const PaddingSelector = (props, clientId) => {
             <InspectorControls>
 			<PanelBody
 					title={__('Padding')}
-					initialOpen={true}
+					initialOpen={false}
 				>
                     <Flex>
                     <FlexItem>
