@@ -29,6 +29,17 @@ const widthOptions = [
     },
 ];
 
+const BGOptions = [
+    {
+        label: __( '--' ),
+        disabled: true
+    },
+    {
+        label: __( 'Light Blue' ),
+        value: 'light-blue',
+    },
+];
+
 const EditCTA = ( { attributes, setAttributes } ) => {
 		const {
 			width, icons, bgColor, bgSlug, link, content, buttonText, iconColor
@@ -159,6 +170,21 @@ const EditCTA = ( { attributes, setAttributes } ) => {
             				onChange={ ( selectedWidth ) => {
             					setAttributes({
             						width: selectedWidth
+            					});
+            				}}
+        				/>
+					</PanelBody>
+					<PanelBody
+						title={__('Card Background')}
+						initialOpen={ false }
+					>
+						<SelectControl
+							label={ __( 'Background Color' ) }
+            				options={ BGOptions }
+            				value={ cardBG }
+            				onChange={ ( selectedBG ) => {
+            					setAttributes({
+            						cardBG: selectedBG
             					});
             				}}
         				/>
