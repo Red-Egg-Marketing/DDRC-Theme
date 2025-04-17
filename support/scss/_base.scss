@@ -637,22 +637,21 @@ textarea {
 	padding-left: 0;
 }
 
-// .main-navigation ul ul {
-// 	width: 100%;
-// 	@media screen and (min-width: $med-small-width) {
-// 		float: left;
-// 		position: absolute;
-// 		top: 100%;
-// 		background: white;
-// 		min-width: 600px;
-// 		border-radius: 12px;
-// 		border: 2px solid #EDF5FE;
-// 		width: auto;
-// 		left: -999em;
-// 		z-index: 99999;
-// 		padding: 15px;
-// 	}
-// }
+.main-navigation ul ul {
+	width: 100%;
+	@media screen and (min-width: $med-small-width) {
+		float: left;
+		position: absolute;
+		top: 100%;
+		background: white;
+		border-radius: 20px;
+		width: auto;
+		left: -999em;
+		z-index: 99999;
+		padding: 15px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, .16);
+	}
+}
 
 .main-navigation ul ul li {
 	margin-left: 0;

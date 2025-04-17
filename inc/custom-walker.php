@@ -1,9 +1,11 @@
 <?php
 
-class ddrc_theme_Menu_Walker extends Walker_Nav_Menu {
+class DDRC_Menu_Walker extends Walker_Nav_Menu {
 	function start_el(&$output, $data_object, $depth=0, $args=[], $current_object_id = 0) {
 		// Restores the more descriptive, specific name for use within this method.
 		$menu_item = $data_object;
+
+		print_r($menu_item);
 
 		$columns = $menu_item->column;
 
@@ -14,6 +16,7 @@ class ddrc_theme_Menu_Walker extends Walker_Nav_Menu {
 			$t = "\t";
 			$n = "\n";
 		}
+
 		$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
 
 		$classes   = empty( $menu_item->classes ) ? array() : (array) $menu_item->classes;
@@ -29,6 +32,8 @@ class ddrc_theme_Menu_Walker extends Walker_Nav_Menu {
 		 * @param int      $depth     Depth of menu item. Used for padding.
 		 */
 		$args = apply_filters( 'nav_menu_item_args', $args, $menu_item, $depth );
+
+		// $args->mega_menu = true;
 
 		/**
 		 * Filters the CSS classes applied to a menu item's list item element.
@@ -117,17 +122,16 @@ class ddrc_theme_Menu_Walker extends Walker_Nav_Menu {
 		 */
 		$title = apply_filters( 'nav_menu_item_title', $title, $menu_item, $args, $depth );
 
-		print_r($args);
 		$item_output  = $args->before;
-		if (function_exists('get_field')){
-			$is_modal = get_field('modal', $menu_item->ID);
-			$form = get_field('menu_form', 'options');
-			if ($is_modal == 'yes') {
+		// if (function_exists('get_field')){
+		// 	$is_modal = get_field('modal', $menu_item->ID);
+		// 	$form = get_field('menu_form', 'options');
+		// 	if ($is_modal == 'yes') {
 
-				$attributes .= ' ' . 'data-fancybox';
-				$attributes .= ' ' . 'data-src="#modal-form-' . $form . '"';
-			}
-		}
+		// 		$attributes .= ' ' . 'data-fancybox';
+		// 		$attributes .= ' ' . 'data-src="#modal-form-' . $form . '"';
+		// 	}
+		// }
 
 		$item_output .= $atts['href'] != '' ? '<a' . $attributes . '>' : '';
 		$item_output .= $args->link_before . $title . $args->link_after;
@@ -160,8 +164,9 @@ class ddrc_theme_Menu_Walker extends Walker_Nav_Menu {
 			$t = "\t";
 			$n = "\n";
 		}
+
 		$indent = str_repeat( $t, $depth );
-		$button = $depth == 0 ? '<button class="toggle-menu">Toggle</button>' : '';
+		// $button = $depth == 0 ? '<button class="toggle-menu">Toggle</button>' : '';
 
 		// Default class.
 		$classes = array( 'sub-menu' );
@@ -181,6 +186,11 @@ class ddrc_theme_Menu_Walker extends Walker_Nav_Menu {
 		$output .= "{$n}{$indent}{$button}<ul$class_names>{$n}";
 	}
 
+}
+
+add_filter('walker_nav_menu_start_el', 'ddrc_custom_menu_start_el', 10, 4);
+function ddrc_custom_menu_start_el($item_output, $item, $depth, $args) {
+	return $item_output;
 }
 
 ?>

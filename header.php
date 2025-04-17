@@ -65,70 +65,11 @@ if (function_exists('get_field')) {
 							'theme_location' => 'menu-1',
 							'menu_id'        => 'primary-menu',
 							'menu_class'	 => 'nav-menu',
+							'walker' => new DDRC_Menu_Walker()
 						)
 					);
 				
 				?>
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'DDRC' ); ?></button>
-
-				<div class="hide-away-menu">
-					<div class="wrapper">
-					<div class="sub-col">
-						<h3>Featured Insight</h3>
-						<?php 
-							ddrc_theme_featured_post();
-						?>
-					</div>
-					<div class="sub-col">
-						<div class="nav-wrap">
-						<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'menu-2',
-									'menu_id'        => 'secondary-menu',
-								)
-							);
-						?>
-						
-						</div>
-					</div>
-					<aside class="sub-col">
-						<div class="nav-wrap">
-						<?php
-
-							wp_nav_menu(
-								array(
-									'theme_location' => 'menu-3',
-									'menu_id'        => 'secondary-aside-menu',
-								)
-							);
-							
-						?>
-						<ul class="social">
-						<?php
-							if (is_array($company_settings['icons']) && sizeof($company_settings['icons']) > 0) {
-                            	foreach($company_settings['icons'] as $icon) {
-                            	    $src = $icon['social']['link'];
-                            	    $class = $icon['social']['icon_class'];
-                            	    ?>
-                            	        <li><a href="<?= $src; ?>" class="fa-brands fa-<?= $class; ?>" target="_blank"></a></li>
-                            	    <?php
-                            	}
-                        	}
-						?>
-						</ul>
-						<address>
-							<p>
-                            <?= $company_settings['street']; ?><br />
-                            <?= $company_settings['city']; ?>, <?= $company_settings['state']; ?> <?= $company_settings['zip']; ?>
-						</address>
-						<p class="phone">
-							<a href="tel:<?= $company_settings['phone']; ?>"><?= $company_settings['phone']; ?></a>
-						</p>
-						</div>
-					</aside>
-					</div>
-				</div>
 
 			</nav><!-- #site-navigation -->
 
