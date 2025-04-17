@@ -14,6 +14,10 @@ registerBlockType( 'ddrc-theme-blocks/cards-grid', {
 			type: 'string',
 			default: '3'
 		},
+		imgSize: {
+			type: 'string',
+			default: 'large'
+		},
 		bgColor: {
 			type: 'string',
 			default: ''

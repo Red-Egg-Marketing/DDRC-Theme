@@ -11,7 +11,7 @@ import PaddingSelector from '../../components/Padding.js';
 import MarginSelector from '../../components/Margin.js';
 
 const template = [
-	['ddrc-theme-blocks/contact-content'],
+	['ddrc-theme-blocks/header-intro'],
 	['ddrc-theme-blocks/contact-forms']
 ];
 
@@ -55,9 +55,9 @@ const EditContact = ( { attributes, setAttributes, clientId } ) => {
 				</InspectorControls>
 				<div {...blockProps}>
 					<div className="block-wrapper">
-						<div className="block-content">
+						<div className="content">
 							<InnerBlocks 
-								allowedBlocks={ ['ddrc-theme-blocks/contact-content', 'ddrc-theme-blocks/contact-forms'] }
+								allowedBlocks={ ['ddrc-theme-blocks/header-intro', 'ddrc-theme-blocks/contact-forms'] }
 								template={ template }
 							/>
 						</div>

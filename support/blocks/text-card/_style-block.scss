@@ -16,7 +16,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: stretch;
-	background: $light-grey;
 	border-radius: 20px;
 	margin-top: 75px;
 	@media screen and (min-width: $med-width + 1px) {
@@ -45,6 +44,22 @@
 	}
 	@media screen and (min-width: $small-width) and (max-width: $med-width) {
 		width: calc(33.3333% - 45px);
+	}
+}
+
+.text-cards-grid.small .text-card figure {
+	width: 90px;
+	height: 90px;
+	margin-top: -45px;
+	@media screen and (min-width: $small-width) and (max-width: $med-width) {
+		width: 120px;
+		height: 120px;
+		margin-top: -60px;
+	}
+	@media screen and (min-width: $med-width + 1px) {
+		width: 180px;
+		height: 180px;
+		margin-top: -90px;
 	}
 }
 

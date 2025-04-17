@@ -8,11 +8,11 @@ import Icons from '../../components/Icons.js';
 
 const SaveCTA = ( { attributes } ) => {
 		const {
-			width, icons, bgSlug, iconColor
+			width, icons, bgSlug, iconColor, cardBG
 		} = attributes;
 
 		const blockProps = useBlockProps.save({
-			className: 'text-card' + ' width-' + width + ' ' + 'border-' + bgSlug
+			className: 'text-card' + ' width-' + width + ' ' + 'border-' + bgSlug + ' ' + cardBG
 		});
 	
 		return (

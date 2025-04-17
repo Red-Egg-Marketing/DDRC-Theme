@@ -17,10 +17,26 @@ const template = [
 	['ddrc-theme-blocks/text-card', {}],
 ];
 
+
+const ImageSize = [
+    {
+        label: __( '--' ),
+        disabled: true
+    },
+    {
+        label: __( 'Small' ),
+        value: 'small',
+    },
+    {
+        label: __( 'Large' ),
+        value: 'large',
+    },
+];
+
 const EditCTAGrid = ( { attributes, setAttributes, clientId } ) => {
 
 		const {
-			columns, bgColor, bgSlug, color, padding, blockId, margin, bg
+			columns, bgColor, bgSlug, color, padding, blockId, margin, bg, imgSize
 		} = attributes;
 
 		const onChangeContent = (value) => {
@@ -30,7 +46,7 @@ const EditCTAGrid = ( { attributes, setAttributes, clientId } ) => {
 		}
 
 		const blockProps = useBlockProps({
-			className: 'text-cards-grid' + ' columns-' + columns + (bgSlug != '' ? ' ' + bgSlug + ' with-bg' : '') + (bg != '' ? ' ' + bg : '')
+			className: 'text-cards-grid' + ' columns-' + columns + (bgSlug != '' ? ' ' + bgSlug + ' with-bg' : '') + (bg != '' ? ' ' + bg : '') + (imgSize != '' ? ' ' + imgSize : '')
 		});	
 
 		React.useEffect( () => {
@@ -42,6 +58,21 @@ const EditCTAGrid = ( { attributes, setAttributes, clientId } ) => {
 		return (
 			<Fragment>
 				<InspectorControls>
+					<PanelBody
+						title={__('Image Size')}
+						initialOpen={ false }
+					>
+						<SelectControl
+							label={ __( 'Size' ) }
+            				options={ ImageSize }
+            				value={ imgSize }
+            				onChange={ ( selectedSize ) => {
+            					setAttributes({
+            						imgSize: selectedSize
+            					});
+            				}}
+        				/>
+					</PanelBody>
 					<PaddingSelector
 						setAttributes={ setAttributes }
 						padding={ padding }

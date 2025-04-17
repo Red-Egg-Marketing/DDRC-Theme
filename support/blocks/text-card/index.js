@@ -13,6 +13,10 @@ registerBlockType( 'ddrc-theme-blocks/text-card', {
 	category: 'layout',
 	parent: ['ddrc-theme-blocks/cards-grid'],
 	attributes: {
+		cardBG: {
+			type: 'string',
+			default: 'light-grey'
+		},
 		bgColor: {
 			type: 'string',
 			default: ''

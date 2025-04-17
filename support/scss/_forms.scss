@@ -49,7 +49,7 @@ div.gform_wrapper.gravity-theme .chosen-container-multi .chosen-choices li.searc
 div.gform_wrapper.gravity-theme .chosen-container-multi input.chosen-search-input {
 	width: 100% !important;
 	box-shadow: none !important;
-	font-family: $font-head;
+	font-family: $font-body;
   color: $body-color;
   font-size: 18px;
   line-height: 30px;
@@ -100,12 +100,11 @@ div.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]
 	background: white;
 	border-radius: 0;
 	border: none;
-	box-shadow: 0 0 8px rgba(0, 0, 0, .16);
 	-webkit-appearance: none;
 	padding-left: 15px;
 	padding-right: 15px;
-	padding-top: 12px;
-	padding-bottom: 12px;
+	padding-top: 18px;
+	padding-bottom: 18px;
 	font-size: 18px;
 	line-height: 27px;
 	color: $body-color;
@@ -113,8 +112,8 @@ div.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]
 	font-weight: 300;
 	width: 100%;
 	@media screen and (min-width: $form-width) {
-		font-size: 18px;
-		line-height: 32px;
+		font-size: 22px;
+		line-height: 36px;
 	}
 }
 
@@ -160,12 +159,10 @@ body div.gform_wrapper .ginput_complex {
 div.gform_wrapper .ginput_container_select select {
  	appearance: none;
  	background: white url(img/down-chevron.svg) no-repeat calc(100% - 15px) center / 15px;
- 	box-shadow: 0 0 8px rgba(0, 0, 0, .16);
- 	border-radius: 5px;
  	padding-left: 15px;
- 	padding-right: 15px;
- 	padding-top: 12px;
-	padding-bottom: 12px;
+	padding-right: 15px;
+	padding-top: 18px;
+	padding-bottom: 18px;
  	font-size: 18px;
 	line-height: 27px;
 	color: $body-color;
@@ -173,8 +170,8 @@ div.gform_wrapper .ginput_container_select select {
 	font-weight: 300;
 	margin-bottom: 0;
  	@media screen and (min-width: $form-width) {
-		font-size: 18px;
-		line-height: 32px;
+		font-size: 22px;
+		line-height: 36px;
 		margin-bottom: 0;
 	}
 }
@@ -235,8 +232,8 @@ div.gform_wrapper.gravity-theme .gfield.gfield--width-half {
 
 div.gform_wrapper.gravity-theme .gform_fields {
 		@media screen and (min-width: $form-width) {
-			grid-column-gap: 28px;
-			grid-row-gap: 14px;
+			grid-column-gap: 45px;
+			grid-row-gap: 25px;
 		}
 }
 
@@ -313,10 +310,9 @@ div.gform_wrapper textarea {
 div.gform_wrapper input[type="submit"]:not([type=checkbox]):not([type=image]):not([type=file])	
  {
 	@extend .wp-block-button__link;
-	min-height: 56px;
+	min-height: 62px;
 	width: auto;
 	padding-right: 45px; 
-	border-radius: 0;
 	@media only screen and (max-width: $form-width) {
 		line-height: 1;
 		width: 100%;
@@ -502,47 +498,47 @@ div.gform_wrapper .ginput_complex span {
 }
 
 .gform_wrapper ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  font-family: $font-head;
+  font-family: $font-body;
   line-height: 30px;
-  color: $body-color;
+  color: #000000;
   font-size: 18px;
-  @media screen and (min-width: $form-width) {
-  	font-size: 18px;
-  	line-height: 32px;
-  }
+ 	@media screen and (min-width: $form-width) {
+		font-size: 22px;
+		line-height: 36px;
+	}
 }
 
 .gform_wrapper ::-moz-placeholder { /* Firefox 19+ */
-  font-family: $font-head;
+  font-family: $font-body;
   line-height: 30px;
-  color: $body-color;
+  color: #000000;
   font-size: 18px;
   @media screen and (min-width: $form-width) {
-  	font-size: 18px;
-  	line-height: 32px;
-  }
+		font-size: 22px;
+		line-height: 36px;
+	}
 }
 
 .gform_wrapper :-ms-input-placeholder { /* IE 10+ */
-  font-family: $font-head;
+  font-family: $font-body;
   line-height: 30px;
-  color: $body-color;
+  color: #000000;
   font-size: 18px;
-  @media screen and (min-width: $form-width) {
-  	font-size: 18px;
-  	line-height: 32px;
-  }
+ 	@media screen and (min-width: $form-width) {
+		font-size: 22px;
+		line-height: 36px;
+	}
 }
 
 .gform_wrapper :-moz-placeholder { /* Firefox 18- */
-  font-family: $font-head;
+  font-family: $font-body;
   line-height: 30px;
-  color: $body-color;
+  color: #000000;
   font-size: 18px;
-  @media screen and (min-width: $form-width) {
-  	font-size: 18px;
-  	line-height: 32px;
-  }
+ 	@media screen and (min-width: $form-width) {
+		font-size: 22px;
+		line-height: 36px;
+	}
 }
 
 div.gform_wrapper .ginput_complex {
@@ -562,12 +558,12 @@ div.gform_wrapper.gravity-theme .ginput_complex:not(.ginput_container_address) s
 	padding-left: 0;
 }
 
-div.gform_wrapper .gform_footer,
+div.gform_wrapper.gravity-theme .gform_footer,
 div.gform_wrapper .gform_page_footer {
 	padding-top: 0;
 	margin-top: 20px;
 	@media screen and (min-width: $form-width) {
-		margin-top: 35px;
+		margin-top: 45px;
 	}
 }
 
@@ -618,8 +614,8 @@ div.gform_wrapper .gform_page_footer {
 .contact-section div.gform_wrapper div.charleft.warningTextareaInfo, 
 .contact-section div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
 .contact-section div.gform_wrapper .top_label .gfield_label {
-	color: white;
-	font-family: $font-head;
+	color: black;
+	font-family: $font-body;
 	font-size: 18px;
 	line-height: 29px;
 	@media screen and (min-width: $small-width) {
@@ -851,6 +847,6 @@ div.gform_wrapper .gform_drop_area button.gform_button_select_files {
 	text-transform: capitalize;
 	font-size: 26px;
 	line-height: 32px;
-	font-family: $font-head;
+	font-family: $font-body;
 
 }

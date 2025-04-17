@@ -33,7 +33,7 @@ const SaveContact = ( { attributes } ) => {
 				/>
 				<div {...blockProps}>
 					<div className="block-wrapper">
-						<div className="block-content">
+						<div className="content">
 							<InnerBlocks.Content />
 						</div>
 					</div>

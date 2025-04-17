@@ -35,14 +35,18 @@ const BGOptions = [
         disabled: true
     },
     {
-        label: __( 'Light Blue' ),
-        value: 'light-blue',
+        label: __( 'None' ),
+        value: '',
+    },
+    {
+        label: __( 'Light Grey' ),
+        value: 'light-grey',
     },
 ];
 
 const EditCTA = ( { attributes, setAttributes } ) => {
 		const {
-			width, icons, bgColor, bgSlug, link, content, buttonText, iconColor
+			width, icons, bgColor, bgSlug, link, content, buttonText, iconColor, cardBG
 		} = attributes;
 
 
@@ -152,7 +156,7 @@ const EditCTA = ( { attributes, setAttributes } ) => {
 		}
 
 		const blockProps = useBlockProps({
-			className: 'text-card' + ' width-' + width + ' ' + 'border-' + bgSlug
+			className: 'text-card' + ' width-' + width + ' ' + 'border-' + bgSlug + ' ' + cardBG
 		});	
 
 		
