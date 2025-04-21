@@ -14,6 +14,25 @@
 
 	var navWrapper = document.getElementById( 'masthead' );
 
+	var searchButtons = document.querySelectorAll('button.search-toggle');
+
+		searchButtons.forEach(function(searchButton){
+			searchButton.addEventListener('click', function(event){
+				var searchField = event.currentTarget.previousElementSibling;
+				var mainNav = event.currentTarget.parentElement.parentElement.parentElement;
+				mainNav.classList.toggle('search-active');
+				searchField.classList.toggle('search-active');
+
+				if (searchField.classList.contains('search-active')) {
+					var input = searchField.querySelector('input[type="search"]');
+					input.focus();
+					input.select();
+				}
+
+			});
+	});;
+
+
 
 	if (isTouch == true) {
 		document.addEventListener('touchend', removeMenuToggle);

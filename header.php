@@ -70,8 +70,15 @@ if (function_exists('get_field')) {
 					);
 				
 				?>
-
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'DDRC' ); ?></button>
 			</nav><!-- #site-navigation -->
+
+			<div class="search-navigation">
+				<div class="wrapper">
+					<?php echo do_shortcode('[base_search_shortcode]'); ?>
+					<button class="search-toggle">Search</button>
+				</div>
+			</div>
 
 		</div><!-- .wrapper -->
 		</div>

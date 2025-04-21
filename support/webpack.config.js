@@ -41,7 +41,7 @@ const extractConfig = {
 module.exports = {
   entry: {
     './assets/js/editor.blocks' : './blocks/index.js',
-    './assets/js/post-editor.blocks' : './blocks/index-post.js',
+    '../js/search' : './search.js',
     './assets/js/main' : './front-end.js'
   },
   output: {

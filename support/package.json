@@ -41,6 +41,7 @@
     "@wordpress/block-editor": "^3.9.1",
     "bootstrap": "^5.0.2",
     "es6-promise": "^4.2.8",
+    "fuzzyset": "^1.0.7",
     "lord-icon-element": "^3.4.3",
     "lottie-react-native": "^5.1.4",
     "lottie-web": "^5.9.6",

@@ -80,12 +80,24 @@ h4 {
 	background: $light-orange;
 }
 
+.light-orange-text {
+	color: $light-orange;
+}
+
 .teal {
 	background: $teal;
 }
 
+.teal-text {
+	color: $teal;
+}
+
 .red {
 	background: $red;
+}
+
+.red-text {
+	color: $red;
 }
 
 .navy {
@@ -100,12 +112,20 @@ h4 {
 	background: $bg-color-7;
 }
 
+.blue-green-text {
+	color: $bg-color-7;
+}
+
 .yellow {
 	background: $bg-color-5;
 }
 
 .orange {
 	background: $orange;
+}
+
+.orange-text {
+	color: $orange;
 }
 
 .grey {
@@ -116,8 +136,16 @@ h4 {
 	background: $purple;
 }
 
+.purple-text {
+	color: $purple;
+}
+
 .light-grey {
 	background: $light-grey;
+}
+
+.light-grey-text {
+	color: $light-grey;
 }
 
 .light-brown {
@@ -142,6 +170,10 @@ h4 {
 
 .green {
 	background: $green;
+}
+
+.green-text {
+	color: $green;
 }
 
 .border-red figure {

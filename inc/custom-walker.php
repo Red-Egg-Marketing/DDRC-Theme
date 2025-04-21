@@ -1,11 +1,94 @@
 <?php
 
 class DDRC_Menu_Walker extends Walker_Nav_Menu {
+
+	/**
+	 * Traverses elements to create list from elements.
+	 *
+	 * Display one element if the element doesn't have any children otherwise,
+	 * display the element and its children. Will only traverse up to the max
+	 * depth and no ignore elements under that depth. It is possible to set the
+	 * max depth to include all depths, see walk() method.
+	 *
+	 * This method should not be called directly, use the walk() method instead.
+	 *
+	 * @since 2.5.0
+	 *
+	 * @param object $element           Data object.
+	 * @param array  $children_elements List of elements to continue traversing (passed by reference).
+	 * @param int    $max_depth         Max depth to traverse.
+	 * @param int    $depth             Depth of current element.
+	 * @param array  $args              An array of arguments.
+	 * @param string $output            Used to append additional content (passed by reference).
+	 */
+	public function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
+		if ( ! $element ) {
+			return;
+		}
+		$id_field = $this->db_fields['id'];
+		$id       = $element->$id_field;
+		$classes = $element->classes;
+
+		if (function_exists('get_field')) {
+			$add_menus = get_field('add_menu_items', 'options');
+		}
+
+		// Display this element.
+		$this->has_children = ! empty( $children_elements[ $id ] );
+		if ( isset( $args[0] ) && is_array( $args[0] ) ) {
+			$args[0]['has_children'] = $this->has_children; // Back-compat.
+		}
+
+		$this->start_el( $output, $element, $depth, ...array_values( $args ) );
+
+		// Descend only when the depth is right and there are children for this element.
+		if ( ( 0 == $max_depth || $max_depth > $depth + 1 ) && isset( $children_elements[ $id ] ) ) {
+
+			$total_child = sizeof($children_elements[ $id ]);
+
+			foreach ( $children_elements[ $id ] as $key => $child ) {
+
+				if ( ! isset( $newlevel ) ) {
+					$newlevel = true;
+					// Start the child delimiter.
+					$this->start_lvl( $output, $depth, ...array_values( $args ) );
+				}
+				$this->display_element( $child, $children_elements, $max_depth, $depth + 1, $args, $output );
+
+
+				if (in_array('mega-menu', $classes) && $key == $total_child - 1) {
+					if($add_menus) {
+						$output .= '<ul class="sub-menu-child">';
+							foreach($add_menus as $add_menu) {
+								$menu_link = $add_menu['menu_item']['menu_link'];
+								$menu_class = $add_menu['menu_item']['menu_class'];
+								$menu_text = $add_menu['menu_item']['menu_text'];
+
+								$output .= '<li>';
+									$output .= '<a href="' . $menu_link . '" class="' . $menu_class . '">' . $menu_text . '</a>';
+								$output .= '</li>';
+							}
+						$output .= '</ul>';
+					}
+
+				}
+			}
+			unset( $children_elements[ $id ] );
+		}
+
+		if ( isset( $newlevel ) && $newlevel ) {
+			// End the child delimiter.
+			$this->end_lvl( $output, $depth, ...array_values( $args ) );
+		}
+
+		// End this element.
+		$this->end_el( $output, $element, $depth, ...array_values( $args ) );
+	}
+
+
 	function start_el(&$output, $data_object, $depth=0, $args=[], $current_object_id = 0) {
 		// Restores the more descriptive, specific name for use within this method.
 		$menu_item = $data_object;
-
-		print_r($menu_item);
 
 		$columns = $menu_item->column;
 
@@ -166,7 +249,7 @@ class DDRC_Menu_Walker extends Walker_Nav_Menu {
 		}
 
 		$indent = str_repeat( $t, $depth );
-		// $button = $depth == 0 ? '<button class="toggle-menu">Toggle</button>' : '';
+		$button = $depth == 0 ? '<button class="toggle-menu">Toggle</button>' : '';
 
 		// Default class.
 		$classes = array( 'sub-menu' );

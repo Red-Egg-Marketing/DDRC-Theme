@@ -157,6 +157,14 @@ function ddrc_theme_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
+	 wp_register_script(
+        'site-search',
+        get_stylesheet_directory_uri() . '/js/search.js',
+        ['jquery', 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor', 'wp-dom-ready', 'lodash' ],
+        '1.1.7',
+        true
+    );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'ddrc_theme_scripts' );
@@ -284,6 +292,12 @@ require get_template_directory() . '/inc/posts.php';
  * Menu Functions
  */
 require get_template_directory() . '/inc/menu-functions.php';
+
+
+/**
+ * Shortcodes
+ */
+require get_template_directory() . '/inc/shortcodes.php';
 
 
 
