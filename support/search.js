@@ -16,9 +16,9 @@ const SaveSearch = ( { attributes } ) => {
   		const matchInfo = (item) => {
   			let search = data['search'];
   			item = item.toLowerCase();
-  			item = item.split(' ');
   			let s = search.toLowerCase();
   			let test = FuzzySet(item, false);
+  			console.log(test);
   			let match = test.get(s);
   			if (match != null) {
   				let success = match[0][0];
