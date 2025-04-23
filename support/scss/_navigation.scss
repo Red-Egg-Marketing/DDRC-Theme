@@ -754,6 +754,7 @@ li.menu-item.nav-button a {
 	padding: 0 !important;
 	border: none;
 	text-indent: -100000px;
+	margin-left: 8px;
 	background: url(img/search.svg) no-repeat center center / 25px;
 }
 
@@ -763,10 +764,6 @@ li.menu-item.nav-button a {
 
 .results .content {
 	margin-bottom: 0;
-}
-
-.search-active .search-toggle:focus {
-	outline: none;
 }
 
 .search-toggle:active,
@@ -797,6 +794,9 @@ li.menu-item.nav-button a {
 	padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 
 .site-header .search-filters {
@@ -810,6 +810,95 @@ li.menu-item.nav-button a {
 .main-wrapper.search-active .search-filters {
 	display: block;
 	min-width: 200px;
+	@media screen and (min-width: $med-small-width) {
+		min-width: 500px;
+	}
+}
+
+.search-filters {
+	position: relative;
+}
+
+button.clear {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	height: 100%;
+	background: none;
+	color: #888888;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.search-filters input[type="search"] {
+	transition: none;
+	background: white url(img/search.svg) no-repeat calc(100% - 15px) center / 20px;
+	width: 100%;
+	padding: 10px 10px;
+	font-size: 18px;
+	border: 1px solid $green;
+	border-radius: 0;
+	@media screen and (min-width: $med-small-width) {
+		padding: 15px 20px;
+		font-size: 20px;
+	}
+}
+
+.search-filters input[type="search"]:focus-visible {
+	background: white;
+}
+
+.search-filters input[type="search"].active-search {
+	background: white;
+}
+
+.search-filters input[type="submit"] {
+	position: absolute;
+	left: -100000px;
+}
+
+.results-container {
+	position: relative;
+	width: 100%;
+}
+
+.results-container .results {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: white;
+	width: 100%;
+	max-height: 400px;
+	overflow-y: auto;
+	z-index: 99;
+	border-left: solid #F3F5F7;
+	border-right: solid #F3F5F7;
+	border-bottom: solid #F3F5F7;
+	box-shadow: 0 12px 10px -2px rgba(0, 0, 0, .15);
+}
+
+.result.error {
+	padding: 5px 10px;
+}
+
+.result a {
+	display: flex;
+	align-items: center;
+	text-decoration: none !important;
+	padding: 5px 10px;
+	border-bottom: 1px solid #F3F5F7;
+}
+
+.result a:focus,
+.result a:hover {
+	background: #F3F5F7;
+}
+
+.result h3 {
+	font-size: 18px;
+	margin-bottom: 0;
+	text-decoration: none;
 }
 
 

@@ -3,7 +3,7 @@ const { render, Fragment, useState } = wp.element;
 const { RangeControl, PanelBody, TextControl, SelectControl, Button, Toolbar, ToolbarButton, Popover, withFocusOutside, Dashicon } = wp.components;
 const { useDispatch, useSelect, replaceInnerBlocks } = wp.data;
 const { __ } = wp.i18n;
-import FuzzySet from 'fuzzyset';
+// import FuzzySet from 'fuzzyset';
 const ResourcesRootNew = document.getElementsByClassName('search-site');
 
 const SaveSearch = ( { attributes } ) => {
@@ -13,20 +13,19 @@ const SaveSearch = ( { attributes } ) => {
   		const [searchActive, setSearch] = useState(false);
   		const [data, setData] = useState({});
 
-  		const matchInfo = (item) => {
-  			let search = data['search'];
-  			item = item.toLowerCase();
-  			let s = search.toLowerCase();
-  			let test = FuzzySet(item, false);
-  			console.log(test);
-  			let match = test.get(s);
-  			if (match != null) {
-  				let success = match[0][0];
-  				return success > 0.6;
-  			} else {
-  				return false;
-  			}
-  		}
+  		// const matchInfo = (item) => {
+  		// 	let search = data['search'];
+  		// 	item = item.toLowerCase();
+  		// 	let s = search.toLowerCase();
+  		// 	let test = FuzzySet(item, false);
+  		// 	let match = test.get(s);
+  		// 	if (match != null) {
+  		// 		let success = match[0][0];
+  		// 		return success > 0.6;
+  		// 	} else {
+  		// 		return false;
+  		// 	}
+  		// }
   		
   		const filterResources = () => {
 
@@ -34,11 +33,45 @@ const SaveSearch = ( { attributes } ) => {
 	  			let info = '';
     			let title = post.post_title;
     			let content = post.content;
-    			let truthy = false;
+    			let search = data['search'];
+    			let reg = new RegExp(`${search}`, 'i');
     			info += title + ' ' + content;
-    			let match = matchInfo(info);
-    			return match;
+    			let match = info.search(reg);
+    			let truthy = false;
+    			// let match = matchInfo(info);
+
+    			// check phrase is found
+    			if (match == -1 || search == '') {
+    				truthy = false;
+    			} else {
+    				data['excerpt'] = search;
+    				setData({
+  						...data
+  					});
+    				truthy = true;
+    			}
+
+    			// if not split phrase into separate words, will return if 50% greater match
+    			if (truthy == false) {
+    				let splitText = search.split(' ');
+    				let total = splitText.length;
+    				let it = 0;
+    				splitText.forEach((text) => {
+    					let newReg = new RegExp(`${text}`, 'i');
+    					let newMat = info.search(newReg);
+    					if(newMat != -1) {
+    						it+=1;
+    					}
+    					
+    				});
+    				if (it/total > 0.6) {
+    					truthy = true;
+    				}
+    			}
+
+    			return truthy;
     		});
+
     		return temp;
 	  	}
 
@@ -124,6 +157,7 @@ const SaveSearch = ( { attributes } ) => {
 											<a href={ link }>
 												<div className="content">
 													<h3>{title}</h3>
+													<p>{data['excerpt']}</p>
 												</div>
 											</a>
 										</div>
