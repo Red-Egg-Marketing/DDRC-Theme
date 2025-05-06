@@ -6,11 +6,11 @@
 }
 
 .resources-block {
-	padding-top: 4.25rem;
-	padding-bottom: 4.25rem;
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
 	@media screen and (min-width: $small-width) {
-		padding-top: 6.75rem;
-		padding-bottom: 6.75rem;
+		padding-top: 2.75rem;
+		padding-bottom: 2.75rem;
 	}
 }
 
@@ -21,18 +21,6 @@
 	@media screen and (min-width: $small-width) {
 		padding-top: 3.675rem;
 		padding-bottom: 1rem;
-	}
-}
-
-.resources-block .block-wrapper {
-	width: 100%;
-	max-width: $max-cont-w + 200px;
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
-	margin: 0 auto;
-	@media screen and (min-width: $small-width) {
-		padding-left: 2.5rem;
-		padding-right: 2.5rem;
 	}
 }
 
@@ -50,6 +38,28 @@
 
 .resources-block .header-title {
 	margin-top: 0;
+}
+
+@supports (display: grid) {
+
+	.resources-block .resources.grid {
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+		@media screen and (min-width: $small-width) and (max-width: $med-width) {
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 1.5rem;
+			grid-row-gap: 1.5rem;
+			padding-left: 1.25rem;
+			padding-right: 1.25rem;
+		}
+		@media screen and (min-width: $med-width + 1px) {
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 2.5rem;
+			grid-row-gap: 2.5rem;
+			padding-left: 1.25rem;
+			padding-right: 1.25rem;
+		}
+	}
 }
 
 // .selected-resources {

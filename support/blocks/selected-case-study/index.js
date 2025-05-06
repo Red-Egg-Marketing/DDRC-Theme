@@ -5,19 +5,14 @@ import save from './save';
 
 registerBlockType( 'ddrc-theme-blocks/selected-case-study', {
 	apiVersion: 2,
-	title: __( 'Selected Projects', 'ddrc-theme-blocks' ),
-	description: __( 'Block for a selecting Case Studies by category. Displays statistics block associated with Case Study.', 'ddrc-theme-blocks' ),
+	title: __( 'Selected Spotlight Stories', 'ddrc-theme-blocks' ),
+	description: __( 'Block for a selecting Spotlight Stories by category. Displays statistics block associated with Case Study.', 'ddrc-theme-blocks' ),
 	icon: 'welcome-write-blog',
 	category: 'layout',
 	attributes: {
 		resources: {
-			type: 'string',
-			source: 'html',
-			default: ''
-		},
-		anchor: {
-			type: 'string',
-			default: ''
+			type: 'array',
+			default: []
 		},
 		category : {
 			type: 'string',
@@ -25,6 +20,9 @@ registerBlockType( 'ddrc-theme-blocks/selected-case-study', {
 		mainTitle : {
 			type: 'string',
 		}
+	},
+	supports: {
+		anchor: true
 	},
 	edit: edit,
 	save: save

@@ -4,11 +4,16 @@ const { __ } = wp.i18n;
 import PaddingSelector from '../../components/Padding.js';
 import MarginSelector from '../../components/Margin.js';
 
-const SaveSelectedProject = ( { attributes } ) => {
+const SaveSelectedPost = ( { attributes } ) => {
 
 	const {
-		padding, blockId, margin
+		resource, padding, blockId, margin, postID
 	} = attributes;
+
+	const blockProps = useBlockProps.save({
+			className: 'post-recent',
+			id: blockId
+	});
 
 	return  (
 		<Fragment>
@@ -20,9 +25,15 @@ const SaveSelectedProject = ( { attributes } ) => {
 				margin={ margin }
 				id={ blockId }
 			/>
-			<InnerBlocks.Content />
+			<div 
+				{...blockProps}
+				data-resource={ postID }
+			>
+				<InnerBlocks.Content />
+				<div className="wrapper"></div>
+			</div>
 		</Fragment>
 	);
 }
 
-export default SaveSelectedProject;
+export default SaveSelectedPost;

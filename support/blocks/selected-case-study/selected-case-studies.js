@@ -4,7 +4,7 @@ import Swiper from 'swiper/bundle';
 (function() {
 
 	function FeatureCaseStudies() {
-		const apiUrl = '/wp-json/providence/v2/case-studies';
+		const apiUrl = '/wp-json/ddrc/v2/case-studies';
 		const grids = document.querySelectorAll('.selected-case-studies');
 
   		if (grids && grids != null) {

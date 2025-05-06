@@ -10,7 +10,7 @@ registerBlockType( 'ddrc-theme-blocks/contact-forms', {
 	description: __( ' Can contain blocks for header and description in column format. Useful for introduction to section.', 'ddrc-theme-blocks' ),
 	apiVersion: 2,
 	icon: 'align-center',
-	parent: ['ddrc-theme-blocks/contact'],
+	parent: ['ddrc-theme-blocks/contact', 'ddrc-theme-blocks/sign-up'],
 	category: 'layout',
 	edit: edit,
 	save: save,

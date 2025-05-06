@@ -3,21 +3,10 @@
 function base_build_search() {
 
 	wp_enqueue_script( 'site-search' );
-	$a = [
-		'featured' => false,
-		'limit' => -1,
-		'title' => false,
-		'search' => true
-	];
-	$posts_array = get_post_type_json($a);
 
-	$html = '<div class="search-site shortcode-wrap">';
+	$html = '<div class="shortcode-wrap">';
+	$html .= get_search_form(['echo' => false]);
 	$html .= '</div>';
-
-	wp_localize_script(
-       'site-search',
-       'posts_search', $posts_array[0]
-    );
 
 	return $html;
 }

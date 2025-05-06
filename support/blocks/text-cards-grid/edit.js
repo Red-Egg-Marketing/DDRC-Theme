@@ -47,7 +47,7 @@ const EditCTAGrid = ( { attributes, setAttributes, clientId } ) => {
 
 		const blockProps = useBlockProps({
 			className: 'text-cards-grid' + ' columns-' + columns + (bgSlug != '' ? ' ' + bgSlug + ' with-bg' : '') + (bg != '' ? ' ' + bg : '') + (imgSize != '' ? ' ' + imgSize : '')
-		});	
+		});
 
 		React.useEffect( () => {
         	if ( ! blockId ) {

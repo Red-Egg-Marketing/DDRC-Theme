@@ -5,9 +5,9 @@ const { __ } = wp.i18n;
 import edit from './edit';
 import save from './save';
 
-registerBlockType( 'providence/hero', {
+registerBlockType( 'ddrc/hero', {
 	apiVersion: 2,
-	title: __( 'Hero', 'DDRC' ),
+	title: __( 'Home Hero Block', 'DDRC' ),
 	icon: 'id',
 	category: 'layout',
 	attributes: {

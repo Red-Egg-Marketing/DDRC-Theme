@@ -3,7 +3,7 @@ require('es6-promise/auto');
 (function() {
 
 	function ResourceLoader() {
-		const apiUrl = '/wp-json/providence/v2/resources';
+		const apiUrl = '/wp-json/ddrc/v2/resources';
 		const grid = document.getElementById('ResourcesGrid');
   		var resources = false;
   		var taxonomies = false;

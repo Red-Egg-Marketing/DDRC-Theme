@@ -4,7 +4,6 @@ const { RichText, MediaUpload, InnerBlocks, InspectorControls, useBlockProps, UR
 const { Button, PanelBody, SelectControl, ColorPalette, ToggleControl, RangeControl, Flex, TextareaControl, TextControl } = wp.components;
 const { __ } = wp.i18n;
 import Content from '../../components/Content.js';
-import Icons from '../../components/Icons.js';
 import BackgroundColor from '../../components/BackgroundColor.js';
 
 const template = [
@@ -205,30 +204,7 @@ const EditCTA = ( { attributes, setAttributes } ) => {
 				>
 					<div className="block-wrapper">
 						<div className="block-content">
-							{/*<Icons 
-								rows={ icons }
-								addIcon={ addIcon }
-								rowFocus={ currentRowFocus }
-								removeIcon={ removeIcon }
-								currentIconList={ currentIconList }
-								updateIcon={ updateIcon }
-								updateUploadIcon={ updateUploadIcon }
-								activateIconSearch={ activateIconSearch }
-								activateHTMLUpload={ activateHTMLUpload }
-								updateHTMLUpload={ updateHTMLUpload }
-								searchActive={ searchActive }
-								uploadActive={ uploadActive }
-								filterIconList={ filterIconList }
-								customButtonLang={ "Add Icon" }
-								setAttributes={ setAttributes }
-								color={ iconColor }
-								bgColor={ bgSlug }
-								setIconList={ setIconList }
-								totalIcons={ 1 }
-								iconColor={ iconColor }
-								uploadActivated={ true }
-							/>*/}
-
+							
 							<InnerBlocks
 								template={ template }
 								templateLock={ false }

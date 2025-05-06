@@ -12,10 +12,10 @@ import PaddingSelector from '../../components/Padding.js';
 import MarginSelector from '../../components/Margin.js';
 // import a component
 
-const apiUrl  = '/wp-json/providence/v2/projects';
+const apiUrl  = '/wp-json/ddrc/v2/events';
 
 const template = [
-	['core/buttons']
+	['ddrc-theme-blocks/header-intro']
 ]
 const count = 3;
 const buttonStyle = {
@@ -42,11 +42,11 @@ const warningStyle = {
 
 const EditSelectedProject = ( { setAttributes, attributes, isSelected, clientId } ) => {
 
-		const { resource, padding, blockId, margin } = attributes;
+		const { resource, padding, blockId, margin, postID } = attributes;
 
 		const blockProps = useBlockProps({
 			className: 'project',
-			postId: resource ? resource.ID : ''
+			// postId: resource ? resource.ID : ''
 		});
 
 		const [searchActive, activateSearch] = useState({index: false, active: false});
@@ -54,9 +54,9 @@ const EditSelectedProject = ( { setAttributes, attributes, isSelected, clientId 
 		const [editCurrent, activateCurrent] = useState({index: false, active: false});
 		const [currentSelect, activateSelect] = useState(false);
 		const [currentProjects, activateProjects] = useState(false);
+		const [noResource, activateResource] = useState(false);
 
 		if ( (resource == undefined || resource.length == 0) && currentProjects.length == 0) {
-
 			wp.apiFetch({
 				url: apiUrl
 			}).then(resourcelist => {
@@ -65,8 +65,7 @@ const EditSelectedProject = ( { setAttributes, attributes, isSelected, clientId 
 				for (var x = 0; x < size; x++) {
 					posts[x] = resourcelist[x];
 				}
-
-				setAttributes({resource: posts });
+				setAttributes({resource: posts[0] });
 			});
 
 			return (
@@ -79,16 +78,27 @@ const EditSelectedProject = ( { setAttributes, attributes, isSelected, clientId 
 
 		if (currentProjects == false || currentProjects.length == 0) {
 			wp.apiFetch({
-				url: apiUrl
+				url: apiUrl + '?ppp=-1'
 			}).then(projects => {
 				let projs = [];
 				projects.forEach((project, index) => {
-					projs[index] = {	
+					if (index == 0) {
+						projs[index] = {
+							label: 'Latest Event',
+							value: ''
+						}
+					}
+					projs[index + 1] = {	
 						label: project.title,
 						value: project.ID,
 					};
 				});
 				activateProjects(projs);
+				if (resource.length == 0) {
+					activateResource(projects[0]);
+				} else {
+					activateResource(false);
+				}
 			});
 		}
 
@@ -103,12 +113,16 @@ const EditSelectedProject = ( { setAttributes, attributes, isSelected, clientId 
 				for (var x = 0; x < size; x++) {
 					posts[x] = resourcelist[x];
 				}
-				setAttributes({resource: posts });
 
-			});
-
-			setAttributes({
-				project: value
+				if (value == '') {
+					setAttributes({resource: false });
+					setAttributes({postID: false });
+					activateResource(posts[0]);
+				} else {
+					setAttributes({resource: posts });
+					setAttributes({postID: posts[0].ID })
+					activateResource(false);	
+				}
 			});
 
 		}
@@ -118,6 +132,7 @@ const EditSelectedProject = ( { setAttributes, attributes, isSelected, clientId 
     		    setAttributes( { blockId: 'block-' + clientId } );
     		}
 		}, [] );
+
 
 		return (
 			<Fragment>
@@ -133,11 +148,11 @@ const EditSelectedProject = ( { setAttributes, attributes, isSelected, clientId 
 						id={ 'block-' + clientId }
 					/>
 					<PanelBody
-						title={ __('Select Project')}
+						title={ __('Select Event')}
 						initialOpen={ true }
 					>
 						<SelectControl
-							 label={ __('Project')}
+							 label={ __('Event')}
 							 value={ resource.length > 0 ? resource[0].ID : false }
 							 options={
 							 	currentProjects
@@ -146,8 +161,16 @@ const EditSelectedProject = ( { setAttributes, attributes, isSelected, clientId 
 						/>
 					</PanelBody>
 				</InspectorControls>
-				<div {...blockProps}>
-					{ resource.length > 0 && resource.map( (resource, resourceIndex) => {
+				<div 
+					{...blockProps}
+				>
+					<InnerBlocks
+						template={ template }
+						allowBlocks={['ddrc-theme-blocks/header-intro']}
+					/>
+					<div className="wrapper">
+					{ noResource == false && resource.length > 0 && resource.map( (resource, resourceIndex) => {
+							
 							return(
 								<Fragment>
 									<ResourceCard
@@ -162,14 +185,36 @@ const EditSelectedProject = ( { setAttributes, attributes, isSelected, clientId 
 										updateResourceText={ null }
 										updateResourceExcerpt={ null }
 										updateResourceType={ null }
+										buttonText={ "Learn More" }
 									/>	
 								</Fragment>
 							);
 						})
 					}
-					{ resource.length == 0 && (
-						<p style={ warningStyle }>{__('No Project found. Try again.', 'ddrc-theme-blocks')}</p>
+					{ noResource == false && resource.length == 0 && (
+								<Fragment>
+									<p>No Events found</p>
+								</Fragment>	
 					)}
+					{ (noResource != false || noResource.length > 0) && (
+						<Fragment>
+							<ResourceCard
+								resourceIndex={ 0 }
+								resourceURL={ noResource.link }
+								resourceID={ noResource.ID }
+								resourceImg={ noResource.featured_image }
+								resourceTitle={ noResource.title  }
+								resourceType={ noResource.label  }
+								resourceExcerpt={ noResource.excerpt }
+								updateResourceImage={ null }
+								updateResourceText={ null }
+								updateResourceExcerpt={ null }
+								updateResourceType={ null }
+								buttonText={ "Learn More" }
+							/>	
+						</Fragment>
+					)}
+					</div>
 				</div>
 			</Fragment>
 		);

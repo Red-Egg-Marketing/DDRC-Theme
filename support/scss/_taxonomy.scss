@@ -10,7 +10,6 @@ body.archive .entry-header {
 	align-content: center;
 	position: relative;
 	overflow: hidden;
-	background: $head-color;
 	@media screen and (min-width: $small-width) {
 		min-height: 200px;
 	}
@@ -24,11 +23,10 @@ body.archive .entry-header .wrapper {
 	margin: 0 auto;
 }
 
-body.blog .entry-header h1,
-body.archive .entry-header h1 {
+body.blog #page .entry-header h1,
+body.archive #page .entry-header h1 {
 	@extend h1.header-title;
 	font-family: $font-head;
-	text-transform: uppercase;
 	color: white;
 	margin-top: 0;
 	position: relative;

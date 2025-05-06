@@ -3,7 +3,7 @@ require('es6-promise/auto');
 (function() {
 
 	function PostsLoader() {
-		var apiOrigin = '/wp-json/providence/v2/posts/';
+		var apiOrigin = '/wp-json/ddrc/v2/posts/';
 		var apiUrl = apiOrigin;
 		var grid = document.getElementById('PostsGrid');
   		var resources = false;
@@ -169,7 +169,7 @@ require('es6-promise/auto');
   				content.appendChild(p);
   				contWrap.appendChild(content);
   				a.appendChild(contWrap);
-  				a.appendChild(button);
+  				content.appendChild(button);
   				extra.appendChild(a);
   				card.appendChild(extra);
   				wrap.appendChild(card);

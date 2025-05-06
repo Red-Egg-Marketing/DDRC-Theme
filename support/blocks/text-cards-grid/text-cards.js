@@ -55,7 +55,6 @@ function handleIntersect(entries, observer) {
 
   scrollPos = window.pageYOffset;
 
-  console.log(scrollPos);
   entries.forEach((entry, index) => {
     let target = entry.target;
     let inView = entry.isIntersecting;

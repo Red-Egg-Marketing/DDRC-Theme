@@ -17,7 +17,7 @@ const SaveSelectedProjects = () => {
 
 		React.useEffect( () => {
 			if (resources === false) {
-				data['ppp'] = 10;
+				data['ppp'] = 1;
 				data['year'] = ResourcesRoot.getAttribute('data-category');
 				setData(data);
     			wp.apiRequest({

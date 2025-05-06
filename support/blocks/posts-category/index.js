@@ -3,9 +3,9 @@ const { __ } = wp.i18n;
 import edit from './edit';
 import save from './save';
 
-registerBlockType( 'ddrc-theme-blocks/selected-insights', {
+registerBlockType( 'ddrc-theme-blocks/posts-category', {
 	apiVersion: 2,
-	title: __( 'Selected insights by category', 'ddrc-theme-blocks' ),
+	title: __( 'Selected Posts by category', 'ddrc-theme-blocks' ),
 	description: __( 'Block for a selecting posts. Displays latest 3 from selected category.', 'ddrc-theme-blocks' ),
 	icon: 'welcome-write-blog',
 	category: 'layout',
@@ -13,10 +13,6 @@ registerBlockType( 'ddrc-theme-blocks/selected-insights', {
 		resources: {
 			type: 'array',
 			default: []
-		},
-		anchor: {
-			type: 'string',
-			default: ''
 		},
 		category : {
 			type: 'string',

@@ -87,3 +87,48 @@ div.gs_tm_theme23 .single-member-div {
 	background: $bg-color-7;
 	border: 1px solid $bg-color-7;
 }
+
+.error404 .block-wrapper {
+  max-width: $max-cont-w - 200px;
+  margin: 0 auto;
+}
+
+.error404 .hero .hero-block-content {
+	width: 100%;
+	background: none;
+}
+
+.error404  .hero .hero-block-wrap {
+	max-width: 100%;
+	text-align: center;
+}
+
+.error404 .page-header {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.error404 .hero .hero-block-image-wrap:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .3);
+}
+
+.error404 .hero h1.header-title {
+	color: white !important;
+}
+
+.error404 .hero .hero-block-image-wrap {
+  position: relative;
+  background: url(img/404-image.jpg) no-repeat center center / cover;
+}
+
+.error404 .hero .hero-block-content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

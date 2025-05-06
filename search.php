@@ -11,18 +11,19 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'DDRC' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
+			<header class="section-header with-bg teal">
+				<div class="block-wrapper">
+					<h1>
+						<?php
+						/* translators: %s: search query. */
+						printf( esc_html__( 'Search for %s', 'DDRC' ), '<em>"' . get_search_query() . '"</em>' );
+						?>
+					</h1>
+				</div>
 			</header><!-- .page-header -->
-
+			<div class="wrapper grid">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -38,16 +39,18 @@ get_header();
 			endwhile;
 
 			the_posts_navigation();
-
+			?>
+			</div><!-- .wrapper -->
+		<?php
+		
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
 		?>
-
+			
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

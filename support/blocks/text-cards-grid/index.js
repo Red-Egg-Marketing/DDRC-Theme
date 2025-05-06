@@ -6,7 +6,7 @@ import edit from './edit';
 import save from './save';
 
 registerBlockType( 'ddrc-theme-blocks/cards-grid', {
-	title: __( 'Text Cards Grid', 'ddrc-theme-blocks' ),
+	title: __( 'Text Cards Grid (Services Block)', 'ddrc-theme-blocks' ),
 	description: __( 'Grid of Text Cards', 'ddrc-theme-blocks' ),
 	apiVersion: 2,
 	attributes: {

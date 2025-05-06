@@ -28,12 +28,13 @@ a.custom-logo-link {
 
 .site-header .custom-logo {
 	max-width: 130px;
+	min-width: 130px;
 	width: 100%;
 	height: auto;
 	display: block;
 	@media screen and (min-width: $small-width) {
 		max-width: 270px;
-		min-width: 123px;
+		min-width: 270px;
 	}
 }
 .fixed-buttons {
@@ -67,12 +68,16 @@ a.custom-logo-link {
 
 .main-navigation .nav-menu > .menu-item.mega-menu > .sub-menu {
 	overflow: hidden;
-	display: flex;
+	display: none;
 	flex-wrap: wrap;
-	padding-top: 48px;
+	padding-top: 15px;
 	padding-bottom: 0;
 	padding-left: 0;
 	padding-right: 0;
+	@media screen and (min-width: $med-small-width) {
+		padding-top: 48px;
+		display: flex;
+	}
 }
 
 .main-navigation .sub-menu li.menu-item {
@@ -130,6 +135,7 @@ a.custom-logo-link {
 	@media screen and (min-width: $med-small-width) {
 		width: 16.6667%;
 		padding-right: 1.25rem;
+		padding-left: 1.25rem;
 		padding-bottom: 35px;
 		margin-right: 0;
 		margin-left: 0;
@@ -166,12 +172,13 @@ a.custom-logo-link {
 	border: none;
 	border-radius: 0;
 	text-indent: -10000px;
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	background: url(img/nav-open.svg) no-repeat center center / 100%;
 	order: 2;
 	margin-left: 7%;
 	cursor: pointer;
+	align-self: center;
 	@media screen and (min-width: $med-small-width) {
 		display: none;
 	}
@@ -202,6 +209,7 @@ a.custom-logo-link {
 
 .main-navigation .menu-item.mega-menu .sub-menu {
 	width: 100%;
+	display: block;
 	@media screen and (min-width: $med-small-width) {
 		max-width: $max-cont-w + 200px;
 	}
@@ -216,6 +224,15 @@ a.custom-logo-link {
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
 	position: relative;
+	@media screen and (min-width: $med-small-width) {
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+	}
+}
+
+.search-navigation .wrapper {
+	padding-right: 0;
+	padding-left: 0;
 }
 
 .main-navigation button.toggle-menu {
@@ -227,6 +244,7 @@ a.custom-logo-link {
 	text-indent: -10000px;
 	margin-top: -3px;
 	cursor: pointer;
+	padding: 0 10px;
 	@media screen and (min-width: $med-small-width) {
 		display: none;
 	}
@@ -244,11 +262,32 @@ a.custom-logo-link {
 	width: 100%;
 }
 
+
+.main-navigation.toggled .menu-primary-menu-container {
+	display: block;
+	width: 100%;
+	left: 0;
+	top: 80px;
+	background: white;
+	max-height: calc(100vh - 80px);
+	padding-bottom: 80px;
+	overflow: auto;
+	box-shadow: 0 12px 10px -2px rgba(0, 0, 0, .15);
+	@media screen and (min-width: $med-small-width) {
+		display: flex;
+		top: inherit;
+		max-height: inherit;
+		padding-bottom: 0;
+		box-shadow: none;
+	}
+}
+
 .menu-primary-menu-container {
-	display: flex;
+	display: none;
 	align-items: stretch;
 	position: absolute;
 	@media screen and (min-width: $med-small-width) {
+		display: flex;
 		position: inherit;
 	}
 }
@@ -318,8 +357,8 @@ li.menu-item.nav-button a {
 	color: white;
 	padding: 16px 25px 11px;
 	background: $bg-color-5;
-	font-size: 16px;
-	line-height: 16px;
+	font-size: 18px;
+	line-height: 18px;
 	&:hover {
 		background: $navy;
 		color: $bg-color-5;
@@ -341,12 +380,13 @@ li.menu-item.nav-button a {
 	width: 100%;
 	background: $light-grey;
 	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 	display: flex;
 	flex-wrap: wrap;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	font-size: 18px;
-	font-weight: 600x;
+	font-weight: 600;
 	@media screen and (min-width: $med-small-width) {
 		padding-top: 40px;
 		padding-bottom: 40px;
@@ -375,7 +415,8 @@ li.menu-item.nav-button a {
 .main-navigation .menu-item {
 	color: $teal;
 	font-family: $font-head;
-	font-size: 16px;
+	font-size: 24px;
+	line-height: 28px;
 	text-align: left;
 	font-weight: 400;
 	text-transform: capitalize;
@@ -426,7 +467,7 @@ li.menu-item.nav-button a {
 	align-items: center;
 	justify-content: flex-start;
 	padding-top: 6px;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	@media screen and (min-width: $med-small-width) and (max-width: $med-width) {
 		margin-bottom: 0;
 		width: auto;
@@ -460,6 +501,8 @@ li.menu-item.nav-button a {
 	padding-bottom: 30px;
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
+	box-sizing: content-box;
+	overflow: auto;
 	@media screen and (min-width:  $med-small-width) {
 		padding-bottom: 0;
 		padding-left: 0;
@@ -475,7 +518,6 @@ li.menu-item.nav-button a {
 }
 
 .main-navigation .nav-menu > .menu-item > .sub-menu {
-	background: linear-gradient(to left, $bg-color-7, $bg-color-7);
 	background-position: top left;
 	background-repeat: no-repeat;
 	background-size: 30% 1px;
@@ -618,11 +660,11 @@ li.menu-item.nav-button a {
 
 .main-navigation .sub-menu .menu-item a {
 	width: 100%;
-	font-size: 18px;
+	font-size: 20px;
 	text-transform: none;
 	line-height: 24px;
 	position: relative;
-	padding-left: 1.25rem;
+	padding-left: 0;
 	font-weight: 500;
 	@media screen and (min-width:  $med-small-width) {
 		font-size: 22px;
@@ -791,15 +833,20 @@ li.menu-item.nav-button a {
 }
 
 .site-header .search-navigation {
-	padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
+	padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
     margin-left: auto;
     display: flex;
     align-items: center;
+    @media screen and (min-width: $med-small-width) {
+    	padding-top: 20px;
+   		padding-bottom: 20px;
+    	padding-left: 20px;
+    }
 }
 
-.site-header .search-filters {
+.site-header .search-form {
 	display: none;
 }
 
@@ -807,15 +854,15 @@ li.menu-item.nav-button a {
 	display: none;
 }
 
-.main-wrapper.search-active .search-filters {
+.main-wrapper.search-active .search-form {
 	display: block;
-	min-width: 200px;
+	min-width: 150px;
 	@media screen and (min-width: $med-small-width) {
 		min-width: 500px;
 	}
 }
 
-.search-filters {
+.site-header .search-form {
 	position: relative;
 }
 
@@ -831,29 +878,39 @@ button.clear {
 	padding-right: 15px;
 }
 
-.search-filters input[type="search"] {
+.site-header .search-form .search-field {
+	width: 100%;
+	max-width: 200px;
+	min-width: 150px;
+	@media screen and (min-width: $med-small-width) {
+		max-width: 100%;
+	}
+}
+
+.search-form .search-field {
 	transition: none;
 	background: white url(img/search.svg) no-repeat calc(100% - 15px) center / 20px;
-	width: 100%;
 	padding: 10px 10px;
 	font-size: 18px;
 	border: 1px solid $green;
 	border-radius: 0;
+	min-width: 250px;
 	@media screen and (min-width: $med-small-width) {
 		padding: 15px 20px;
 		font-size: 20px;
+		min-width: 400px;
 	}
 }
 
-.search-filters input[type="search"]:focus-visible {
+.site-header .search-form .search-field:focus-visible {
 	background: white;
 }
 
-.search-filters input[type="search"].active-search {
+.site-header .search-form .search-field.active-search {
 	background: white;
 }
 
-.search-filters input[type="submit"] {
+.site-header .search-form input[type="submit"] {
 	position: absolute;
 	left: -100000px;
 }

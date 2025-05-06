@@ -6,7 +6,7 @@ import edit from './edit';
 import save from './save';
 
 registerBlockType( 'ddrc-theme-blocks/image-text', {
-	title: __( 'Image & Text Columns', 'ddrc-theme-blocks' ),
+	title: __( 'Left-Right Block', 'ddrc-theme-blocks' ),
 	description: __( 'Contains Image, Title, Description and Buttons. Has offset display.', 'ddrc-theme-blocks' ),
 	apiVersion: 2,
 	icon: 'columns',

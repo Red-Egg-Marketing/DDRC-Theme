@@ -26,6 +26,8 @@ function ddrc_theme_enqueue_block_editor_assets() {
             $dependencies,
             'v1.0.0'
         );
+
+    
         wp_localize_script(
            'wp-core-blocks-js',
            'DDRC',
@@ -192,7 +194,7 @@ function ddrc_theme_dynamic_case_studies_grid_block() {
         wp_enqueue_script(
             'wp-main-js',
             get_template_directory_uri() . $front_path,
-            ['wp-api', 'scroll-magic', 'tweenmax', 'tweenmax-animation', 'scrolltrigger', 'lottie-script'],
+            ['wp-api', 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor', 'scroll-magic', 'tweenmax', 'tweenmax-animation', 'scrolltrigger', 'lottie-script'],
             'v1.0.1',
             true
        );

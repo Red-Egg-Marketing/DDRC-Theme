@@ -1,3 +1,4 @@
+
 #CybotCookiebotDialogBodyButtonAccept,
 .buddypress .buddypress-wrap input[type=button],
 .buddypress .buddypress-wrap .button,
@@ -37,7 +38,7 @@ button.wp-button {
 	@media screen and (min-width: $small-width) {
 		font-size: 19px;
 		line-height: 22px;
-		padding: 15px 35px 15px;
+		padding: 18px 35px 18px;
 	}
 	&:hover {
 		background-position: 100px 0;
@@ -45,11 +46,33 @@ button.wp-button {
 	}
 	&:visited {
 		background-position: -100px 0;
-		color: $green;
+		color: white;
 	}
 	&[disabled] {
 		opacity: .5;
 		cursor: not-allowed;
+	}
+}
+
+.tribe-events .tribe-events-c-search__button, 
+.tribe-events button.tribe-events-c-search__button {
+	background: $green;
+	color: white;
+	font-family: $font-body;
+	border-radius: 20px;
+	text-transform: uppercase;
+	border: none;
+	cursor: pointer;
+	border: none;
+	transition-property: all;
+	transition-duration: .25s;
+	&:hover {
+		background: $green;
+		font-size: inherit;
+		border-radius: 20px;
+		padding: 11px 25px 11px;
+		line-height: 21px;
+		width: initial;
 	}
 }
 

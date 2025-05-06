@@ -12,11 +12,11 @@ import PaddingSelector from '../../components/Padding.js';
 import MarginSelector from '../../components/Margin.js';
 // import a component
 
-const apiUrl  = '/wp-json/providence/v2/projects';
+const apiUrl  = '/wp-json/ddrc/v2/events';
 const catUrl  = '/wp-json/wp/v2/categories';
 
 const template = [
-	['core/buttons']
+	['ddrc-theme-blocks/header-intro']
 ]
 const count = 3;
 const buttonStyle = {
@@ -54,10 +54,6 @@ const EditSelectedResources = ( { setAttributes, attributes, isSelected, clientI
 		const [currentSelect, activateSelect] = useState(false);
 		const [currentCats, activateCategories] = useState(false);
 
-		const updateAnchor = (value) => {
-			let removeSpace = value.replace(/\s+/g, '-');
-			setAttributes({ anchor: removeSpace });
-		}
 
 		const addResource = () => {
 			let curResources = JSON.parse(JSON.stringify(resourcelist));
@@ -92,9 +88,8 @@ const EditSelectedResources = ( { setAttributes, attributes, isSelected, clientI
 		if ( (resources == undefined || resources.length == 0) && currentCats.length == 0) {
 
 			wp.apiFetch({
-				url: apiUrl
+				url: apiUrl + '?post_types=post&ppp=2'
 			}).then(resourcelist => {
-				console.log('what');
 				let size = resourcelist.length < count ? resourcelist.length : count;
 				let posts = [];
 				for (var x = 0; x < size; x++) {
@@ -118,10 +113,16 @@ const EditSelectedResources = ( { setAttributes, attributes, isSelected, clientI
 			}).then(categories => {
 				let cats = [];
 				categories.forEach((category, index) => {
-					cats[index] = {	
-								label: category.name,
-								value: category.id,
-							 };
+					if (index == 0) {
+						cats[index] = {
+							label: '--',
+							value: ''
+						}
+					}
+					cats[index + 1] = {	
+						label: category.name,
+						value: category.id,
+					};
 				});
 				activateCategories(cats);
 			});
@@ -130,14 +131,13 @@ const EditSelectedResources = ( { setAttributes, attributes, isSelected, clientI
 		const setCategoryPosts = (value) => {
 
 			wp.apiFetch({
-				url: apiUrl + '?category=' + value
+				url: apiUrl + '?&post_types=post&category=' + value + '&ppp=2'
 			}).then(resourcelist => {
 				let size = resourcelist.length < count ? resourcelist.length : count;
 				let posts = [];
 				for (var x = 0; x < size; x++) {
 					posts[x] = resourcelist[x];
 				}
-
 				setAttributes({resources: posts });
 
 			});
@@ -186,36 +186,16 @@ const EditSelectedResources = ( { setAttributes, attributes, isSelected, clientI
 						bgSlug={ bgSlug }
 						setAttributes={ setAttributes }
 					/>
-					<PanelBody
-						title={ __( 'HTML Anchor' ) }
-						initialOpen={ false }
-					>
-							<TextControl
-								label={ __( 'HTML Anchor' ) }
-								value={ anchor }
-								onChange={ ( anchor ) => updateAnchor( anchor ) }
-								help={__('Enter a word or two — without spaces — to make a unique web address just for this heading, called an “anchor.”')}
-							/>
-						
-					</PanelBody>
 				</InspectorControls>
 				<section {...blockProps}>
 					<div className="resources-block">
-					<div className="block-wrapper" id={anchor}>
+					<div className="block-wrapper">
 						<div className="resources-wrap">
-							<header
-								className="header"
-							>
-								<Header
-									tag="h2"
-									title={ mainTitle }
-									setAttributes={ setAttributes }
-									updateProp="mainTitle"
-									placeholder={ "Selected Posts Heading..." }
-								/>
-							</header>
+							<InnerBlocks
+								template={ template }
+								allowBlocks={['ddrc-theme-blocks/header-intro']}
+							/>
 							<div className="resources grid">
-				
 									{ resources.length > 0 && resources.map( (resource, resourceIndex) => {
 											return(
 												<Fragment>
@@ -231,7 +211,6 @@ const EditSelectedResources = ( { setAttributes, attributes, isSelected, clientI
 														updateResourceText={ null }
 														updateResourceExcerpt={ null }
 														updateResourceType={ null }
-
 													/>	
 												</Fragment>
 											);
@@ -241,10 +220,7 @@ const EditSelectedResources = ( { setAttributes, attributes, isSelected, clientI
 							{ resources.length == 0 && (
 								<p style={ warningStyle }>{__('No Posts found. Try a different category.', 'ddrc-theme-blocks')}</p>
 							)}
-							<InnerBlocks 
-								template={ template }
-								allowedBlocks={['core-buttons']}
-							/>
+							
 						</div>
 					</div>
 					</div>

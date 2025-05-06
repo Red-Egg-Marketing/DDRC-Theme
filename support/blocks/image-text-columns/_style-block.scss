@@ -10,8 +10,18 @@
 
 .image-columns:not(.full-width) {
 	width: 100%;
-	padding-top: 3.125rem;
-	padding-bottom: 3.125rem;
+	padding-top: 2.25rem;
+	padding-bottom: 2.25rem;
+	@media screen and (min-width: $small-width) {
+		padding-top: 6.75rem;
+		padding-bottom: 6.75rem;
+	}
+}
+
+.image-columns.full-width .content-columns {
+	padding-top: 2.25rem;
+	padding-bottom: 2.25rem;
+	margin-top: 0;
 	@media screen and (min-width: $small-width) {
 		padding-top: 6.75rem;
 		padding-bottom: 6.75rem;
@@ -61,8 +71,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: stretch;
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
+/*	padding-left: 1.25rem;
+	padding-right: 1.25rem;*/
 }
 
 .image-columns .faq:last-of-type {
@@ -110,17 +120,15 @@
 }
 
 .image-columns.img-right .content-columns {
-	margin-top: 25px;
 	@media screen and (min-width: $small-width) {
 		padding-left: 0;
-		padding-right: 2.5rem;
-		margin-top: 0;
+		padding-right: 1.25rem;
 	}
 }
 
 .image-columns.img-right.no-ds .content-columns {
 	@media screen and (min-width: $small-width) {
-		padding-left: 2.5rem;
+		padding-left: 1.25rem;
 	}
 }
 

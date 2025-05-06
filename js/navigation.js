@@ -32,8 +32,6 @@
 			});
 	});;
 
-
-
 	if (isTouch == true) {
 		document.addEventListener('touchend', removeMenuToggle);
 		document.navigation = siteNavigation;
@@ -44,8 +42,7 @@
 		return;
 	}
 
-	var button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
-
+	var button = siteNavigation.getElementsByClassName( 'menu-toggle' )[0];
 
 	var subButtons = siteNavigation.getElementsByClassName( 'toggle-menu' );
 

@@ -12,7 +12,9 @@ import MarginSelector from '../../components/Margin.js';
 // import a component
 
 const template = [
-	['ddrc-theme-blocks/project']
+	['ddrc-theme-blocks/post'],
+	['ddrc-theme-blocks/event']
+	
 ]
 const count = 3;
 const buttonStyle = {
@@ -70,10 +72,10 @@ const EditSelectedProjects = ( { setAttributes, attributes, isSelected, clientId
 					<div className="resources-block">
 					<div className="block-wrapper">
 						<div className="resources-wrap">
-							<div className="resources">
+							<div className="resources grid">
 								<InnerBlocks 
 									template={ template }
-									allowedBlocks={['ddrc-theme-blocks/project']}
+									allowedBlocks={['ddrc-theme-blocks/event', 'ddrc-theme-blocks/post']}
 								/>
 							</div>
 						</div>

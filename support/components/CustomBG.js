@@ -11,7 +11,11 @@ const BGArray = [
 	},
 	{
 		label: __('With Pinwheel Background'),
-		value: 'with-bg'
+		value: 'with-bg-pinwheel'
+	},
+	{
+		label: __('With White Repeating Pinwheel'),
+		value: 'with-bg-repeat'
 	},
 	{
 		label: __('No Background'),

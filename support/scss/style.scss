@@ -44,6 +44,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 @import "./scss/reviews";
 @import "./scss/buddypress";
 @import "./scss/bios";
+@import "./scss/events";
 
 
 /*--------------------------------------------------------------
@@ -51,7 +52,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 --------------------------------------------------------------*/
 @import "../blocks/hero/style-block";
 @import "../blocks/header-intro/style-block";
-@import "../blocks/header-intro-column/style-block";
+/*@import "../blocks/header-intro-column/style-block";*/
 @import "../blocks/text-card/style-block";
 @import "../blocks/text-cards-grid/style-block";
 @import "../blocks/title-image-cta/style-block";
@@ -72,10 +73,11 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 @import "../blocks/section-header/style-block";
 @import "../blocks/stat-callout/style-block";
 @import "../blocks/selected-projects/style-block";
-@import "../blocks/selected-insights/style-block";
+@import "../blocks/posts-category/style-block";
 @import "../blocks/progress-block/style-block";
 @import "../blocks/case-study/style-block";
 @import "../blocks/cta/style-block";
 @import "../blocks/savings-calculator/style-block";
 @import "../blocks/filter-resources/style-block";
 @import "../blocks/feature-section/style-block";
+@import "../blocks/sign-up/style-block";

@@ -1,3 +1,4 @@
+
 .entry-content > p, 
 .entry-content > h1, 
 .entry-content > h2,
@@ -25,14 +26,13 @@
 h1 {
 	font-size: 42px;
 	line-height: 49px;
-	color: $head-color;
+	color: $green;
 	font-family: $font-head;
 	text-transform: uppercase;
 	font-weight: 500;
 	letter-spacing: 0.75px;
 	margin-top: 2.5rem;
 	@media screen and (min-width: $small-width) {
-		color: white;
 		font-size: 65px;
 		line-height: 80px;
 		margin-top: 0;
@@ -40,7 +40,7 @@ h1 {
 }
 
 h3 {
-	color: $head-color;
+	color: $green;
 	font-family: $font-head;
 	font-size: 28px;
 	line-height: 36px;
@@ -57,7 +57,7 @@ h3 {
 
 h4 {
 	font-family: $font-body;
-	color: $head-color;
+	color: $green;
 	font-weight: 700;
 	font-size: 17px;
 	line-height: 22px;
@@ -67,6 +67,13 @@ h4 {
 		line-height: 34px;
 		 letter-spacing: 0.25px;
 	}
+}
+
+.site-main > .wrapper {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	max-width: $max-cont-w + 200px;
+	margin: 45px auto 45px;
 }
 
 .content p {
@@ -268,13 +275,19 @@ h4 {
 	width: 100%;
 }
 
+.wp-block.event,
+.wp-block.project {
+	width: 100%;
+	max-width: 100%;
+}
+
 @supports (display: grid) {
  	div.resources-grid:not(.swiper-wrapper) .block-wrapper {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-column-gap: 1.25rem;
 		grid-row-gap: 1.25rem;
-		max-width: $max-cont-w;
+		max-width: $max-cont-w + 200px;
 		padding-left: 1.25rem;
 		padding-right: 1.25rem;
 		width: 100%;
@@ -283,15 +296,15 @@ h4 {
 			grid-template-columns: 1fr 1fr;
 			grid-column-gap: 1.5rem;
 			grid-row-gap: 1.5rem;
-			padding-left: 2rem;
-			padding-right: 2rem;
+			padding-left: 1.25rem;
+			padding-right: 1.25rem;
 		}
 		@media screen and (min-width: $med-width + 1px) {
 			grid-template-columns: 1fr 1fr 1fr;
 			grid-column-gap: 2.5rem;
 			grid-row-gap: 2.5rem;
-			padding-left: 2.5rem;
-			padding-right: 2.5rem;
+			padding-left: 1.25rem;
+			padding-right: 1.25rem;
 		}
 	}
 
@@ -343,6 +356,10 @@ h4 {
 
 }
 
+#page .site-main .section-header h1 {
+	color: white;
+	text-align: left;
+}
 
 
 
@@ -395,14 +412,16 @@ h4 {
 .resource-card .image-cont {
     width: 100%;
     position: relative;
-    padding-bottom: 66.4%;
+    padding-bottom: 50%;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .resource-card p.resource-excerpt {
 	overflow-wrap: anywhere;
 	font-family: $font-body;
 	color: $bg-color-7;
+	margin-top: 10px;
 }
 
 .resource-card.whitepaper .image-cont img {
@@ -510,19 +529,18 @@ h4.resource-type,
 
 h3.resource-title,
 .editor-styles-wrapper h3.resource-title {
-	color: $teal-blue;
-	font-size: 18px;
+	color: $green;
+	font-size: 20px;
 	line-height: 25px;
 	font-weight: 700;
-	font-family: $font-head;
+	font-family: $font-body;
 	text-transform: none;
-	margin-bottom: 0.75rem;
-	margin-top: 0;
-	letter-spacing: 1px;
+	margin-bottom: 0;
+	margin-top: 15px;
 	@media screen and (min-width: $small-width) {
-		font-size: 20px;
-		line-height: 27px;
-		margin-bottom: .9rem;
+		font-size: 22px;
+		line-height: 36px;
+		margin-top: 30px;
 	}
 }
 

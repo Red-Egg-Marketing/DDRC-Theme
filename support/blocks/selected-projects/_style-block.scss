@@ -12,8 +12,8 @@
 .resources-block .block-wrapper {
 	width: 100%;
 	max-width: $max-cont-w + 200px;
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
+	padding-left: 0;
+	padding-right: 0;
 	margin: 0 auto;
 }
 
@@ -136,14 +136,77 @@
 }
 
 .resource-card {
-	background: $grey-2;
 	margin-top: 0;
 }
 
 .resource-card .content {
-	padding: 0 20px;
 	margin-top: 0;
+}
+
+.resources-block .resources.grid > .block-editor-inner-blocks > .block-editor-block-list__layout {
+	display: grid;
+	grid-template-columns: 1fr;
+		grid-column-gap: 1.25rem;
+		grid-row-gap: 1.25rem;
+		max-width: $max-cont-w + 200px;
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+		width: 100%;
+		margin: 0 auto;
+		@media screen and (min-width: $small-width) and (max-width: $med-width) {
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 1.5rem;
+			grid-row-gap: 1.5rem;
+			padding-left: 1.25rem;
+			padding-right: 1.25rem;
+		}
+		@media screen and (min-width: $med-width + 1px) {
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 2.5rem;
+			grid-row-gap: 2.5rem;
+			padding-left: 1.25rem;
+			padding-right: 1.25rem;
+		}
+}
+
+
+
+.resources-block .resources.grid > .block-editor-inner-blocks {
+	grid-column: 1/2;
+	@media screen and (min-width: $small-width) and (max-width: $med-width) {
+		grid-column: 1/3;
+	}
+	@media screen and (min-width: $med-width + 1px) {
+		grid-column: 1/3;
+	}
+}
+
+.resources .header-intro-block {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.resources .header-intro-block .block-wrapper {
+	padding-top: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 10px;
 	@media screen and (min-width: $small-width) {
-		padding: 0 40px;
+		padding-bottom: 15px;
+	}
+}
+
+.resources .header-intro-block .wp-block-heading {
+	margin: 0;
+}
+
+.resources .header-intro-block .wp-block-heading:before {
+	display: none;
+}
+
+.resources .header-intro-block .wp-block-heading {
+	font-size: 26px;
+	@media screen and (min-width: $small-width) {
+		font-size: 34px;
 	}
 }

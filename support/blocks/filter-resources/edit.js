@@ -6,7 +6,7 @@ const { __ } = wp.i18n;
 import Header from '../../components/Header.js';
 import ResourceCard from '../../components/ResourceCard.js';
 import ResourceFilters from '../../components/ResourceLoader.js';
-const apiUrl  = '/wp-json/providence/v2/resources';
+const apiUrl  = '/wp-json/ddrc/v2/resources';
 
 const EditResources = ( { attributes, setAttributes } ) => {
 	  	

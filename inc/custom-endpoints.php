@@ -116,7 +116,7 @@ function ddrc_theme_return_resources() {
 
 
 add_action( 'rest_api_init', function () {
-  register_rest_route( 'providence/v2', '/resources/', 
+  register_rest_route( 'ddrc/v2', '/resources/', 
   	[
     	'methods' => 'GET',
     	'callback' => 'ddrc_theme_return_resources',
@@ -126,7 +126,7 @@ add_action( 'rest_api_init', function () {
  });
 
 
-function ddrc_theme_return_projects($data, $post_types = 'projects') {
+function ddrc_theme_return_projects($data, $post_types = 'tribe_events') {
 
 	$get = $_GET;
 	$post_a = $_POST;
@@ -139,7 +139,8 @@ function ddrc_theme_return_projects($data, $post_types = 'projects') {
 	$offset = isset($get['offset']) ? $get['offset'] : 0;
 	$offset = isset($post_a['offset']) ? $post_a['offset'] : $offset;
 	$post_types = isset($get['post_types']) ? explode(',', $get['post_types']) : $post_types;
-	$posts_per_page = isset($get['ppp']) ? $get['ppp'] : 6;
+	$post_types = isset($post_a['post_types']) ? explode(',', $post_a['post_types']) : $post_types;
+	$posts_per_page = isset($get['ppp']) ? $get['ppp'] : 1;
 	$posts_per_page = isset($post_a['ppp']) ? $post_a['ppp'] : $posts_per_page;
 	$stacked = isset($get['stacked']) ? $get['stacked'] : false;
 	$stacked = isset($post_a['stacked']) ? $post_a['stacked'] : $stacked;
@@ -151,8 +152,11 @@ function ddrc_theme_return_projects($data, $post_types = 'projects') {
 	$args = [
 		'post_type' => $post_types,
 		'post_status' => 'publish',
+		'order' => 'DESC',
+		'orderby' => 'date',
 		'posts_per_page' => $posts_per_page,
-		'offset'	=> $offset
+		'offset'	=> $offset,
+		'ignore_sticky_posts' => true
 	];
 
 	if ($cats != false) {
@@ -203,7 +207,7 @@ function ddrc_theme_return_projects($data, $post_types = 'projects') {
 }
 
 add_action( 'rest_api_init', function () {
-  register_rest_route( 'providence/v2', '/projects/', 
+  register_rest_route( 'ddrc/v2', '/events/', 
   	[
     	'methods' => 'GET, POST',
     	'callback' => 'ddrc_theme_return_projects',
@@ -310,7 +314,7 @@ function ddrc_theme_return_posts($data) {
 
 
 add_action( 'rest_api_init', function () {
-  register_rest_route( 'providence/v2', '/posts/', 
+  register_rest_route( 'ddrc/v2', '/posts/', 
   	[
     	'methods' => 'GET',
     	'callback' => 'ddrc_theme_return_posts',
@@ -324,8 +328,13 @@ function ddrc_theme_resource_card($id, $cats = true, $read = 'Read More', $image
 		$permalink = get_the_permalink($id);
 		$title = get_the_title($id);
 		$excerpt = get_the_excerpt($id);
-		$terms = $cats == true ? ddrc_theme_posts_topics_list($id, 'category') : ddrc_theme_posts_post_type($id);
+		// $terms = $cats == true ? ddrc_theme_posts_topics_list($id, 'category') : ddrc_theme_posts_post_type($id);
+		$terms = $cats == true ? ddrc_theme_posts_topics_list($id, 'category') : false;
 		$thumbnail = get_the_post_thumbnail_url($id, 'post-landscape') != false ? get_the_post_thumbnail_url($id, 'post-landscape') : get_the_post_thumbnail_url($id, 'thumbnail');
+
+		if ($thumbnail == false || $thumbnail == '') {
+			$thumbnail .= get_template_directory_uri() .  '/img/coming-soon.gif';
+		}
 
 		$html = '<div class="resource-card">';
 			$html .= '<div class="resource-extra">';
@@ -333,10 +342,7 @@ function ddrc_theme_resource_card($id, $cats = true, $read = 'Read More', $image
 				$html .= '<div class="cont-wrap">';
 				if ($thumbnail != '' && $image == true) {
 					$html .= '<div class="image-cont">';
-						$html .= '<picture>';
-							$html .= '<source type="image/webp" srcset="' . $thumbnail . '.webp">';
 							$html .= '<img class="resource-img" src="' . $thumbnail . '" />';
-						$html .= '</picture>';
 					$html .= '</div>';
 				}
 					$html .= '<div class="content">';

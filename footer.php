@@ -49,10 +49,13 @@ if (function_exists('get_field')) {
                     </ul>
                 </div>
                 <div class="col">
+                    <p>
+                        <a href="tel:<?= $company_settings['phone']; ?>" class="contact-link phone"><?= $company_settings['phone'] ?></a>
+                    </p>
                     <address>
-                        <p>
-                            <a href="tel:<?= $company_settings['phone']; ?>" class="contact-link phone"><?= $company_settings['phone'] ?></a>
-                            <a href="mailto:<?= $company_settings['email']; ?>" class="contact-link email"><?= $company_settings['email'] ?></a>
+                        <p class="contact-link address">
+                            <?= $company_settings['street'] ?>,<br />
+                            <?= $company_settings['city'] . ', ' . $company_settings['state'] . ' ' . $company_settings['zip'] ?>
                         </p>
                     </address>
                 </div>

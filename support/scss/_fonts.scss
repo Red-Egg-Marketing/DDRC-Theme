@@ -9,12 +9,14 @@
 
 }
 
+.site-main p,
+.site p,
 .gs-sin-mem-desig,
 .gs_team p, .gs_team li,
-.edit-post-visual-editor__content-area p, .entry-content p,
-.edit-post-visual-editor__content-area li, .entry-content li,
-.edit-post-visual-editor__content-area dl, .entry-content dl,
-.edit-post-visual-editor__content-area dd, .entry-content dd {
+.editor-visual-editor p, .entry-content p,
+.editor-visual-editor li, .entry-content li,
+.editor-visual-editor dl, .entry-content dl,
+.editor-visual-editor dd, .entry-content dd {
 	font-family: $font-body;
 	font-size: 18px;
 	line-height: 25px;
@@ -43,16 +45,16 @@
 	}
 }
 
-.edit-post-visual-editor__content-area a, .entry-content a {
+.editor-visual-editor a, .entry-content a {
 	color: $head-color;
 }
 
-.edit-post-visual-editor__content-area strong,.entry-content strong {
+.editor-visual-editor strong,.entry-content strong {
 	font-weight: bold;
 }
 
-.edit-post-visual-editor__content-area ul.has-large-font-size li, .entry-content ul.has-large-font-size li,
-.edit-post-visual-editor__content-area p.has-large-font-size, .entry-content p.has-large-font-size {
+.editor-visual-editor ul.has-large-font-size li, .entry-content ul.has-large-font-size li,
+.editor-visual-editor p.has-large-font-size, .entry-content p.has-large-font-size {
 	font-size: 24px !important;
 	line-height: 34px;
 	color: $bg-color-7;
@@ -62,12 +64,12 @@
 	}
 }
 
-
-.edit-post-visual-editor__content-area ul, .entry-content ul {
+.site-main ul,
+.editor-visual-editor ul, .entry-content ul {
 	margin: 0;
 }
 
-.edit-post-visual-editor__content-area li, .page .entry-content li,
+.editor-visual-editor li, .page .entry-content li,
 .post .post-content li {
 	position: relative;
 	margin-bottom: 5px;
@@ -76,8 +78,9 @@
 	}
 }
 
-
-.edit-post-visual-editor__content-area li, .page .entry-content li {
+.site-main li,
+.site li,
+.editor-visual-editor li, .page .entry-content li {
 	font-size: 18px;
 	line-height: 30px;
 	color: $body-color;
@@ -99,12 +102,14 @@
 }
 
 .gs_team h1,
-.edit-post-visual-editor__content-area h1, .entry-content h1 {
+.site-main h1,
+.site h1,
+.editor-visual-editor h1, .entry-content h1 {
 	color: $green;
 	font-size: 42px;
 	line-height: 50px;
 	font-family: $font-head;
-	font-weight: 500;
+	font-weight: 700;
 	text-transform: none;
 	@media screen and (min-width: $small-width) {
 		font-size: 65px;
@@ -113,14 +118,16 @@
 }
 
 .gs_team h2,
-.edit-post-visual-editor__content-area h2, .entry-content h2 {
+.site h2,
+.site-main h2,
+.editor-visual-editor h2, .entry-content h2 {
 	font-size: 35px;
 	line-height: 42px;
 	color: $green;
 	margin-top: 2rem;
 	font-family: $font-head;
 	text-transform: none;
-	font-weight: 500;
+	font-weight: 700;
 	@media screen and (min-width: $small-width) {
 		font-size: 50px;
 		line-height: 60px;
@@ -128,23 +135,46 @@
 	}
 }
 
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	text-decoration: none;
+}
 
 .main-navigation h3,
+.site h3,
+.site-main h3,
 .gs_team h3,
-.edit-post-visual-editor__content-area h3, .entry-content h3 {
+.editor-visual-editor h3, .entry-content h3 {
 	color: $green;
 	font-size: 28px;
 	line-height: 36px;
 	font-family: $font-head;
-	font-weight: 500;
+	font-weight: 700;
 	@media screen and (min-width: $small-width) {
 		font-size: 34px;
 		line-height: 44px;
 	}
 }
 
+
+.editor-visual-editor h3.has-large-font-size,
+.entry-content h3.has-large-font-size {
+	font-size: 34px !important;
+	line-height: 40px;
+	@media screen and (min-width: $small-width) {
+		font-size: 50px !important;
+		line-height: 62px;
+	}
+}
+
 .gs_team h4,
-.edit-post-visual-editor__content-area h4, .entry-content h4 {
+.site h4,
+.site-main h4,
+.editor-visual-editor h4, .entry-content h4 {
 	color: $green;
 	line-height: 22px;
 	font-size: 15px;
@@ -156,8 +186,10 @@
 	}
 }
 
-.gs_team h5, 
-.edit-post-visual-editor__content-area h5, .entry-content h5 {
+.gs_team h5,
+.site h5,
+.site-main h5,
+.editor-visual-editor h5, .entry-content h5 {
 	color: $green;
 	line-height: 19px;
 	font-size: 14px;
@@ -169,7 +201,9 @@
 }
 
 .gs_team h6,
-.edit-post-visual-editor__content-area h6, .entry-content h6 {
+.site h6,
+.site-main h6,
+.editor-visual-editor h6, .entry-content h6 {
 	color: $green;
 	line-height: 18px;
 	font-size: 14px;
@@ -182,7 +216,7 @@
 }
 
 .entry-content h3 + h2,
-.edit-post-visual-editor__content-area h3 + h2 {
+.editor-visual-editor h3 + h2 {
 	margin-top: 0;
 }
 

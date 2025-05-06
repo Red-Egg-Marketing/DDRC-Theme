@@ -3,11 +3,11 @@ const { __ } = wp.i18n;
 import edit from './edit';
 import save from './save';
 
-registerBlockType( 'ddrc-theme-blocks/project', {
+registerBlockType( 'ddrc-theme-blocks/event', {
 	apiVersion: 2,
-	title: __( 'Project', 'ddrc-theme-blocks' ),
-	description: __( 'Project Block.', 'ddrc-theme-blocks' ),
-	parent: ['ddrc-theme-blocks/selected-projects'],
+	title: __( 'Event', 'ddrc-theme-blocks' ),
+	description: __( 'Event Block.', 'ddrc-theme-blocks' ),
+	parent: ['ddrc-theme-blocks/selected-events-blog'],
 	icon: 'welcome-write-blog',
 	category: 'layout',
 	attributes: {
@@ -27,6 +27,12 @@ registerBlockType( 'ddrc-theme-blocks/project', {
 		},
 		blockId: {
 			type: 'string'
+		},
+		postID: {
+			type: 'string',
+			source: 'attribute',
+			selector: '.project',
+			attribute: 'data-resource'
 		}
 	},
 	supports: {

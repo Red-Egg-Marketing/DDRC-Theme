@@ -28,8 +28,8 @@ const SaveSelectedProjectsBlock = ( { attributes } ) => {
 			<section {...blockProps} id={blockId}>
 				<div className="resources-block">
 					<div className="block-wrapper">
-						<div className="resources-wrap swiper">
-							<div className="resources swiper-wrapper">
+						<div className="resources-wrap">
+							<div className="resources grid">
 								<InnerBlocks.Content />
 							</div>
 						</div>

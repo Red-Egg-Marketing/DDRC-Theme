@@ -23,16 +23,27 @@
 .text-cards-grid {
 	position: relative;
 	overflow: hidden;
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 2.25rem;
+	padding-bottom: 2.25rem;		
 	@media screen and (min-width: $small-width) {
 		padding-bottom: 6.25rem;
-		padding-left: 30px;
-		padding-right: 30px;
+		padding-top: 6.75rem;
+		padding-bottom: 6.75rem;
 	}
 }
 
-.with-bg.text-cards-grid:before {
+.with-bg-repeat {
+	background-image: url(img/pinwheel-pattern.svg);
+	background-repeat: repeat;
+	background-size: 200px;
+	@media screen and (min-width: $small-width) {
+		background-size: 275px;
+	}
+}
+
+.with-bg-pinwheel.text-cards-grid:before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -53,9 +64,9 @@
 }
 
 .text-cards-grid > .block-wrapper {
-	max-width: $max-cont-w;
-	padding-left: 0;
-	padding-right: 0;
+	max-width: $max-cont-w + 200px;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 	margin: 0 auto;
 
 }
@@ -102,14 +113,14 @@
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	align-items: stretch;
 	justify-content: center;
 	grid-template-columns: 1fr;
 	grid-row-gap: 35px;
 	grid-column-gap: 15px;
 	@media screen and (min-width: $med-width + 1px) {
 		grid-template-columns: 1fr 1fr;
-		grid-row-gap: 90px;
+		grid-row-gap: 60px;
 		grid-column-gap: 60px;
 	}
 	@media screen and (min-width: $small-width) and (max-width: $med-width) {
@@ -123,14 +134,14 @@
 .wp-block.text-cards-grid.columns-3 > .block-wrapper > .block-content > .block-editor-inner-blocks > .block-editor-block-list__layout,
 .text-cards-grid:not(.wp-block).columns-3  > .block-wrapper > .block-content {
 	width: 100%;
-	display: fex;
+	display: flex;
 	flex-wrap: wrap;
 	grid-template-columns: 1fr;
 	grid-row-gap: 35px;
 	grid-column-gap: 15px;
 	@media screen and (min-width: $med-width + 1px) {
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-row-gap: 90px;
+		grid-row-gap: 60px;
 		grid-column-gap: 60px;
 	}
 	@media screen and (min-width: $small-width) and (max-width: $med-width) {

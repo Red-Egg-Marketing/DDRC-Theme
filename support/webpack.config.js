@@ -42,7 +42,7 @@ module.exports = {
   entry: {
     './assets/js/editor.blocks' : './blocks/index.js',
     '../js/search' : './search.js',
-    './assets/js/main' : './front-end.js'
+    './assets/js/main' : './front-end.js',
   },
   output: {
     path: path.resolve( __dirname ),

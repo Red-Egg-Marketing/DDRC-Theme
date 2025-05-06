@@ -9,7 +9,7 @@ import ResourceCard from '../../components/ResourceCard.js';
 import Swiper from 'swiper/bundle';
 // import a component
 
-const apiUrl  = '/wp-json/providence/v2/projects';
+const apiUrl  = '/wp-json/ddrc/v2/events';
 const catUrl  = '/wp-json/wp/v2/categories';
 
 const template = [
@@ -30,9 +30,9 @@ const mainControl = {
 	"width": "100%"
 }
 
-const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected } ) => {
+const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected, clientId } ) => {
 
-		const { resources, anchor, mainTitle, category } = attributes;
+		const { resources, mainTitle, category } = attributes;
 
 		const blockProps = useBlockProps({
 			className: 'selected-case-studies'
@@ -43,24 +43,24 @@ const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected } ) =>
 		const [editCurrent, activateCurrent] = useState({index: false, active: false});
 		const [currentSelect, activateSelect] = useState(false);
 		const [currentCats, activateCategories] = useState(false);
-
-		const updateAnchor = (value) => {
-			let removeSpace = value.replace(/\s+/g, '-');
-			setAttributes({ anchor: removeSpace });
-		}
+		const [tempSwip, activateSwipe] = useState(false);
+		const [tempResources, activateResources] = useState(false);
 
 		if ( (resources == undefined || resources.length == 0)) {
 
 			wp.apiFetch({
-				url: apiUrl + '?&html=cards'
+				url: apiUrl + '?post_types=stories&ppp=10'
 			}).then(resourcelist => {
 				let posts = resourcelist;
 				setAttributes({resources: posts });
+				activateResources(posts);	
+				activateSwipe(true);
+
 			});
 
 			return (
 				<section { ...blockProps }>
-					Loading Projects...
+					Loading Spotlight Stories...
 				</section>
 			);
 				
@@ -72,7 +72,13 @@ const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected } ) =>
 			}).then(categories => {
 				let cats = [];
 				categories.forEach((category, index) => {
-					cats[index] = {	
+					if (index == 0) {
+						cats[index] = {
+							label: '--',
+							value: ''
+						}
+					}
+					cats[index + 1] = {	
 						label: category.name,
 						value: category.id,
 					};
@@ -82,13 +88,13 @@ const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected } ) =>
 		}
 
 		const setCategoryPosts = (value) => {
-
+			activateSwipe(false);
 			wp.apiFetch({
-				url: apiUrl + '?category=' + value + '&html=true'
+				url: apiUrl + '?category=' + value + '&post_types=stories&ppp=10'
 			}).then(resourcelist => {
-			
 				setAttributes({resources: resourcelist });
-
+				activateResources(resourcelist);
+				activateSwipe(true);
 			});
 
 			setAttributes({
@@ -96,7 +102,6 @@ const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected } ) =>
 			});
 
 		}
-
 
 		return (
 			<Fragment>
@@ -114,43 +119,58 @@ const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected } ) =>
 							 onChange={ setCategoryPosts }
 						/>
 					</PanelBody>
-					<PanelBody
-						title={ __( 'HTML Anchor' ) }
-						initialOpen={ false }
-					>
-							<TextControl
-								label={ __( 'HTML Anchor' ) }
-								value={ anchor }
-								onChange={ ( anchor ) => updateAnchor( anchor ) }
-								help={__('Enter a word or two — without spaces — to make a unique web address just for this heading, called an “anchor.”')}
-							/>
-						
-					</PanelBody>
 				</InspectorControls>
 				<section {...blockProps}>
 					<div className="case-studies-block">
-					<div className="block-wrapper" id={anchor}>
+					<div className="block-wrapper">
 						<div className="resources-wrap">
-							<header
-								className="header"
-							>
-								<Header
-									tag="h2"
-									title={ mainTitle }
-									setAttributes={ setAttributes }
-									updateProp="mainTitle"
-									placeholder={ "Selected Projects Heading..." }
-									
-								/>
-							</header>
-							<div className="resources"
-								dangerouslySetInnerHTML={{ __html: resources }}
-							>
+							<div className="resources swiper">
+							{ tempSwip == true && (
+								<Fragment>
+									<div className="swiper-wrapper">
+											{ (tempResources.length > 0) && tempResources.map((resource, resourceIndex) => {
+													let swip = new Swiper('.resources.swiper', 
+														{
+															loop: false,
+															slidesPerView: 3,
+															autoplay: false,
+															effect: 'slide',
+															spaceBetween: 15,
+															speed: 1500,
+														}
+													);
+													return (
+														<Fragment>
+															<ResourceCard
+																resourceIndex={ resourceIndex }
+																resourceURL={ resource.link }
+																resourceID={ resource.ID }
+																resourceImg={ resource.featured_image }
+																resourceTitle={ resource.title  }
+																resourceExcerpt={ resource.excerpt  }
+																resourceClass="swiper-slide"
+															/>
+														</Fragment>
+													)
+												})
+											}
+											{ tempSwip && tempResources.length == 0 && (
+												<Fragment>
+													<div className="error">
+														<h3>There are no available stories matching your filters. Please try something else.</h3>
+													</div>
+												</Fragment>
+											)}
+									</div>
+									<div class="swiper-button-prev"></div>
+  									<div class="swiper-button-next"></div>
+  								</Fragment>
+  							)}
 							</div>
-							{/*<InnerBlocks 
+							<InnerBlocks
 								template={ template }
-								allowedBlocks={['core-buttons']}
-							/>*/}
+								allowBlocks={['core/buttons']}
+							/>
 						</div>
 					</div>
 					</div>

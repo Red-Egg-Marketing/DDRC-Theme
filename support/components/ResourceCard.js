@@ -8,6 +8,8 @@ const { __ } = wp.i18n;
 const ResourceCard = (props) => {
 	let buttonText = props.resourceType == 'Videos' ? 'Watch Video' : 'Read More';
 	let slideClass = props.resourceClass != null ? props.resourceClass : '';
+	let text = props.buttonText != null ? props.buttonText : 'Read More';
+	let displayType = props.displayType != null ? props.displayType : false;
 	let typeClass= '';
 	if (props.resourceType == 'Whitepaper') {
 		typeClass = 'whitepaper';
@@ -82,7 +84,7 @@ const ResourceCard = (props) => {
 								} }
 							/>
 						)}
-						{ props.updateResourceType == null && (
+						{ props.updateResourceType == null ** displayType == true && (
 							<h4
 								className="resource-type"
 							>
@@ -135,7 +137,7 @@ const ResourceCard = (props) => {
 							</p>
 						)}
 						<button className="wp-button">
-							{ buttonText }
+							{ text }
 						</button>
 					</div>	
 				</div>
@@ -148,6 +150,8 @@ const ResourceCard = (props) => {
 ResourceCard.View = (props) => {
 	let buttonText = props.resourceType == 'Videos' ? 'Watch Video' : 'Read More';
 	let slideClass = props.resourceClass != null ? props.resourceClass : '';
+	let text = props.buttonText != null ? props.buttonText : 'Read More';
+	let displayType = props.displayType != null ? props.displayType : false;
 	let typeClass= '';
 	if (props.resourceType == 'Whitepaper') {
 		typeClass = 'whitepaper';
@@ -173,13 +177,15 @@ ResourceCard.View = (props) => {
 						className="content"
 						data-id={ props.resourceID }
 					>
-						<RichText.Content
-							tagName="h4"
-							className="resource-type"
-							value={
-								props.resourceType
-							}
-						/>
+						{displayType == true && (
+							<RichText.Content
+								tagName="h4"
+								className="resource-type"
+								value={
+									props.resourceType
+								}
+							/>
+						)}
 						<RichText.Content
 							tagName="h3"
 							className="resource-title"
@@ -196,7 +202,7 @@ ResourceCard.View = (props) => {
 							}
 						/>
 						<button className="wp-button">
-							{ buttonText }
+							{ text }
 						</button>
 					</div>
 				</a>

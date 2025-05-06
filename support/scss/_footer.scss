@@ -178,6 +178,15 @@ a.footer-home {
 	text-decoration: underline;
 }
 
+.contact-link:before {
+	content: url($phone);
+	margin-right: 10px;
+}
+
+.contact-link.address:before {
+	content: url($marker);
+}
+
 .site-footer .contact-link {
 	display: block;
 }
@@ -259,13 +268,14 @@ a.footer-home {
 	margin-top: 0;
 }
 
-.site-footer .site-desc {
+.site .site-footer .site-desc {
 	font-size: 24px;
 	line-height: 28px;
 	font-weight: 400;
 	font-style: italic;
 	margin-bottom: 15px;
 	margin-top: 0;
+	font-family: $font-head;
 	@media screen and (min-width: $small-width) {
 		font-size: 34px;
 		line-height: 42px;
@@ -273,7 +283,7 @@ a.footer-home {
 	}
 }
 
-.site-footer p, 
+.site .site-footer p, 
 .site-footer div.gform_wrapper h2.gform_title,
 .site-footer address p,
 .site-footer .contact-link,

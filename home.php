@@ -10,8 +10,8 @@ get_header();
 	<main id="primary" class="site-main">
 	   <article  <?php post_class(); ?>>
            <div class="entry-content">
-                <header class="entry-header">
-                    <div class="wrapper">
+                <header class="section-header with-bg teal">
+                    <div class="block-wrapper">
                         <h1>Blog</h1> 
                     </div>
                 </header>

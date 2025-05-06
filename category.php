@@ -6,7 +6,7 @@ global $is_IE;
 $tax = get_queried_object();
 $term_id = $tax->term_id;
 $term_name = $tax->name;
-$tax_name = $tax->taxonomy;
+$tax_name = ucfirst($tax->taxonomy);
 
 get_header();
 ?>
@@ -14,8 +14,8 @@ get_header();
 	<main id="primary" class="site-main">
 	   <article id="taxonomy-<?= $term_id ?>" <?php post_class(); ?>>
            <div class="entry-content">
-                <header class="entry-header">
-                    <div class="wrapper">
+                <header class="section-header with-bg teal">
+                    <div class="block-wrapper">
                         <h1><?= $tax_name ?>: <?= $term_name; ?></h1> 
                     </div>
                 </header>

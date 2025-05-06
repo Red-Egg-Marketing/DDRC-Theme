@@ -9,12 +9,13 @@
 
 ?>
 
-<section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'providence' ); ?></h1>
+	<header class="section-header with-bg red">
+		<div class="block-wrapper">
+			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'providence' ); ?></h1>
+		</div>
 	</header><!-- .page-header -->
 
-	<div class="page-content">
+	<div class="wrapper">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 
@@ -47,5 +48,4 @@
 
 		endif;
 		?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
+	</div><!-- .wrapper -->

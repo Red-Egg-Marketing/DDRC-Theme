@@ -4,7 +4,6 @@ const { RichText, MediaUpload, InnerBlocks } = wp.blockEditor;
 const { Button } = wp.components;
 const { __ } = wp.i18n;
 import Content from '../../components/Content.js';
-import Icons from '../../components/Icons.js';
 
 const SaveCTA = ( { attributes } ) => {
 		const {
@@ -21,11 +20,6 @@ const SaveCTA = ( { attributes } ) => {
 			>
 				<div className="block-wrapper">
 					<div className="block-content">
-						<Icons.View 
-							rows={ icons }
-							color={ iconColor }
-							bgColor={ bgSlug }
-						/>
 						<InnerBlocks.Content />
 					</div>
 				</div>
