@@ -1,19 +1,22 @@
-.wp-block-ddrc-theme-blocks-resources {
+.wp-block-ddrc-blocks-resources {
 	padding-bottom: 8.125rem;
 }
 
-.wp-block-ddrc-theme-blocks-resources .resources-block {
+.wp-block-ddrc-blocks-resources .resources-block {
 	padding-top: 0;
 }
 
-.wp-block-ddrc-theme-blocks-resources .resources-block .header-title {
+.wp-block-ddrc-blocks-resources .resources-block .header-title {
 	margin-top: 2rem;
+	text-align: left;
+	margin-bottom: 0;
 	@media screen and (min-width: $small-width) {
 		margin-top: 3rem;
 	}
 }
 
-.wp-block-ddrc-theme-blocks-resources header.section-header {
+
+.wp-block-ddrc-blocks-resources header.section-header {
 	@media screen and (min-width: $small-width) {
 		padding-top: 4.125rem;
 	}
@@ -21,33 +24,68 @@
 
 .form-filters {
 	width: 100%;
-	max-width: $max-cont-w;
 	margin: 0 auto;
-	padding-top: 1.25rem;
-	padding-bottom: 1.25rem;
 	padding-left: 1.25rem;
-	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	background: $orange;
 	@media screen and (min-width: $small-width) {
-		padding-top: 0;
-		padding-bottom: 0;
 		padding-left: 2.5rem;
     	padding-right: 2.5rem;
 	}
 }
 
+.form-filters input[type="search"] {
+	border-radius: 0;
+	border: none;
+	background: white url(img/search.svg) no-repeat 15px center / 22px;
+	padding-left: 45px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	@media screen and (min-width: $small-width) {
+		width: auto;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		padding-left: 45px;
+		margin-top: 45px;
+		margin-bottom: 45px;
+		min-width: 305px;
+	}
+}
+
+.form-filters input[type="search"]::-webkit-input-placeholder {
+	color: $navy;
+	font-size: 18px;
+	font-family: $font-head;
+}
+
+.form-filters input[type="search"]::-moz-placeholder  {
+	color: $navy;
+	font-size: 18px;
+	font-family: $font-head;
+}
+
+.form-filters input[type="search"]:-ms-input-placeholder {
+	color: $navy;
+	font-size: 18px;
+	font-family: $font-head;
+}
+
+
 .form-filters .wrapper {
 	max-width: $max-cont-w;
-	margin: 0 auto 25px;
+	margin: 0 auto;
 	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-column-gap: 15px;
-	border-top: 1px solid $navy;
-	border-bottom: 1px solid $navy;
-	@media screen and (min-width: $small-width) {
-		grid-template-columns: 1fr 1fr;
-		grid-column-gap: 15px;
-	}
+	display: flex;
+	justify-content: center;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	flex-wrap: wrap;
 }
 
 .form-filters .wrapper.one-col {
@@ -57,10 +95,22 @@
 }
 
 
+.form-filters .wrapper .col-6 {
+	width: 100%;
+	@media screen and (min-width: $small-width) {
+		width: auto;
+	}
+}
+
 .form-filters .wrapper .filter-block {
 	grid-column: 1;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	@media screen and (min-width: $small-width) {
 		grid-column: 1;
+		margin: 0 25px;
+		padding-top: 45px;
+		padding-bottom: 45px;
 	}
 }
 
@@ -75,25 +125,24 @@
 
 .form-filters .tax-filter-button, 
 .form-filters .components-button {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: $font-head;
+	font-weight: 500;
+	font-size: 16px;
 	border: none;
 	border-radius: 0;
-	color: $navy;
-	font-family: $font-body;
-	font-size: 18px;
-	letter-spacing: 0.3px;
-	line-height: 24px;
 	cursor: pointer;
-	background: url(img/filter-icon.svg) no-repeat center left / 14px;
-	padding-top: 1.25rem;
-	padding-bottom: 1.25rem;
-	padding-left: 1.25rem;
+	padding-top: 0;
+	padding-bottom: 0;
+	background: url(img/filter-icon.svg) no-repeat center left / 18px;
+	padding-left: 1.75rem;
 	@media screen and (min-width: $small-width) {
-		font-size: 19px;
+		font-size: 18px;
 		line-height: 24px;
-		background: url(img/filter-icon.svg) no-repeat center left / 18px;
-		padding-top: 1.85rem;
-		padding-bottom: 1.85rem;
-		padding-left: 1.75rem;
+		background: url(img/filter-icon.svg) no-repeat center left / 22px;
+		padding-left: 2rem;
 	}
 }
 
@@ -112,35 +161,22 @@
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: rgba(255, 255, 255, 0.65);
 	z-index: 9999;
+	background: rgba(0, 0, 0, .3);
 	@media screen and (min-width: $small-width) {
 		position: absolute;
 		top: 100%;
-		left: 0;
+		left: 50%;
+		background: $grey-2;
+		transform: translateX(-50%);
 		height: auto;
 		z-index: 998;
 		min-width: 300px;
 		max-width: 450px;
-		border-radius: 12px;
-		border: 2px solid #EDF5FE;
-		background: white;
+		background: $grey-2;
 	}
 }
 
-.form-filters [class*="col"].active .tax-cont:before {
-	@media screen and (min-width: $small-width) {
-		content: "";
-		display: inline-block;
-		position: absolute;
-		top: -24px;
-		left: 10%;
-		transform: translateX(-50%);
-  		border-bottom: solid 24px #EDF5FE;
-  		border-left: solid 16px transparent;
-  		border-right: solid 16px transparent;
-	}
-}
 
 
 .form-filters [class*="col"].active .tax-cont:after {
@@ -149,9 +185,9 @@
 		display: inline-block;
 		position: absolute;
 		top: -20px;
-		left: 10%;
+		left: 50%;
 		transform: translateX(-50%);
-  		border-bottom: solid 20px white;
+  		border-bottom: solid 20px $grey-2;
   		border-left: solid 14px transparent;
   		border-right: solid 14px transparent;
 	}
@@ -165,8 +201,9 @@
 	height: calc(100% - 2.5rem);
 	background: white;
 	position: relative;
-	border: 2px solid #EDF5FE;
-	border-radius: 12px;
+	border-radius: 0;
+	max-height: 450px;
+	overflow: auto;
 	@media screen and (min-width: $small-width) {
 		box-shadow: none;
 		background: transparent;
@@ -195,9 +232,7 @@ ul.tax-list {
 		display: grid;
 		width: 100%;
 		height: auto;
-		grid-template-columns: 1fr 1fr;
-		grid-row-gap: 15px;
-		grid-column-gap: 15px;
+		grid-template-columns: 1fr;
 	}
 }
 
@@ -205,7 +240,7 @@ ul.tax-list {
 	position: relative;
 }
 
-.tax-wrapper .tax-close {
+.tax-wrapper .tax-close.components-button {
 	position: absolute;
 	top: 0.75rem;
 	right: 1.75rem;
@@ -223,7 +258,7 @@ ul.tax-list {
 
 ul.tax-list li.tax-item {
 	width: 50%;
-	margin-bottom: 1.25rem;
+	margin-bottom: 0;
 	line-height: 22px;
 	@media screen and (min-width: $small-width) {
 		width: auto;
@@ -254,11 +289,11 @@ ul.tax-list .checkbox-component {
 ul.tax-list .checkbox-component:checked + label:after {
 	content: "";
 	position: absolute;
-	top: 5px;
-	left: 3px;
-	width: 16px;
-	height: 16px;
-	background: $button-color-1;
+	top: 11px;
+	left: 2px;
+	width: 11px;
+	height: 11px;
+	background: $navy;
 }
 
 ul.tax-list label {
@@ -281,12 +316,12 @@ ul.tax-list .tax-wrap {
 ul.tax-list .tax-wrap:before {
 	content: "";
 	position: absolute;
-	top: 6px;
+	top: 9px;
 	left: 0;
-	width: 22px;
-	height: 22px;
-	background: white;
-	border: 1px solid $head-color;
+	width: 15px;
+	height: 15px;
+	background: $grey-2;
+	border: 1px solid $navy;
 }
 
 h2.no-success-header {
@@ -321,7 +356,6 @@ h2.no-success-header {
 
 
 header.section-header {
-	text-align: center;
 	margin-bottom: 0;
 	margin-top: 0;
 }
@@ -356,13 +390,6 @@ header.section-header {
 	flex-wrap: wrap;
 }
 
-.form-filters .wrapper {
-	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-column-gap: 15px;
-}
-
 .tax-wrapper .tax-close {
 	position: absolute;
 	top: 0.5rem;
@@ -382,14 +409,11 @@ header.section-header {
 	border-radius: 0;
 	color: white;
 	text-transform: uppercase;
-	font-family: $font-body;
-	font-size: 22px;
-	letter-spacing: 0.35px;
+	font-family: $font-head;
+	font-size: 18px;
 	line-height: 34px;
 	cursor: pointer;
 	background: url(img/filter-icon.svg) no-repeat center left / 18px;
-	padding-top: 1.85rem;
-	padding-bottom: 1.85rem;
 	padding-left: 1.75rem;
 	height: auto;
 }
@@ -406,22 +430,18 @@ header.section-header {
 	display: block;
 	width: 100%;
 	z-index: 1003;
-	min-width: 400px;
 }
 
 ul.tax-list {
-	padding: 1.5rem 2rem;
+	padding: 25px;
 	list-style-type: none;
 	margin: 0;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-row-gap: 15px;
-	grid-column-gap: 15px;
 }
 
 ul.tax-list .checkbox-component {
-	width: 22px;
-	height: 22px;
+	width: 15px;
+	height: 15px;
 	opacity: 0;
 	position: absolute;
 	top: 2px;
@@ -430,38 +450,16 @@ ul.tax-list .checkbox-component {
 	cursor: pointer;
 }
 
-ul.tax-list .checkbox-component:checked + label:after {
-	content: "";
-	position: absolute;
-	display: inline-block;
-	top: 5px;
-	left: 3px;
-	width: 16px;
-	height: 16px;
-	background: $button-color-1;
-}
-
 ul.tax-list label {
-	font-family: $font-body;
-	font-size: 18px;
+	font-family: $font-head;
+	font-size: 16px;
 	cursor: pointer;
-	color: $head-color;
+	color: $navy;
 }
 
 ul.tax-list .tax-wrap {
-	padding-left: 2rem;
+	padding-left: 1.5rem;
 	position: relative;
-}
-
-ul.tax-list .tax-wrap:before {
-	content: "";
-	position: absolute;
-	top: 2px;
-	left: 0;
-	width: 22px;
-	height: 22px;
-	background: white;
-	border: 1px solid $head-color;
 }
 
 h2.no-success-header {

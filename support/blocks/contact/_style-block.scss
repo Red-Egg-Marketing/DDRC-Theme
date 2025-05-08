@@ -144,6 +144,15 @@ p.contact-item {
 
 .contact-section .block-content > .block-editor-inner-blocks > .block-editor-block-list__layout {
 	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.contact-section .block-content > .block-editor-inner-blocks > .block-editor-block-list__layout p {
+	width: 100%;
+}
+
+.contact-section .block-content > .block-editor-inner-blocks > .block-editor-block-list__layout .wp-block-heading {
 	width: 100%;
 }
 

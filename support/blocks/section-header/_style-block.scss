@@ -20,6 +20,11 @@
 	margin-bottom: 0;
 }
 
+.section-header .wp-block-heading {
+	max-width: 100%;
+	font-weight: 500;
+}
+
 .section-header {
 	position: relative;
 	display: flex;

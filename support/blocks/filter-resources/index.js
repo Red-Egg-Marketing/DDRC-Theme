@@ -9,6 +9,9 @@ registerBlockType( 'ddrc-theme-blocks/resources', {
 	description: __( 'Block with filterable list of Resourcess', 'ddrc-theme-blocks' ),
 	icon: 'megaphone',
 	category: 'layout',
+	supports: {
+		anchor: true
+	},
 	attributes: {
 		resources: {
 			type: 'array',
@@ -17,12 +20,23 @@ registerBlockType( 'ddrc-theme-blocks/resources', {
 		taxonomies : {
 			type: 'object'
 		},
-		anchor: {
-			type: 'string',
-			default: ''
-		},
 		mainTitle : {
 			type: 'string',
+		},
+		padding: {
+			type: 'object',
+			default: {
+			}
+		},
+		blockId: {
+			type: 'string'
+		},
+		postType: {
+			type: 'string',
+			default: 'post',
+			source: 'attribute',
+			selector: '.resources-grid',
+			attribute: 'data-posttype'
 		}
 	},
 	edit: edit,

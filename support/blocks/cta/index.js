@@ -6,7 +6,7 @@ import edit from './edit';
 import save from './save';
 
 registerBlockType( 'ddrc-theme-blocks/cta', {
-	title: __( 'Call to Action', 'ddrc-theme-blocks' ),
+	title: __( 'Centered Text Block', 'ddrc-theme-blocks' ),
 	description: __( 'Heading & Button with short blurb.', 'ddrc-theme-blocks' ),
 	apiVersion: 2,
 	icon: 'button',

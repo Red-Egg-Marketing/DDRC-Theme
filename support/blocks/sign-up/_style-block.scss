@@ -1,6 +1,12 @@
 .sign-up {
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
+	margin-top: -45px;
+	margin-bottom: -45px;
+	@media screen and (min-width: $small-width) {
+		margin-top: -90px;
+		margin-bottom: -90px;
+	}
 }
 
 .sign-up .block-wrapper {
@@ -9,7 +15,6 @@
 	padding-right: 2.25rem;
 	background: $green;
 	border-radius: 20px;
-	margin-top: -45px;
 	overflow: hidden;
 	position: relative;
 	display: flex;
@@ -18,7 +23,6 @@
 	padding-top: 25px;
 	padding-bottom: 25px;
 	@media screen and (min-width: $small-width) {
-		margin-top: -90px;
 		padding-left: 60px;
 		padding-right: 60px;
 		grid-column-gap: 60px;

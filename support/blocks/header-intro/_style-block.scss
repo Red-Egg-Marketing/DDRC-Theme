@@ -14,7 +14,7 @@
 
 [class*="wp-block-ddrc-theme"] .header-intro-block {
 	padding-top: 0;
-	padding-bottom: 0;
+	padding-bottom: 20px;
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -112,6 +112,11 @@
 	@media screen and (min-width: $small-width) {
 		margin-top: 65px;
 	}
+}
+
+.header-intro-block .block-content p {
+	max-width: $med-small-width;
+	margin: 0 auto;
 }
 
 .header-intro-block .block-content p:last-of-type {

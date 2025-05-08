@@ -322,7 +322,7 @@ function ddrc_theme_posts_footer(int $id) {
 			?>
 			<div class="resources-grid resources-block light-grey">
 				<header class="header">
-					<h2 class="header-title"><background class="bg-gradient">Related Content</background></h2>
+					<h2 class="header-title">Related Content</h2>
 				</header>
 				<div class="block-wrapper">
 				<?php

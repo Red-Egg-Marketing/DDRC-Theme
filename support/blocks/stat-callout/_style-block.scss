@@ -4,9 +4,13 @@
 	box-sizing: border-box;
 	padding-top: 3.25rem;
 	padding-bottom: 3.25rem;
+	margin-top: 3.25rem;
+	margin-bottom: 3.25rem;
 	@media screen and (min-width: $small-width) {
 		padding-top: 6.125rem;
 		padding-bottom: 6.125rem;
+		margin-top: 6.125rem;
+		margin-bottom: 6.125rem;
 	}
 }
 

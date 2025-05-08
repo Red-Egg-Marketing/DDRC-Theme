@@ -7,6 +7,7 @@ import "./blocks/image-links/images.js";
 import "./blocks/event/frontend.js";
 import "./blocks/post/frontend.js";
 import "./blocks/posts-category/frontend.js";
+import "./blocks/filter-resources/frontend.js";
 // import "./blocks/selected-insights/selected-insights.js";
 import "./blocks/progress-block/scroll.js";
 import "./blocks/contact/contact.js";
@@ -17,5 +18,5 @@ import "./js-compile/fancybox-settings.js";
 import "./js-compile/words.js";
 import "./js-compile/background.js";
 import "./js-compile/stat-callout.js";
-import "./js-compile/filter-resources.js";
+// import "./js-compile/filter-resources.js";
 

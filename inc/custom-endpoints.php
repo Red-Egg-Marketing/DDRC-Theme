@@ -6,7 +6,9 @@ function ddrc_theme_return_taxonomies($post_types) {
 	$response = rest_do_request( $request );
 	$server = rest_get_server();
 	$taxes = $server->response_to_data( $response, false );
+
 	$tax_array = [];
+	$sort_order = ['Category', 'Donor'];
 
 	foreach($post_types as $post_type) {
 		$type = $taxes[$post_type];
@@ -14,14 +16,27 @@ function ddrc_theme_return_taxonomies($post_types) {
 		for ($x = 0; $x < sizeof($type_tax); $x++) {
 			$tax = $type_tax[$x];
 			if (!in_array($tax, $tax_array)) {
-				$tax_array[] = $tax;
+				$terms = post_type_get_terms(
+					$tax, 
+					['post_types' => $post_type]
+				);
+				$singular = get_object_taxonomies($post_type, 'object');
+				$singular_name = $singular[$tax]->labels->singular_name;
+				foreach($terms as $term) {
+					$tax_array[$singular_name][$term->name]['tax_name'] = $term->name;
+					$tax_array[$singular_name][$term->name]['tax_id'] = $term->term_id;
+					$tax_array[$singular_name][$term->name]['tax_slug'] = $term->slug;
+					$tax_array[$singular_name][$term->name]['taxonomy'] = $term->taxonomy;
+					$tax_array[$singular_name][$term->name]['count'] = $term->count;
+				}
+				
 			}
 		}
 	}
 
-	sort($tax_array);
+	$ordered_array = array_merge(array_flip($sort_order), $tax_array);
 
-	return $tax_array;
+	return $ordered_array;
 }
 
 
@@ -35,68 +50,61 @@ function ddrc_theme_build_post_tax_array($posts, $tax) {
 			$id = $post->ID;
 			
 			$post->link = get_permalink($id);
-			$post->post_excerpt = wp_trim_words($post->post_excerpt, 25, '...');
+			$post->post_excerpt = wp_trim_words($post->post_content, 25, '...');
 			$post->taxonomies = [];
 			$post_type = get_post_type($id);
 			$post_label = get_post_type_object($post_type);
 			$post_label = $post_label->labels->singular_name;
 			$post->label = $post_label;
-			if ($post_label == 'Whitepaper' ) {
-				$thumbnail = get_the_post_thumbnail_url($id, 'whitepaper-poster') != false ? get_the_post_thumbnail_url($id, 'whitepaper-poster') : get_the_post_thumbnail_url($id, 'thumbnail');
-			} else {
-				$thumbnail = get_the_post_thumbnail_url($id, 'post-landscape') != false ? get_the_post_thumbnail_url($id, 'post-landscape') : get_the_post_thumbnail_url($id, 'thumbnail');
-			}
+			$thumbnail = get_the_post_thumbnail_url($id, 'post-landscape') != false ? get_the_post_thumbnail_url($id, 'post-landscape') : get_the_post_thumbnail_url($id, 'thumbnail');
 			$post->media_url = $thumbnail;
-
-			for ($x = 0; $x < $len; $x++) {
-				$c_tax = $tax[$x];
-				$post_taxes = get_the_terms($id, $c_tax);
-				
-				if (!empty($post_taxes)) {
-
-					$singular = get_object_taxonomies($post_type, 'object');
-					$sing_label = $singular[$c_tax]->labels->singular_name;
-
-					foreach($post_taxes as $post_tax) {
-						$term_id = $post_tax->term_id;
-						$term_slug = $post_tax->slug;
-						$term_tax = $post_tax->taxonomy;
-						$term_name = $post_tax->name;
-						$tax_array[$sing_label][$term_name]['tax_name'] = $term_name;
-						$tax_array[$sing_label][$term_name]['tax_id'] = $term_id;
-						$tax_array[$sing_label][$term_name]['tax_slug'] = $term_slug;
-						$tax_array[$sing_label][$term_name]['taxonomy'] = $term_tax;
-						$post->taxonomies[$sing_label][] = [
-							'term_name' => $term_name,
-							'term_id' => $term_id,
-							'taxonomy' => $term_tax
-						];
-					}
-				}
-
-			}
-
 			$post_array['resources'][] = $post;
 			
 		}
-		return [$post_array, $tax_array];
+		return $post_array;
 
 	} else {
 		return false;
 	}
 }
 
-
 function ddrc_theme_return_resources() {
-	$post_types = ['post', 'case-studies', 'videos'];
+	$post_types = ['post'];
 
+	$get = $_GET;
 	$offset = isset($get['offset']) ? $get['offset'] : 0;
+	$search = isset($get['search']) ? $get['search'] : false;
+	$cats = isset($get['category']) ? explode(',', $get['category']) : false;
+	$post_types = isset($get['post-type']) ? explode(',', $get['post-type']) : ['post'];
+	$cont = isset($get['post_tag']) ? explode(',', $get['post_tag']) : false;
 
 	$args = [
 		'post_type' => $post_types,
 		'post_status' => 'publish',
 		'posts_per_page' => -1,
 	];
+
+	if ($cats) {
+		$args['tax_query'][] =
+			[
+				'terms' => $cats,
+				'field' => 'term_id',
+				'taxonomy' => 'category',
+			];
+	}
+
+	if ($cont) {
+		$args['tax_query'][] =
+			[
+				'terms' => $cont,
+				'field' => 'term_id',
+				'taxonomy' => 'post_tag',
+			];
+	}
+
+	if ($search) {
+		$args['s'] = $search;
+	}
 
 	$query = new WP_Query($args);
 
@@ -109,7 +117,12 @@ function ddrc_theme_return_resources() {
 
 		wp_reset_postdata();
 
-		return $resources;
+		return [$resources, $taxes, 'empty' => false, $args];
+	}  else {
+		$empty  = '<div class="warning">There are no available resources matching your filters. Please try something else.</div>';
+		$error = new stdClass();
+		$error->message = $empty;
+		return [$error ,$taxes, 'empty' => true, $args];
 	}
 
 }
@@ -359,3 +372,36 @@ function ddrc_theme_resource_card($id, $cats = true, $read = 'Read More', $image
 		return $html;
 	}
 }
+
+function post_type_get_terms( $taxonomies, $args=array() ){
+    //Parse $args in case its a query string.
+    $args = wp_parse_args($args);
+
+    if( !empty($args['post_types']) ){
+        $args['post_types'] = (array) $args['post_types'];
+        add_filter( 'terms_clauses','wpse_filter_terms_by_cpt',10,3);
+
+        
+    } // endif post_types set
+
+    return get_terms($taxonomies, $args);           
+}
+
+
+function wpse_filter_terms_by_cpt( $pieces, $tax, $args){
+    global $wpdb;
+
+    // Don't use db count
+    $pieces['fields'] .=", COUNT(*) " ;
+
+    //Join extra tables to restrict by post type.
+    $pieces['join'] .=" INNER JOIN $wpdb->term_relationships AS r ON r.term_taxonomy_id = tt.term_taxonomy_id 
+                                INNER JOIN $wpdb->posts AS p ON p.ID = r.object_id ";
+
+    // Restrict by post type and Group by term_id for COUNTing.
+    $post_types_str = implode(',',$args['post_types']);
+    $pieces['where'].= $wpdb->prepare(" AND p.post_type IN(%s) GROUP BY t.term_id", $post_types_str);
+
+    remove_filter( current_filter(), __FUNCTION__ );
+    return $pieces;
+ }

@@ -9,11 +9,11 @@
 	}
 }
 
-.resources-block .block-wrapper {
+.resources-block > .block-wrapper {
 	width: 100%;
 	max-width: $max-cont-w + 200px;
-	padding-left: 0;
-	padding-right: 0;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 	margin: 0 auto;
 }
 
@@ -36,11 +36,11 @@
 .selected-case-studies-grid {
 	margin-bottom: 2.5rem;
 	padding-top: 4.25rem;
-	padding-bottom: 4.25rem;
+	padding-bottom: 2.25rem;
 	@media screen and (min-width: $small-width) {
 		margin-bottom: 3.15em;
 		padding-top: 6.75rem;
-		padding-bottom: 6.75rem;
+		padding-bottom: 4.75rem;
 	}
 }
 
@@ -149,23 +149,17 @@
 		grid-column-gap: 1.25rem;
 		grid-row-gap: 1.25rem;
 		max-width: $max-cont-w + 200px;
-		padding-left: 1.25rem;
-		padding-right: 1.25rem;
 		width: 100%;
 		margin: 0 auto;
 		@media screen and (min-width: $small-width) and (max-width: $med-width) {
 			grid-template-columns: 1fr 1fr;
 			grid-column-gap: 1.5rem;
 			grid-row-gap: 1.5rem;
-			padding-left: 1.25rem;
-			padding-right: 1.25rem;
 		}
 		@media screen and (min-width: $med-width + 1px) {
 			grid-template-columns: 1fr 1fr;
 			grid-column-gap: 2.5rem;
 			grid-row-gap: 2.5rem;
-			padding-left: 1.25rem;
-			padding-right: 1.25rem;
 		}
 }
 

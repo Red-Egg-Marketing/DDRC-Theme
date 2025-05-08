@@ -46,44 +46,6 @@ add_action('enqueue_block_editor_assets', 'ddrc_theme_enqueue_block_editor_asset
 // For Dynamic blocks that are registered within blocks folder
 
 
-function ddrc_theme_render_filtered_resources_callback($block_attributes, $content) {
-    global $is_IE;
-
-    $title = !empty($block_attributes['mainTitle']) ? $block_attributes['mainTitle'] : '';
-
-    $block_content = '<div class="wp-block-ddrc-theme-blocks-resources">';
-        $block_content .= '<div class="resources-block">';
-            $block_content .= '<div class="resources-wrap">';
-                $block_content .= '<div id="ResourcesGrid" class="resources-grid" data-title="' . $title . '">';
-                    $block_content .= '<header class="header">';
-                        $block_content .= '<h2 class="header-title"><background class="bg-gradient">' . $title . '</background></h2>';
-                    $block_content .= '</header>';
-                    $block_content .= '<div class="block-wrapper">';
-                    if ($is_IE) {
-                        $block_content .= ddrc_theme_posts_pagination();
-                    }
-                    $block_content .= '</div>';
-                $block_content .= '</div>';
-            $block_content .= '</div>';
-        $block_content .= '</div>';
-    $block_content .= '</div>';
-
-    return $block_content; 
-}
-
-
-function ddrc_theme_dynamic_resources_block() {
-    
-    register_block_type( 'ddrc-theme-blocks/resources', [
-            'api_version' => 2,
-            'script' => 'wp-main-js',
-            'render_callback' => 'ddrc_theme_render_filtered_resources_callback'
-        ] 
-    );
-}
-
-add_action('init', 'ddrc_theme_dynamic_resources_block');
-
 
 function ddrc_theme_render_filtered_projects_callback($block_attributes, $content) {
 

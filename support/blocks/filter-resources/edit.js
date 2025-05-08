@@ -6,19 +6,22 @@ const { __ } = wp.i18n;
 import Header from '../../components/Header.js';
 import ResourceCard from '../../components/ResourceCard.js';
 import ResourceFilters from '../../components/ResourceLoader.js';
+import PaddingSelector from '../../components/Padding.js';
 const apiUrl  = '/wp-json/ddrc/v2/resources';
+const typeUrl  = '/wp-json/wp/v2/types';
 
-const EditResources = ( { attributes, setAttributes } ) => {
+const EditResources = ( { attributes, setAttributes, clientId } ) => {
+
+		const {
+			taxonomies, anchor, mainTitle, blockId, padding, postType
+		} = attributes;
 	  	
 	  	const [resources, selectResources] = useState(false);
 	  	const [taxonomy, setTaxes] = useState([]);
   		const [selectTax, setSelectTaxes] = useState([]);
   		const [toggleFilters, setToggleFilters] = useState({key: '', active: false});
-
-		const {
-			taxonomies, anchor, mainTitle
-		} = attributes;
-
+  		const [currentTypes, activateTypes] = useState(false);
+  		const [type, setPostType] = useState(postType);
 
 		document.addEventListener('click', function(event) {
     		let target = event.target;
@@ -106,36 +109,89 @@ const EditResources = ( { attributes, setAttributes } ) => {
 
 		if (resources === false) {
     		wp.apiRequest({
-    		    url: apiUrl
+    		    url: apiUrl + '?post-type=' + postType
     		}).then(resourcelist => {
     		    let posts = resourcelist[0].resources;
     		    let taxes = resourcelist[1];
     		    selectResources(posts);
     		    setTaxes(taxes);
+
     		});
 
   		}
+
+  		if (currentTypes == false || currentTypes.length == 0) {
+			wp.apiFetch({
+				url: typeUrl
+			}).then(types => {
+				let index = 0;
+				let t = [];
+				for(const [key, value] of Object.entries(types)) {
+					let title = value.name;
+					t[index] = {
+						label: title,
+						value: key
+					};
+					index++;
+
+				}
+				activateTypes(t);
+			});
+		}
+
+  		const setPostTypes = (value) => {
+
+			wp.apiFetch({
+				url: apiUrl + '?post-type=' + value
+			}).then(resourcelist => {
+				let posts = resourcelist[0].resources;
+    		    let taxes = resourcelist[1];
+    		    selectResources(posts);
+    		    setTaxes(taxes);
+				setAttributes({resources: posts });
+
+			});
+			console.log('the falue i' + value);
+			setAttributes({
+				postType: value
+			});
+
+		}
+
+  		React.useEffect( () => {
+        	if ( ! blockId ) {
+        	    setAttributes( { blockId: 'block-' + clientId } );
+        	}
+    	}, [] );
 		
 		return (
 			<Fragment>
 				<InspectorControls>
 					<PanelBody
-							title={ __( 'HTML Anchor' ) }
-							initialOpen={ false }
-						>
-							<TextControl
-								label={ __( 'HTML Anchor' ) }
-								value={ anchor }
-								onChange={ ( anchor ) => updateAnchor( anchor ) }
-								help={__('Enter a word or two — without spaces — to make a unique web address just for this heading, called an “anchor.”')}
-							/>
-						
+						title={ __('Select Post Type')}
+						initialOpen={ true }
+					>
+						<SelectControl
+							 label={ __('Post Type')}
+							 value={ postType }
+							 options={
+							 	currentTypes
+							 }
+							 onChange={ setPostTypes }
+						/>
 					</PanelBody>
+					<PaddingSelector
+						setAttributes={ setAttributes }
+						padding={ padding }
+						id={ 'block-' + clientId }
+					/>
 				</InspectorControls>
 				<div { ...blockProps }>
 					<div className="resources-block">
-						<div className="block-wrapper" id={anchor}>
-							<div className="resources-wrap">
+						<div className="block-wrapper">
+							<div className="resources-wrap"
+								data-posttype={ postType }
+							>
 								<ResourceFilters
 									filterCats={ filterCats }
 									taxonomies={ taxonomy }
@@ -149,12 +205,17 @@ const EditResources = ( { attributes, setAttributes } ) => {
 										tag="h2"
 										title={ mainTitle }
 										updateProp="mainTitle"
-										placeholder={ __('Title...', 'DDRC')}
+										placeholder={ __('Title...', 'providence')}
 										setAttributes={ setAttributes }
 									/>
 								</header>
-								<div className="resources-grid">
-									{resources.length > 0 && resources.map((resource, resourceIndex) => {
+								
+								<div 
+									className="resources-grid"
+									data-title={ mainTitle }
+									
+								>
+									{typeof resources != 'undefined' && resources.length > 0 && resources.map((resource, resourceIndex) => {
 											
 											return (
 												<Fragment>

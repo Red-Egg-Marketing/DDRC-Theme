@@ -43,21 +43,15 @@
 @supports (display: grid) {
 
 	.resources-block .resources.grid {
-		padding-left: 1.25rem;
-		padding-right: 1.25rem;
 		@media screen and (min-width: $small-width) and (max-width: $med-width) {
 			grid-template-columns: 1fr 1fr;
 			grid-column-gap: 1.5rem;
 			grid-row-gap: 1.5rem;
-			padding-left: 1.25rem;
-			padding-right: 1.25rem;
 		}
 		@media screen and (min-width: $med-width + 1px) {
 			grid-template-columns: 1fr 1fr;
 			grid-column-gap: 2.5rem;
 			grid-row-gap: 2.5rem;
-			padding-left: 1.25rem;
-			padding-right: 1.25rem;
 		}
 	}
 }

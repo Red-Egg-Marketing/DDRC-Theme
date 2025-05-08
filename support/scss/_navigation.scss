@@ -80,6 +80,19 @@ a.custom-logo-link {
 	}
 }
 
+.main-navigation .nav-menu > .menu-item.mega-menu > .sub-menu li {
+	@media screen and (min-width: $med-small-width) {
+		margin-bottom: 7px;
+	}
+}
+
+.main-navigation .menu-item .sub-menu li.menu-item {
+	@media screen and (min-width: $med-small-width) {
+		margin-bottom: 20px;
+	}
+
+}
+
 .main-navigation .sub-menu li.menu-item {
 	font-style: italic;
 	font-weight: bold;
@@ -460,6 +473,10 @@ li.menu-item.nav-button a {
 	}
 }
 
+.main-navigation .nav-menu > .menu-item:not(.mega-menu) {
+	position: relative;
+}
+
 .main-navigation .nav-menu > .menu-item {
 	width: 100%;
 	display: flex;
@@ -502,7 +519,6 @@ li.menu-item.nav-button a {
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
 	box-sizing: content-box;
-	overflow: auto;
 	@media screen and (min-width:  $med-small-width) {
 		padding-bottom: 0;
 		padding-left: 0;
@@ -528,7 +544,14 @@ li.menu-item.nav-button a {
 		background: white;
 		padding-top: 2rem;
 		padding-bottom: 1.5rem;
-		display: flex;
+		position: absolute;
+		min-width: 250px;
+	}
+}
+
+.main-navigation .nav-menu > .menu-item:not(.mega-menu):hover > .sub-menu {
+	@media screen and (min-width:  $med-small-width) {
+		display: block;
 	}
 }
 
@@ -775,6 +798,7 @@ li.menu-item.nav-button a {
 	@media screen and (min-width: $med-small-width) {
 		left: 50%;
 		transform: translateX(-50%);
+		display: block;
 	}
 }
 

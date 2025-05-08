@@ -8,7 +8,7 @@ import save from "./save";
 registerBlockType("ddrc-theme-blocks/faq", {
 	title: __("FAQ", "ddrc-theme-blocks"),
 	description: __("Block for displaying FAQ."),
-	parent: ['ddrc-theme-blocks/faq'],
+	parent: ['ddrc-theme-blocks/faq-section'],
 	apiVersion: 2,
 	icon: "info",
 	category: "layout",

@@ -339,18 +339,6 @@ const EditImageColumns = ( { attributes, setAttributes, clientId } ) => {
 					}
 					<PanelBody>
 						<ToggleControl 
-							label={__('With Dropshadow?')}
-							checked={ !!withDrop }
-							onChange={ () => {
-									setAttributes({
-										withDrop: !withDrop
-									});
-								}
-							}
-						/>
-					</PanelBody>
-					<PanelBody>
-						<ToggleControl 
 							label={__('Activate Scroll Animation')}
 							checked={ !!animateScroll }
 							onChange={ () => {

@@ -8,17 +8,6 @@ html :where(.wp-block) {
 	margin-bottom: 0;
 }
 
-.wp-block.is-reusable .faq:last-of-type {
-	margin-bottom: 0;
-}
-
-.faq + [class*="wp-block"]:not(.faq) {
-	margin-top: 5.25rem;
-	@media screen and (min-width: $small-width) {
-		margin-top: 8.25rem;
-	}
-}
-
 .faq {
 	width: 100%;
 	display: flex;
@@ -26,13 +15,6 @@ html :where(.wp-block) {
 	justify-content: center;
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
-}
-
-.faq:last-of-type {
-	margin-bottom: 4.25rem;
-	@media screen and (min-width: $small-width) {
-		margin-bottom: 8.125rem;
-	}
 }
 
 .faq .block-wrapper {
@@ -63,12 +45,13 @@ html :where(.wp-block) {
 	font-weight: 500;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
+	padding-right: 2.5rem;
 	font-family: $font-body;
 	@media screen and (min-width: $small-width) {
 		padding-bottom: 0.35rem;
 		cursor: pointer;
 		padding-left: 1.25rem;
-		padding-right: 2.5rem;
+		padding-right: 3.5rem;
 		background: $light-grey url(img/down-chevron.svg) no-repeat calc(100% - 28px) center / 28px;
 		font-size: 22px;
 		line-height: 36px;

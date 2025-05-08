@@ -6,7 +6,7 @@ import edit from './edit';
 import save from './save';
 
 registerBlockType( 'ddrc-theme-blocks/section-header', {
-	title: __( 'Section Header', 'ddrc-theme-blocks' ),
+	title: __( 'Page Header', 'ddrc-theme-blocks' ),
 	apiVersion: 2,
 	attributes: {
 		bgColor: {

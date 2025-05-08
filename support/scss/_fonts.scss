@@ -20,7 +20,7 @@
 	font-family: $font-body;
 	font-size: 18px;
 	line-height: 25px;
-	color: $head-color;
+	color: black;
 	font-weight: 300;
 	@media screen and (min-width: $small-width) {
 		font-size: 22px;
@@ -83,7 +83,7 @@
 .editor-visual-editor li, .page .entry-content li {
 	font-size: 18px;
 	line-height: 30px;
-	color: $body-color;
+	color: black;
 	@media screen and (min-width: $small-width) {
 		font-size: 23px;
 		line-height: 32px;
@@ -250,38 +250,38 @@ h6 a {
 .has-green-color p,
 .has-green-color,
 .entry-content .has-blue-green-color {
-	color: $green;
+	color: $green !important;
 }
 
 .has-red-color p,
 .has-red-color,
 .entry-content .has-red-color {
-	color: $red;
+	color: $red !important;
 }
 
 .has-teal-color p,
 .has-teal-color,
 .entry-content .has-teal-color {
-	color: $teal;
+	color: $teal !important;
 	
 }
 
 .has-purple-color p,
 .has-purple-color,
 .entry-content .has-purple-color {
-	color: $purple;
+	color: $purple !important;
 }
 
 .has-orange-color p,
 .has-orange-color,
 .entry-content .has-orange-color {
-	color: $orange;
+	color: $orange !important;
 }
 
 .has-light-orange-color p,
 .has-light-orange-color,
 .entry-content .has-light-orange-color {
-	color: $light-orange;
+	color: $light-orange !important;
 }
 
 background {
