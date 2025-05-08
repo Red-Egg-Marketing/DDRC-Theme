@@ -58,6 +58,12 @@
 	}
 }
 
+@for $i from 1 through 360 {
+  div[rotate="#{$i}"].text-cards-grid:before {
+     transform: rotate(#{$i}deg);
+  }
+}
+
 .text-cards-grid .cta .wp-block-buttons {
 	align-self: flex-end;
 	width: 100%;

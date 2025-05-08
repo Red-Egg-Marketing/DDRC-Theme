@@ -27,7 +27,7 @@
 	margin: 0 auto;
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
-	background: $orange;
+	background: $light-grey;
 	@media screen and (min-width: $small-width) {
 		padding-left: 2.5rem;
     	padding-right: 2.5rem;
@@ -125,7 +125,7 @@
 
 .form-filters .tax-filter-button, 
 .form-filters .components-button {
-	color: white;
+	color: black;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: $font-head;
@@ -407,7 +407,7 @@ header.section-header {
 .form-filters .components-button {
 	border: none;
 	border-radius: 0;
-	color: white;
+	color: black;
 	text-transform: uppercase;
 	font-family: $font-head;
 	font-size: 18px;

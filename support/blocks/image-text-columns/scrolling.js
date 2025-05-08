@@ -51,8 +51,8 @@ require('es6-promise/auto');
 		let newX = PosNeg < 0 ? Math.abs(xPos) : -xPos;
 		let progX = xPos + (newX * prog);
 
-		console.log(newX);
 
+		console.log(prog);
 		gsap.to(content, 
 		{
 			opacity: prog,

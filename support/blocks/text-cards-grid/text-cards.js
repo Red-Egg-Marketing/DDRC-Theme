@@ -1,74 +1,35 @@
-window.addEventListener("load", (event) => {
+require('es6-promise/auto');
 
-  BlockIntersect();
-
-}, false);
+(function() {
 
 
-let prevRatio = 0.0;
-let rotate = 0;
-let scrollPos = window.pageYOffset;
+  function ScrollBgEffect() {
 
-function BlockIntersect() {
+    gsap.registerPlugin(ScrollTrigger);
 
-  var blocks = document.querySelectorAll('.text-cards-grid');
-    
-  if (blocks != null && blocks.length > 0) {
-    blocks.forEach(function(background) {
-      let test = createObserverBG(background);
+    var bg = document.querySelectorAll('.text-cards-grid.with-bg-pinwheel');
 
-    });
-  }
-}
+    if (bg.length > 0 ) {
+      bg.forEach(function(column, index) {
 
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: column,
+            start: "top 100%",
+            onUpdate: function(progress) {
+              let degree = Math.round(360 * progress.progress);
+              console.log(degree);
 
-function createObserverBG(boxElement) {
-  let observer;
-  let options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: buildThresholdListBG()
-  };
+              column.setAttribute('rotate', degree);
+              // animateFrom(progress, block, x);
+            }
+          }
+        });
 
-  observer = new IntersectionObserver(handleIntersect, options);
-
-  observer.observe(boxElement);
-
-}
-
-
-function buildThresholdListBG() {
-  let thresholds = [];
-  let numSteps = 20;
-
-  for (let i=1.0; i<=numSteps; i++) {
-    let ratio = i/numSteps;
-    thresholds.push(ratio);
-  }
-
-  thresholds.push(0);
-  return thresholds;
-}
-
-
-function handleIntersect(entries, observer) {
-
-  scrollPos = window.pageYOffset;
-
-  entries.forEach((entry, index) => {
-    let target = entry.target;
-    let inView = entry.isIntersecting;
-    if (inView) {
-
-      target.classList.remove('rotate-' + rotate);
-      rotate += 1;
-      target.classList.add('rotate-' + rotate);
-
+      }); 
     }
+  }
 
-    prevRatio = entry.intersectionRatio;
-    
-  });
-
-
-}
+  ScrollBgEffect();
+  
+})();

@@ -5,15 +5,6 @@
 	padding-bottom: 8.125rem;
 }
 
-.resources-block {
-	padding-top: 1.25rem;
-	padding-bottom: 1.25rem;
-	@media screen and (min-width: $small-width) {
-		padding-top: 2.75rem;
-		padding-bottom: 2.75rem;
-	}
-}
-
 .resources-block .header {
 	text-align: center;
 	padding-top: 2rem;
@@ -21,6 +12,15 @@
 	@media screen and (min-width: $small-width) {
 		padding-top: 3.675rem;
 		padding-bottom: 1rem;
+	}
+}
+
+.resources-block {
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+	@media screen and (min-width: $small-width) {
+		padding-top: 2.75rem;
+		padding-bottom: 2.75rem;
 	}
 }
 

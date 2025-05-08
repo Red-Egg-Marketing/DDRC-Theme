@@ -56,7 +56,6 @@
 .image-columns .img-container {
 	overflow: hidden;
 	width: 100%;
-	max-height: 765px;
 }
 
 .image-columns .img-container {
@@ -96,6 +95,10 @@
 	}
 }
 
+.image-columns > .block-wrapper > .block-content {
+	align-items: stretch;
+}
+
 .image-columns .image-col {
 	position: relative;
 	width: 100%;
@@ -115,6 +118,17 @@
 	align-items: stretch;
 }
 
+.image-columns.full-width .img-container {
+	position: relative;
+}
+
+.image-columns.full-width .img-container img {
+	@media screen and (min-width: $small-width) {
+		position: absolute;
+		height: 100%;
+	}
+}
+
 .img-container img {
 	display: block;
 	margin: 0 auto;
@@ -122,6 +136,7 @@
 
 .image-columns .img-container img {
 	object-fit: cover;
+	object-position: top;
 	width: 100%;
 }
 

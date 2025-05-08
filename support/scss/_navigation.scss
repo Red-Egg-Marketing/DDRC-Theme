@@ -533,6 +533,32 @@ li.menu-item.nav-button a {
 	}
 }
 
+.main-navigation .nav-menu > .menu-item:not(.mega-menu) > .sub-menu {
+	@media screen and (min-width:  $med-small-width) {
+		border-bottom: 25px solid $red;
+		padding-left: 25px;
+		padding-right: 25px;
+	}	
+}
+
+.main-navigation .nav-menu > .menu-item:first-of-type:not(.mega-menu) > .sub-menu {
+	@media screen and (min-width:  $med-small-width) {
+		border-bottom: 25px solid $green;
+	}
+}
+
+.main-navigation .nav-menu > .menu-item:nth-of-type(3):not(.mega-menu) > .sub-menu {
+	@media screen and (min-width:  $med-small-width) {
+		border-bottom: 25px solid $orange;
+	}
+}
+
+.main-navigation .nav-menu > .menu-item:nth-of-type(4):not(.mega-menu) > .sub-menu {
+	@media screen and (min-width:  $med-small-width) {
+		border-bottom: 25px solid $purple;
+	}
+}
+
 .main-navigation .nav-menu > .menu-item > .sub-menu {
 	background-position: top left;
 	background-repeat: no-repeat;
@@ -545,8 +571,12 @@ li.menu-item.nav-button a {
 		padding-top: 2rem;
 		padding-bottom: 1.5rem;
 		position: absolute;
-		min-width: 250px;
+		min-width: 350px;
 	}
+}
+
+.main-navigation .nav-menu > .menu-item:not(.mega-menu) > .sub-menu li a {
+	color: $green;
 }
 
 .main-navigation .nav-menu > .menu-item:not(.mega-menu):hover > .sub-menu {

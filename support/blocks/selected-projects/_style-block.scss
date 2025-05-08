@@ -9,6 +9,10 @@
 	}
 }
 
+.filter-resources .resources-block {
+	padding-top: 0;
+}
+
 .resources-block > .block-wrapper {
 	width: 100%;
 	max-width: $max-cont-w + 200px;
