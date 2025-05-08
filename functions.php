@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.1.1' );
+	define( '_S_VERSION', '1.1.2' );
 }
 
 if ( ! function_exists( 'ddrc_theme_setup' ) ) :
@@ -51,11 +51,11 @@ if ( ! function_exists( 'ddrc_theme_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'DDRC' ),
-				'menu-2' => esc_html__( 'Secondary - Column 1', 'DDRC' ),
-				'menu-3' => esc_html__( 'Secondary - Column 2', 'DDRC' ),
-				'menu-12' => esc_html__( 'Secondary/Footer - Column 1', 'DDRC' ),
-				'menu-14' => esc_html__( 'Secondary/Footer - Column 2', 'DDRC' ),
-				'menu-15' => esc_html__( 'Tertiary/Footer', 'DDRC' )
+				'menu-2' => esc_html__( 'Secondary', 'DDRC' ),
+				// 'menu-3' => esc_html__( 'Secondary - Column 2', 'DDRC' ),
+				// 'menu-12' => esc_html__( 'Secondary/Footer - Column 1', 'DDRC' ),
+				// 'menu-14' => esc_html__( 'Secondary/Footer - Column 2', 'DDRC' ),
+				'menu-15' => esc_html__( 'Footer', 'DDRC' )
 			)
 		);
 

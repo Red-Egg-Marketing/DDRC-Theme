@@ -115,12 +115,9 @@
 }
 
 .header-intro-block .block-content p {
-	max-width: $med-small-width;
-	margin: 0 auto;
-}
-
-.header-intro-block .block-content p:last-of-type {
-	margin-bottom: 0;
+	max-width: $med-small-width + 200px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .header-intro-block .block-content {

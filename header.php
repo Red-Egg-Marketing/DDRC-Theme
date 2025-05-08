@@ -38,6 +38,21 @@ if (function_exists('get_field')) {
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'DDRC' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		<div class="secondary-nav">
+			<div class="wrapper">
+				<nav class="secondary-navigation">
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-2',
+								'menu_id'        => 'SecondaryCont',
+								'menu_class'	 => 'nav-menu',
+							)
+						);
+					?>
+				</nav>
+			</div>
+		</div>
 		<div class="main-content-nav">
 		<div class="wrapper main-wrapper">
 			<div class="site-branding">

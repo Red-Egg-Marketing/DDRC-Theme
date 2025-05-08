@@ -1,27 +1,27 @@
 .wp-block.shortcode-section {
 	width: 100%;
 	max-width: 100%;
+
 }
 
 .shortcode-section {
 	width: 100%;
 	max-width: 100%;
+	padding-top: 3.875rem;
+	padding-bottom: 1.875rem;
 	@media screen and (min-width: $small-width) {
-		padding-bottom: 6.75rem;
+		padding-bottom: 2.75rem;
+		padding-top: 6.75rem;
 	}
 }
 
 .shortcode-section > .block-wrapper {
 	width: 100%;
-	max-width: $max-cont-w;
-	padding-left: 0;
-	padding-right: 0;
+	max-width: $max-cont-w + 200px;
 	margin: 0 auto;
 	box-sizing: border-box;
-	@media screen and (min-width: $small-width) {
-		padding-left: 5.125rem;
-		padding-right: 5.125rem;
-	}
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 }
 
 
@@ -48,3 +48,94 @@
 .shortcode-section .wpex.horizontal-timeline {
 	overflow: hidden;
 }
+
+.wpex.horizontal-timeline.ex-multi-item:not(.wpex-horizontal-4) .horizontal-nav li span.wpex_point {
+	text-align: center;
+	font-family: $font-head;
+	color: $teal;
+	font-weight: 700;
+	font-size: 24px;
+	background: none;
+	padding-bottom: 8px;
+	@media screen and (min-width: $small-width) {
+		font-size: 30px;
+		padding-bottom: 10px;
+	}
+}
+
+.wpex.horizontal-timeline.ex-multi-item .timeline-hr {
+	border-color: $teal;
+}
+
+.wpex.horizontal-timeline.ex-multi-item:not(.wpex-horizontal-4) .horizontal-nav li span.wpex_point:after {
+	display: none;
+}
+.wpex.horizontal-timeline.ex-multi-item .horizontal-nav li span.wpex_point i.no-icon {
+	display: none;
+}
+
+.wpex.horizontal-timeline.ex-multi-item .horizontal-nav li .wpex_point:before,
+.wpex.horizontal-timeline.ex-multi-item .horizontal-nav li.ex_s_lick-current .wpex_point:before {
+	background: $green url(img/calendar.svg) no-repeat center center / 20px;
+	border: 4px solid white;
+	width: 50px;
+	height: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -56px;
+	@media screen and (min-width: $small-width) {
+		width: 72px;
+		height: 72px;
+		bottom: -66px;
+		background: $green url(img/calendar.svg) no-repeat center center / 32px;
+	}
+}
+
+.wpextt_templates {
+	margin-top: 50px;
+	@media screen and (min-width: $small-width) {
+		margin-top: 95px;
+	}
+}
+
+.wpextt_templates > div {
+	background: $light-grey;
+	border-radius: 20px;
+	text-align: center;
+}
+
+.timeline-details h2 {
+	display: none;
+}
+
+.wpex.horizontal-timeline.ex-multi-item .wpex-timeline-label .timeline-details {
+	border: none;
+	text-align: center;
+}
+
+.fa-angle-left:before {
+	content: "\f060";
+	font-size: 33px;
+}
+
+.fa-angle-right:before {
+	content: "\f061";
+	font-size: 33px;
+}
+
+.wpex.horizontal-timeline .horizontal-nav .ex_s_lick-prev {
+	left: 0;
+}
+
+
+.wpex.horizontal-timeline .horizontal-nav .ex_s_lick-next {
+	right: 0;
+}
+
+.wpex.horizontal-timeline.tlml-arrow-top .ex_s_lick-prev, 
+.wpex.horizontal-timeline.tlml-arrow-top .ex_s_lick-next {
+	background-color: $green !important;
+	border-radius: 50px;
+	color: white;
+}
+
