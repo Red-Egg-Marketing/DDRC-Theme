@@ -19,6 +19,19 @@ registerBlockType( 'ddrc-theme-blocks/selected-case-study', {
 		},
 		mainTitle : {
 			type: 'string',
+		},
+		padding: {
+			type: 'object',
+			default: {
+			}
+		},
+		margin: {
+			type: 'object',
+			default: {
+			}
+		},
+		blockId: {
+			type: 'string'
 		}
 	},
 	supports: {

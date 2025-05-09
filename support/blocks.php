@@ -172,51 +172,6 @@ function ddrc_theme_dynamic_case_studies_grid_block() {
 
 add_action('init', 'ddrc_theme_dynamic_case_studies_grid_block');
 
-
-function ddrc_theme_render_filtered_case_studies_stat_block_callback($block_attributes, $content) {
-    $block_content = '';
-
-    $cat = !empty($block_attributes['category']) ? $block_attributes['category'] : '';
-    $anchor = !empty($block_attributes['anchor']) ? $block_attributes['anchor'] : '';
-    $title = !empty($block_attributes['mainTitle']) ? $block_attributes['mainTitle'] : '';
-    
-    $block_content .= '<section class="selected-case-studies">';
-       $block_content .= '<div class="case-studies-block">';
-            $block_content .= '<div class="block-wrapper" id="' . $anchor . '">';
-                $block_content .= '<div class="resources-wrap">';
-                    if ($title != '') {
-                        $block_content .= '<header class="header">';
-                             $block_content .= '<h2 class="header-title">' . $title . '</h2>';
-                        $block_content .= '</header>';
-                    }
-                    $block_content .= '<div class="swiper">';
-                        $block_content .= '<div class="resources swiper-wrapper" data-append data-category="' . $cat . '">';
-                        $block_content .= '</div>';
-                         $block_content .= '<div class="swiper-button-prev"></div>';
-                         $block_content .= '<div class="swiper-button-next"></div>';
-                    $block_content .= '</div>';
-               $block_content .= '</div>';
-               $block_content .= $content;
-            $block_content .= '</div>';
-        $block_content .= '</div>';
-    $block_content .= '</section>';
-    
-    return $block_content;
-}
-
-
-function ddrc_theme_dynamic_case_studies_block() {
-    
-    register_block_type( 'ddrc-theme-blocks/selected-case-study', [
-            'api_version' => 2,
-            'script' => 'wp-main-js',
-            'render_callback' => 'ddrc_theme_render_filtered_case_studies_stat_block_callback'
-        ] 
-    );
-}
-
-add_action('init', 'ddrc_theme_dynamic_case_studies_block');
-
 //remove custom colors from blocks
 
 function ddrc_theme_gutenberg_disable_custom_styles() {

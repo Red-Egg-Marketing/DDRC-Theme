@@ -19,18 +19,20 @@
 	}
 }
 
+.selected-case-studies .wp-block-buttons {
+	margin-bottom: 25px;
+	@media screen and (min-width: $small-width) {
+		margin-top: 50px;
+	}
+}
+
 .selected-case-studies .block-wrapper {
 	width: 100%;
-	max-width: $max-cont-w;
 	margin: 0 auto;
 	box-sizing: border-box;
 	position: relative;
-	padding-left: 20px;
-	padding-right: 20px;
-	@media screen and (min-width: $small-width) {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 }
 
 .case-studies-block .case-study {
@@ -48,10 +50,14 @@
 
 .case-studies-block .swiper-button-next {
 	right: 15px;
+	bottom: 0;
+	top: calc(100% - 25px);
 }
 
 .case-studies-block .swiper-button-prev {
 	left: 15px;
+	bottom: 0;
+	top: calc(100% - 25px);
 }
 
 .case-studies-block .case-study .wp-block-button {

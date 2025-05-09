@@ -7,10 +7,12 @@ import SearchResources from '../../components/SearchResources.js';
 import Header from '../../components/Header.js';
 import ResourceCard from '../../components/ResourceCard.js';
 import Swiper from 'swiper/bundle';
+import PaddingSelector from '../../components/Padding.js';
+import MarginSelector from '../../components/Margin.js';
 // import a component
 
 const apiUrl  = '/wp-json/ddrc/v2/events';
-const catUrl  = '/wp-json/wp/v2/categories';
+const catUrl  = '/wp-json/wp/v2/donors';
 
 const template = [
 	['core/buttons']
@@ -32,7 +34,7 @@ const mainControl = {
 
 const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected, clientId } ) => {
 
-		const { resources, mainTitle, category } = attributes;
+		const { resources, mainTitle, category, padding, blockId, margin } = attributes;
 
 		const blockProps = useBlockProps({
 			className: 'selected-case-studies'
@@ -45,6 +47,12 @@ const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected, clien
 		const [currentCats, activateCategories] = useState(false);
 		const [tempSwip, activateSwipe] = useState(false);
 		const [tempResources, activateResources] = useState(false);
+
+		React.useEffect( () => {
+        	if ( ! blockId ) {
+        	    setAttributes( { blockId: 'block-' + clientId } );
+        	}
+    	}, [] );
 
 		if ( (resources == undefined || resources.length == 0)) {
 
@@ -90,7 +98,7 @@ const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected, clien
 		const setCategoryPosts = (value) => {
 			activateSwipe(false);
 			wp.apiFetch({
-				url: apiUrl + '?category=' + value + '&post_types=stories&ppp=10'
+				url: apiUrl + '?donor=' + value + '&post_types=stories&ppp=10'
 			}).then(resourcelist => {
 				setAttributes({resources: resourcelist });
 				activateResources(resourcelist);
@@ -103,20 +111,31 @@ const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected, clien
 
 		}
 
+
 		return (
 			<Fragment>
 				<InspectorControls>
 					<PanelBody
-						title={ __('Select Category')}
+						title={ __('Select Donor')}
 						initialOpen={ true }
 					>
 						<SelectControl
-							 label={ __('Cateogry')}
+							 label={ __('Donor')}
 							 value={ category }
 							 options={
 							 	currentCats
 							 }
 							 onChange={ setCategoryPosts }
+						/>
+						<PaddingSelector
+							setAttributes={ setAttributes }
+							padding={ padding }
+							id={ 'block-' + clientId }
+						/>
+						<MarginSelector
+							setAttributes={ setAttributes }
+							margin={ margin }
+							id={ 'block-' + clientId }
 						/>
 					</PanelBody>
 				</InspectorControls>
@@ -137,6 +156,10 @@ const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected, clien
 															effect: 'slide',
 															spaceBetween: 15,
 															speed: 1500,
+															navigation: {
+  															  nextEl: '.swiper-button-next',
+  															  prevEl: '.swiper-button-prev',
+  															},
 														}
 													);
 													return (
@@ -162,8 +185,8 @@ const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected, clien
 												</Fragment>
 											)}
 									</div>
-									<div class="swiper-button-prev"></div>
-  									<div class="swiper-button-next"></div>
+									<div class="fa swiper-button-prev"></div>
+  									<div class="fa swiper-button-next"></div>
   								</Fragment>
   							)}
 							</div>

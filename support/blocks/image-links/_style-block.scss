@@ -59,31 +59,6 @@
 	margin-right: 2rem;
 }
 
-.swiper-button-prev {
-	// left: -2rem;
-	background: url(img/left-chevron.svg) no-repeat left center / 14px;
-	@media screen and (min-width: $small-width) {
-		// left: -2.5rem;
-		background: url(img/left-chevron.svg) no-repeat left center / 17px;
-	}
-}
-
-.swiper-button-next {
-	// right: -2rem;
-	background: url(img/right-chevron.svg) no-repeat right center / 14px;
-	@media screen and (min-width: $small-width) {
-		// right: -2.5rem;
-		background: url(img/right-chevron.svg) no-repeat right center / 17px;
-	}
-}
-
-.swiper-button-prev:after {
-	content: '';
-}
-
-.swiper-button-next:after {
-	content: '';
-}
 
 .image-swiper .swiper-wrapper > .block-editor-inner-blocks {
 	width: 100%;

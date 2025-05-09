@@ -8,6 +8,7 @@ import "./blocks/event/frontend.js";
 import "./blocks/post/frontend.js";
 import "./blocks/posts-category/frontend.js";
 import "./blocks/filter-resources/frontend.js";
+import "./blocks/selected-case-study/frontend.js";
 // import "./blocks/selected-insights/selected-insights.js";
 import "./blocks/progress-block/scroll.js";
 import "./blocks/contact/contact.js";

@@ -275,14 +275,21 @@ a.custom-logo-link {
 	width: 100%;
 }
 
+.main-navigation .nav-menu>.menu-item:last-of-type {
+	padding-bottom: 50px;
+	@media screen and (min-width: $med-small-width) {
+		padding-bottom: 26px;
+	}
+}
 
 .main-navigation.toggled .menu-primary-menu-container {
 	display: block;
 	width: 100%;
 	left: 0;
 	top: 80px;
+	padding-top: 25px;
 	background: white;
-	max-height: calc(100vh - 80px);
+	max-height: calc(100vh - 150px);
 	padding-bottom: 80px;
 	overflow: auto;
 	box-shadow: 0 12px 10px -2px rgba(0, 0, 0, .15);
@@ -1029,6 +1036,7 @@ button.clear {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	height: 70px;
 	@media screen and (min-width: $med-small-width) {
 		padding-top: 10px;
 		padding-bottom: 10px;

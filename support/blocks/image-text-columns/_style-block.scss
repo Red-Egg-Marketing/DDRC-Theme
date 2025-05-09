@@ -22,9 +22,13 @@
 	padding-top: 2.25rem;
 	padding-bottom: 2.25rem;
 	margin-top: 0;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 	@media screen and (min-width: $small-width) {
 		padding-top: 6.75rem;
 		padding-bottom: 6.75rem;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
@@ -86,8 +90,6 @@
 	width: 100%;
 	box-sizing: border-box;
 	margin-top: 25px;
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
 	@media screen and (min-width: $small-width) {
 		width: 50%;
 		padding-left: 2.5rem;
@@ -120,6 +122,9 @@
 
 .image-columns.full-width .img-container {
 	position: relative;
+	@media screen and (min-width: $small-width) {
+		min-height: 650px;
+	}
 }
 
 .image-columns.full-width .img-container img {
@@ -147,9 +152,15 @@
 	}
 }
 
-.image-columns.img-right.no-ds .content-columns {
+.image-columns.img-right .content-columns {
 	@media screen and (min-width: $small-width) {
 		padding-left: 1.25rem;
+	}
+}
+
+.image-columns.img-left .content-columns {
+	@media screen and (min-width: $small-width) {
+		padding-right: 1.25rem;
 	}
 }
 

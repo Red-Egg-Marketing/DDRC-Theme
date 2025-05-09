@@ -145,6 +145,8 @@ function ddrc_theme_return_projects($data, $post_types = 'tribe_events') {
 	$post_a = $_POST;
 	$cats = isset($get['category']) ? explode(',', $get['category']) : false;
 	$cats = isset($post_a['category']) ? explode(',', $post_a['category']) : $cats;
+	$donors = isset($get['donors']) ? explode(',', $get['donors']) : false;
+	$donors = isset($post_a['donors']) ? explode(',', $post_a['donors']) : $donors;
 	$post_id = isset($get['id']) ? $get['id'] : false;
 	$post_id = isset($post_a['id']) ? $post_a['id'] : $post_id;
 	$html = isset($get['html']) ? $get['html'] : false;
@@ -168,12 +170,22 @@ function ddrc_theme_return_projects($data, $post_types = 'tribe_events') {
 		'order' => 'DESC',
 		'orderby' => 'date',
 		'posts_per_page' => $posts_per_page,
-		'offset'	=> $offset,
-		'ignore_sticky_posts' => true
+		'offset'=> $offset,
+		'ignore_sticky_posts' => true,
+		'ppp' => $posts_per_page
 	];
 
 	if ($cats != false) {
 		$args['cat'] = $cats;
+	}
+
+	if ($donors) {
+		$args['tax_query'][] =
+			[
+				'terms' => $donors,
+				'field' => 'term_id',
+				'taxonomy' => 'donors',
+			];
 	}
 
 	if($post_id != false) {

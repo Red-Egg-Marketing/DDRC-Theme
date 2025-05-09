@@ -533,3 +533,35 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  background: $teal;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  z-index: 9999;
+  @media screen and (min-width: $small-width) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.fa.swiper-button-next:after,
+.fa.swiper-button-prev:after {
+  font-family: "Font Awesome 5 Free" !important;
+  color: white;
+  font-size: 18px;
+  @media screen and (min-width: $small-width) {
+    font-size: 32px;
+  }
+}
+
+.swiper-button-prev:after {
+  content: "\f060";
+}
+
+.swiper-button-next:after {
+  content: "\f061";
+}
