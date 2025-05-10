@@ -17,11 +17,11 @@ const SaveSelectedCaseStudies = ( { attributes } ) => {
 		<Fragment>
 			<PaddingSelector.View 
 				padding={ padding }
-				id={ blockId }
+				id={ 'block-' + clientId }
 			/>
 			<MarginSelector.View 
 				margin={ margin }
-				id={ blockId }
+				id={ 'block-' + clientId  }
 			/>
 			<section {...blockProps}>
 				<div className="case-studies-block">

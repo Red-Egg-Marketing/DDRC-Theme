@@ -231,6 +231,11 @@ body.buddypress .buddypress-wrap input[type=submit].auto {
 	}
 }
 
+.mfp-gsteam .mfp-arrow.mfp-arrow-right:before,
+.mfp-gsteam .mfp-arrow.mfp-arrow-left:before {
+	color: black;
+}
+
 a[download] {
 	@extend .wp-block-button__link;
 	display: inline-block;

@@ -377,10 +377,11 @@ li.menu-item.nav-button a {
 	background: $light-orange;
 	font-size: 18px;
 	line-height: 18px;
-	padding-top: 14px;
-	padding-bottom: 14px;
 	padding-left: 25px;
 	padding-right: 25px;
+	font-size: 15px;
+    line-height: 21px;
+    padding: 11px 25px 11px;
 	@media screen and (min-width: $med-small-width) {
 		font-size: 17px;
 		line-height: 17px;

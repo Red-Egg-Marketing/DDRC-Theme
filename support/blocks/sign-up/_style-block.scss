@@ -88,9 +88,10 @@
 	width: 100%;
 	min-height: 40px;
 	font-size: 19px;
-	line-height: 36px;
+	line-height: 27px;
 	@media screen and (min-width: $small-width) {
 		min-height: 62px;
+		line-height: 36px;
 	}
 	&:hover {
 		background: $teal;
@@ -98,11 +99,17 @@
 }
 
 .sign-up .block-wrapper div.gform_wrapper.gravity-theme .gform_body {
-	width: calc(100% - 150px);
+	width: calc(100% - 110px);
+	@media screen and (min-width: $small-width) {
+		width: calc(100% - 150px);
+	}
 }
 
 .sign-up .block-wrapper div.gform_wrapper.gravity-theme .gform_footer {
 	margin-top: 0;
-	width: 150px;
+	width: 110px;
 	padding: 0;
+	@media screen and (min-width: $small-width) {
+		width: 150px;
+	}
 }

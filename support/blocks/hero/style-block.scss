@@ -148,8 +148,19 @@
 	}	
 }
 
+.hero-block-content .wp-block-buttons {
+	margin-top: 10px;
+	@media screen and (min-width: $small-width) {
+		margin-top: 0;
+	}
+}
+
 .hero-block-content .wp-block-buttons:last-child {
-	transform: translateY(50%);
+	margin-bottom: 25px;
+	@media screen and (min-width: $small-width) {
+		transform: translateY(50%);
+		margin-bottom: 0;
+	}
 }
 
 .hero-block-form {
