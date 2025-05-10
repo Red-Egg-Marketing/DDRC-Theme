@@ -6,6 +6,10 @@
 	background: white;
 }
 
+.text-cards-grid.no-overlap .text-card {
+	margin-top: 0 !important;
+}
+
 .text-card {
 	width: 100%;
 	text-align: left;
@@ -60,6 +64,14 @@
 		width: 180px;
 		height: 180px;
 		margin-top: -90px;
+	}
+}
+
+
+.text-card .block-content > .wp-block-heading:first-child {
+	margin-top: 35px;
+	@media screen and (min-width: $small-width) {
+		margin-top: 65px;
 	}
 }
 

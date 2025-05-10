@@ -120,6 +120,11 @@
 	align-items: stretch;
 }
 
+.image-columns .img-container picture {
+	display: flex;
+	align-items: stretch;
+}
+
 .image-columns.full-width .img-container {
 	position: relative;
 	@media screen and (min-width: $small-width) {

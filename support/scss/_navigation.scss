@@ -436,16 +436,19 @@ li.menu-item.nav-button a {
 }
 .main-navigation .menu-item a,
 .main-navigation .menu-item {
-	color: $teal;
+	color: $green;
 	font-family: $font-head;
 	font-size: 24px;
 	line-height: 28px;
 	text-align: left;
 	font-weight: 400;
 	text-transform: capitalize;
+	&:hover {
+		color: $teal;
+	}
 	@media screen and (min-width: $med-small-width) {
 		text-align: left;
-		color: $teal;
+		color: $green;
 		font-weight: 400;
 		font-size: 22px;
 		letter-spacing: 0.1px;
