@@ -23,8 +23,8 @@
 	color: black;
 	font-weight: 300;
 	@media screen and (min-width: $small-width) {
-		font-size: 22px;
-		line-height: 36px;
+		font-size: 20px;
+		line-height: 33px;
 	}
 }
 
@@ -85,8 +85,8 @@
 	line-height: 30px;
 	color: black;
 	@media screen and (min-width: $small-width) {
-		font-size: 23px;
-		line-height: 32px;
+		font-size: 20px;
+		line-height: 33px;
 	}
 }
 
@@ -112,8 +112,8 @@
 	font-weight: 700;
 	text-transform: none;
 	@media screen and (min-width: $small-width) {
-		font-size: 65px;
-		line-height: 82px;
+		font-size: 55px;
+		line-height: 75px;
 	}
 }
 
@@ -401,6 +401,8 @@ arrow:after {
 	width: 22px;
 	height: 18px;
 	margin-left: 10px;
+	transition-property: margin;
+	transition-duration: 0.3s;
 	@media screen and (min-width: $small-width) {
 		width: 30px;
 		height: 25px;
@@ -408,27 +410,34 @@ arrow:after {
 	}
 }
 
-.has-teal-color > arrow:after {
+arrow:hover:after {
+	margin-left: 15px;
+	@media screen and (min-width: $small-width) {
+		margin-left: 25px;
+	}
+}
+
+.has-teal-color arrow:after {
 	background-image: url(img/right-arrow-teal.svg);
 }
 
-.has-green-color > arrow:after {
+.has-green-color arrow:after {
 	background-image: url(img/right-arrow-green.svg);
 }
 
-.has-orange-color > arrow:after {
+.has-orange-color arrow:after {
 	background-image: url(img/right-arrow-orange.svg);
 }
 
-.has-light-orange-color > arrow:after {
+.has-light-orange-color arrow:after {
 	background-image: url(img/right-arrow-light-orange.svg);
 }
 
-.has-red-color > arrow:after {
+.has-red-color arrow:after {
 	background-image: url(img/right-arrow-red.svg);
 }
 
-.has-purple-color > arrow:after {
+.has-purple-color arrow:after {
 	background-image: url(img/right-arrow-purple.svg);
 }
 

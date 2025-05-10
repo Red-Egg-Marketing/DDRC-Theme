@@ -2,7 +2,7 @@
 	$id = get_the_id();
 ?>
 <footer class="entry-footer">
-	<div class="wrapper navy">
+	<div class="wrapper teal">
 		<div class="extra-wrap">
 			<div class="col-6">
 				<?php ddrc_theme_posts_topics($id); ?>

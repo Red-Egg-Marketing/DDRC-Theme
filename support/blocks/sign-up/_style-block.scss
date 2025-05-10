@@ -92,6 +92,9 @@
 	@media screen and (min-width: $small-width) {
 		min-height: 62px;
 	}
+	&:hover {
+		background: $teal;
+	}
 }
 
 .sign-up .block-wrapper div.gform_wrapper.gravity-theme .gform_body {

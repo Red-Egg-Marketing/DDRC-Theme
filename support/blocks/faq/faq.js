@@ -15,17 +15,24 @@
 
 		function eventToggleAnswer() {
 			// hide all faq
-			for (x = 0; x < faq.length; x++) {
-				let f = faq[x];
-				let allToggles = f.querySelector('div[data-toggled]');
-				allToggles.setAttribute('data-toggled', false);
-			}
-
 			let that = this;
 			let parent = that.parentElement;
+			for (x = 0; x < faq.length; x++) {
+				let f = faq[x];
+				let allToggles = f.querySelectorAll('div[data-toggled]');
+				allToggles.forEach((toggle) => {
+					if (toggle != parent){
+						toggle.setAttribute('data-toggled', 'false');
+					}
+				});
+			}
+
 			let toggle = parent.getAttribute('data-toggled');
-			toggle = toggle === "false" ? "true" : "false";
-			parent.setAttribute('data-toggled', toggle);
+			if (toggle == "false") {
+				parent.setAttribute('data-toggled', 'true');
+			} else {
+				parent.setAttribute('data-toggled', 'false');
+			}
 			parent.scrollIntoView({
 				behavior: "smooth",
 				block: "center"

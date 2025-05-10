@@ -40,12 +40,13 @@ button.wp-button {
 		line-height: 22px;
 		padding: 18px 35px 18px;
 	}
+	&:visited:hover,
 	&:hover {
-		background-position: 100px 0;
+		background: $teal;
 		color: white;
 	}
 	&:visited {
-		background-position: -100px 0;
+		background: $green;
 		color: white;
 	}
 	&[disabled] {
@@ -136,6 +137,16 @@ body.buddypress .buddypress-wrap input[type=submit].auto {
 .wp-button.is-style-solid-white,
 .wp-block-button.is-style-solid-white .wp-block-button__link {
 	background: white;
+	color: $green;
+	&:visited:hover,
+	&:hover {
+		background: $teal;
+		color: white;
+	}
+	&:visited {
+		background: white;
+		color: $green;
+	}
 }
 
 .wp-button.is-style-solid-green,

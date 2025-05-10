@@ -78,7 +78,6 @@ h4 {
 
 .content p {
 	font-family: $font-body;
-	color: $body-color;
 }
 
 // Backgrounds
@@ -414,7 +413,7 @@ h4 {
 .resource-card p.resource-excerpt {
 	overflow-wrap: anywhere;
 	font-family: $font-body;
-	color: $bg-color-7;
+	color: black;
 	margin-top: 10px;
 }
 

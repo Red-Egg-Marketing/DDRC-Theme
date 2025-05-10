@@ -86,15 +86,6 @@ html :where(.wp-block) {
 	}
 }
 
-.answer .content p {
-	font-size: 16px;
-	line-height: 22px;
-	font-weight: 300;
-	@media screen and (min-width: $small-width) {
-		font-size: 23px;
-		line-height: 32px;
-	}
-}
 
 .wp-block.faq .content-column.hide-this .answer {
 	display: none;
