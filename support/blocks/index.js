@@ -8,6 +8,7 @@ import "../format-types/background-gradient";
 import "../format-types/block-element";
 import "../format-types/underline";
 import "../format-types/with-arrow";
+import "../format-types/middle-line";
 
 // Core Blocks
 import "./core";

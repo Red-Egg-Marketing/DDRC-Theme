@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.3.6' );
+	define( '_S_VERSION', '1.3.8' );
 }
 
 if ( ! function_exists( 'ddrc_theme_setup' ) ) :

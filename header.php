@@ -42,6 +42,9 @@ if (function_exists('get_field')) {
 			<div class="wrapper">
 				<nav class="secondary-navigation">
 					<?php
+						echo do_shortcode('[gtranslate]');
+					?>
+					<?php
 						wp_nav_menu(
 							array(
 								'theme_location' => 'menu-2',

@@ -1,8 +1,11 @@
+.selected-resources,
 .wp-block.selected-resources {
 	width: 100%;
 	max-width: 100%;
-	padding-top: 8.125rem;
-	padding-bottom: 8.125rem;
+	padding-bottom: 2rem;
+	@media screen and (min-width: $small-width) {
+		padding-bottom: 3rem;
+	}
 }
 
 .resources-block .header {

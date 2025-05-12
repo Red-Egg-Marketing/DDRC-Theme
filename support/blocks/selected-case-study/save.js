@@ -4,7 +4,7 @@ const { __ } = wp.i18n;
 import PaddingSelector from '../../components/Padding.js';
 import MarginSelector from '../../components/Margin.js';
 
-const SaveSelectedCaseStudies = ( { attributes } ) => {
+const SaveSelectedCaseStudies = ( { attributes, clientId } ) => {
 
 	const { resources, mainTitle, category, padding, blockId, margin } = attributes;
 
