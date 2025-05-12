@@ -48,11 +48,7 @@ const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected, clien
 		const [tempSwip, activateSwipe] = useState(false);
 		const [tempResources, activateResources] = useState(false);
 
-		React.useEffect( () => {
-        	if ( ! blockId ) {
-        	    setAttributes( { blockId: 'block-' + clientId } );
-        	}
-    	}, [] );
+		
 
 		if ( (resources == undefined || resources.length == 0)) {
 
@@ -110,6 +106,12 @@ const EditSelectedCaseStudies = ( { setAttributes, attributes, isSelected, clien
 			});
 
 		}
+
+		React.useEffect( () => {
+        	if ( ! blockId ) {
+        	    setAttributes( { blockId: 'block-' + clientId } );
+        	}
+    	}, [] );
 
 
 		return (

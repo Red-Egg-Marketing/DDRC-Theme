@@ -249,7 +249,7 @@ class DDRC_Menu_Walker extends Walker_Nav_Menu {
 		}
 
 		$indent = str_repeat( $t, $depth );
-		$button = $depth == 0 ? '<button class="toggle-menu">Toggle</button>' : '';
+		$button = $depth == 0 || $depth == 1 ? '<button class="toggle-menu" toggled=false>Toggle</button>' : '';
 
 		// Default class.
 		$classes = array( 'sub-menu' );

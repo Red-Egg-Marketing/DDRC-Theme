@@ -168,7 +168,10 @@ a.custom-logo-link {
 
 .main-navigation .nav-menu > .menu-item.mega-menu > .sub-menu > .menu-item {
 	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
 	@media screen and (min-width: $med-small-width) {
+		display: block;
 		width: 16.6667%;
 		padding-right: 1.25rem;
 		padding-left: 1.25rem;
@@ -243,10 +246,16 @@ a.custom-logo-link {
 	padding-bottom: 0;
 }
 
+
+.main-navigation .menu-item.active > ul.sub-menu {
+	display: block;
+}
+
 .main-navigation .menu-item.mega-menu .sub-menu {
 	width: 100%;
-	display: block;
+	display: none;
 	@media screen and (min-width: $med-small-width) {
+		display: block;
 		max-width: $max-cont-w + 200px;
 	}
 }
@@ -286,6 +295,10 @@ a.custom-logo-link {
 	}
 }
 
+.main-navigation button.toggle-menu[toggled="true"] {
+	background: transparent url(img/up-chevron.svg) no-repeat center center / 15px;
+}
+
 .site-branding {
 	display: flex;
 	align-items: center;
@@ -310,13 +323,13 @@ a.custom-logo-link {
 	width: 100%;
 	left: 0;
 	top: 80px;
-	padding-top: 25px;
 	background: white;
 	max-height: calc(100vh - 150px);
 	padding-bottom: 80px;
 	overflow: auto;
 	box-shadow: 0 12px 10px -2px rgba(0, 0, 0, .15);
 	@media screen and (min-width: $med-small-width) {
+		padding-top: 0;
 		display: flex;
 		top: inherit;
 		max-height: inherit;
@@ -435,9 +448,11 @@ li.menu-item.nav-button a {
 	padding-bottom: 20px;
 	font-size: 18px;
 	font-weight: 600;
+	margin-top: 25px;
 	@media screen and (min-width: $med-small-width) {
 		padding-top: 40px;
 		padding-bottom: 40px;
+		margin-top: 0;
 	}
 }
 
@@ -557,7 +572,9 @@ li.menu-item.nav-button a {
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
 	box-sizing: content-box;
+	padding-top: 30px;
 	@media screen and (min-width:  $med-small-width) {
+		padding-top: 0;
 		padding-bottom: 0;
 		padding-left: 0;
 		padding-right: 0;
@@ -624,8 +641,7 @@ li.menu-item.nav-button a {
 }
 
 .main-navigation .sub-menu li.menu-item a {
-	margin-top: 10px;
-	margin-bottom: 10px;
+
 	@media screen and (min-width:  $med-small-width) {
 		margin-top: 0;
 		margin-bottom: 0;
@@ -750,7 +766,7 @@ li.menu-item.nav-button a {
 }
 
 .main-navigation .sub-menu .menu-item a {
-	width: 100%;
+	width: auto;
 	font-size: 20px;
 	text-transform: none;
 	line-height: 24px;
@@ -758,6 +774,7 @@ li.menu-item.nav-button a {
 	padding-left: 0;
 	font-weight: 500;
 	@media screen and (min-width:  $med-small-width) {
+		width: 100%;
 		font-size: 22px;
 		letter-spacing: 0.5px;
 		line-height: 26px;

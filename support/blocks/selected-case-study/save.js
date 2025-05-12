@@ -4,7 +4,7 @@ const { __ } = wp.i18n;
 import PaddingSelector from '../../components/Padding.js';
 import MarginSelector from '../../components/Margin.js';
 
-const SaveSelectedCaseStudies = ( { attributes, clientId } ) => {
+const SaveSelectedCaseStudies = ( { attributes } ) => {
 
 	const { resources, mainTitle, category, padding, blockId, margin } = attributes;
 
@@ -17,11 +17,11 @@ const SaveSelectedCaseStudies = ( { attributes, clientId } ) => {
 		<Fragment>
 			<PaddingSelector.View 
 				padding={ padding }
-				id={ 'block-' + clientId }
+				id={ blockId }
 			/>
 			<MarginSelector.View 
 				margin={ margin }
-				id={ 'block-' + clientId  }
+				id={ blockId  }
 			/>
 			<section {...blockProps}>
 				<div className="case-studies-block">

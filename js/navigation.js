@@ -51,7 +51,9 @@
 		for (var subButton of subButtons) {
 			subButton.addEventListener('click', function(){
 				let parent = this.parentElement;
-				
+				let toggled = this.getAttribute('toggled');
+				toggled = toggled == "false" ? true : false;
+				this.setAttribute('toggled', toggled);
 				parent.classList.toggle('active');
 			});
 		}
