@@ -423,9 +423,13 @@ li.menu-item.nav-button a {
 		line-height: 23px;
 		height: 44px;
 	}
-
+	&:visited {
+		color: white;
+		background: $light-orange;
+	}
 	&:hover,
-	&:visited, {
+	&:visited,
+	&:hover:visited {
 		color: $green;
 	}
 }

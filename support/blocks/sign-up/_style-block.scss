@@ -1,11 +1,27 @@
+.wp-block.sign-up {
+	max-width: 100%;
+	width: 100%;
+}
+
+.wp-block.sign-up > .block-wrapper > .block-editor-inner-blocks {
+	width: 100%;
+}
+
+.wp-block.sign-up > .block-wrapper > .block-editor-inner-blocks > .block-editor-block-list__layout {
+	display: flex;
+	width: 100%;
+}
+
 .sign-up {
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
-	margin-top: -45px;
-	margin-bottom: -45px;
+	margin-top: -50px;
+	margin-bottom: -50px;
+	position: relative;
+	z-index: 15;
 	@media screen and (min-width: $small-width) {
-		margin-top: -90px;
-		margin-bottom: -90px;
+		margin-top: -100px;
+		margin-bottom: -100px;
 	}
 }
 

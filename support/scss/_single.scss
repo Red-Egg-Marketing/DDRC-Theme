@@ -23,13 +23,13 @@
 	max-width: $med-width;
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
-	padding-top: 3.125rem;
+	padding-top: 0;
 	padding-bottom: 3.125rem;
 	width: 100%;
 	margin: 0 auto;
 	overflow: hidden;
 	@media screen and (min-width: $small-width) {
-		padding-top: 3.125rem;
+		padding-top: 0;
 		padding-bottom: 3.125rem;
 	}
 }
@@ -40,6 +40,11 @@
 	@media screen and (min-width: $small-width) {
 		width: 100%;
 	}
+}
+
+.single .post-thumbnail.small-image picture {
+	max-width: 1200px;
+	width: 100%;
 }
 
 .single .entry-header.no-image .hero-block-wrap {

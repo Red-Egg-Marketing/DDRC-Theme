@@ -196,6 +196,20 @@
 
 .resources .header-intro-block .wp-block-heading {
 	margin: 0;
+	text-align: left;
+	display: flex;
+	align-items: center;
+}
+
+.resources .header-intro-block .wp-block-heading:after {
+		content: "";
+		background: $light-grey;
+		height: 3px;
+		flex: auto;
+		margin-left: 15px;
+		display: block;
+		flex: 1;
+		width: auto;
 }
 
 .resources .header-intro-block .wp-block-heading:before {

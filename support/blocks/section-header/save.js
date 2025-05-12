@@ -22,11 +22,11 @@ const SaveSectionHead = ( { attributes } ) => {
 			<Fragment>
 				<PaddingSelector.View 
 					padding={ padding }
-					id={ 'block-' + clientId }
+					id={ blockId }
 				/>
 				<MarginSelector.View 
 					margin={ margin }
-					id={ 'block-' + clientId }
+					id={ blockId }
 				/>
 				<div {...blockProps}>
 					<div className="block-wrapper">

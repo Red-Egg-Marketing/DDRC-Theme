@@ -191,13 +191,13 @@
 	document.querySelectorAll('a').forEach(anchor => {
 
 		if (anchor.hash != '') {
-
 			var baseUrl = window.location.href;
 			var anchorLink = anchor.href.replace(anchor.hash, '');
-			var isModal = anchor.hasAttribute('data-fancybox') != null ? true : false;
+			var isModal = anchor.hasAttribute('data-fancybox');
 
 			if (anchorLink == baseUrl && isModal == false) {
    				anchor.addEventListener('click', function (e) {
+
     			   	e.preventDefault();
     			   	document.querySelector(anchor.hash).scrollIntoView({
     			       	behavior: 'smooth'

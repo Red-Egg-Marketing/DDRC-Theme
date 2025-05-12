@@ -66,8 +66,9 @@ $img_class = $media_id == 0 ? 'no-image' : '';
 
 	</div><!-- .post-content -->
 	<?php 
-
-		get_template_part( 'template-parts/footer-post');
+		if ( 'post' === get_post_type() ) :
+			get_template_part( 'template-parts/footer-post');
+		endif;
 
 	?>
 	</div>
