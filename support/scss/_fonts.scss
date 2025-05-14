@@ -71,6 +71,7 @@
 
 .editor-visual-editor li, .page .entry-content li,
 .post .post-content li {
+	font-family: $font-body;
 	position: relative;
 	margin-bottom: 5px;
 	@media screen and (min-width: $small-width) {
@@ -84,6 +85,8 @@
 	font-size: 18px;
 	line-height: 30px;
 	color: black;
+	font-weight: 300;
+	font-family: $font-body;
 	@media screen and (min-width: $small-width) {
 		font-size: 20px;
 		line-height: 33px;

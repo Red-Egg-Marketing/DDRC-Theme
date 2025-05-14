@@ -23,7 +23,7 @@ const EditContactForms = ( { attributes, setAttributes } ) => {
 			<Fragment>
 				<div {...blockProps}>
 					<InnerBlocks 
-						allowedBlocks={ ['gravityforms/form'] }
+						allowedBlocks={ ['gravityforms/form', 'core/shortcode', 'core/embed', 'core/html', 'core/heading', 'core/paragraph'] }
 						template={ template }
 					/>
 				</div>

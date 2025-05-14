@@ -31,6 +31,10 @@ registerBlockType( 'ddrc-theme-blocks/contact-content', {
 			selector: '.header-suptitle',
 			default: ''
 		},
+		allowBlocks : {
+			type: 'array',
+			default: [['core/html', 'core/buttons', 'core/heading']]
+		},
 		icons : {
 			type: 'array',
       		source: 'query',

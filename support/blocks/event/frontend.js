@@ -15,11 +15,11 @@ const SaveSelectedProjects = (posts) => {
   		const [resourcesEmpty, setEmpty] = useState(false);
   		const [data, setData] = useState({});
   		const [noResource, activateResource] = useState(false);
-  		console.log(posts.posts);
 		React.useEffect( () => {
 			if (resources === false) {
 				data['ppp'] = 1;
 				data['id'] = posts.posts;
+				data['post_types'] = 'tribe_events';
 				setData(data);
     			wp.apiRequest({
         			url: apiUrl,

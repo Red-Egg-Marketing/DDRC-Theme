@@ -167,13 +167,23 @@ function ddrc_theme_return_projects($data, $post_types = 'tribe_events') {
 	$args = [
 		'post_type' => $post_types,
 		'post_status' => 'publish',
-		'order' => 'DESC',
-		'orderby' => 'date',
 		'posts_per_page' => $posts_per_page,
 		'offset'=> $offset,
 		'ignore_sticky_posts' => true,
-		'ppp' => $posts_per_page
+		'ppp' => $posts_per_page,
+		'order' => 'DESC',
+		'orderby' => 'date',
 	];
+
+
+	if ($post_types == 'tribe_events') {
+		$args['meta_query'] = [
+			'relation' => 'OR',
+			[
+				'key' => '_EventStartDate',
+			],
+		];
+	}
 
 	if ($cats != false) {
 		$args['cat'] = $cats;

@@ -51,7 +51,7 @@
 	margin-bottom: 0;
 	position: relative;
 	min-height: 450px;
-	
+	height: 100vh;
 	@media screen and (min-width: $small-width) {
 		min-height: 800px;
 		height: 100vh;
@@ -69,6 +69,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: stretch;
+	height: 100vh;
 	@media screen and (min-width: $small-width) {
 		min-height: 730px;
 		height: 100vh;
@@ -102,6 +103,9 @@
 	flex-wrap: wrap;
 	width: 100%;
 	overflow: hidden;
+	@media screen and (max-width: $small-width - 1px) {
+		background-position: center right !important;
+	}
 	@media screen and (min-width: $small-width) {
 		min-height: 730px;
 	}

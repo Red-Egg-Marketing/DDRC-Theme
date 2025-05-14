@@ -87,6 +87,10 @@
 	font-family: $font-head;
 }
 
+.tribe-events-event-meta.primary, .tribe-events-event-meta.secondary {
+	width: 100%;
+}
+
 .tribe-events .tribe-events-calendar-list__event-featured-image {
 	border-radius: 20px;
 }
@@ -97,4 +101,8 @@
 
 .post-type-archive-tribe_events .header-intro-block {
 	padding-bottom: 25px;
+}
+
+.tribe-events-event-image img {
+	width: 100%;
 }

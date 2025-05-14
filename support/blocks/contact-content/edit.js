@@ -20,7 +20,7 @@ const EditContactContent = ( { attributes, setAttributes } ) => {
 
 	
 		const {
-			title, content, icons, subtitle
+			title, content, icons, subtitle, allowBlocks
 		} = attributes;
 
 		const [rowNumber, setRownumber] = useState(null);
@@ -92,46 +92,8 @@ const EditContactContent = ( { attributes, setAttributes } ) => {
 		return (
 			<Fragment>
 				<div {...blockProps}>							
-					<Header
-						tag="h2"
-						title={ title }
-						placeholder={__('Contact Section Header...', 'DDRC')}
-						setAttributes={ setAttributes }
-					/>
-					<Content 
-						tag="div"
-						content={ content }
-						placeholder={__('Contact Section Description...', 'DDRC')}
-						multiline="p"
-						classProp="content"
-						setAttributes={ setAttributes }
-					/>
-					<Header
-						tag="h4"
-						title={ subtitle }
-						placeholder={__('Contact Section SubHeader...', 'DDRC')}
-						setAttributes={ setAttributes }
-						updateProp="subtitle"
-						classProp="header-suptitle"
-					/>
-					<Icons 
-						rows={ icons }
-						addIcon={ addIcon }
-						rowFocus={ currentRowFocus }
-						removeIcon={ removeIcon }
-						currentIconList={ currentIconList }
-						updateIcon={ updateIcon }
-						activateIconSearch={ activateIconSearch }
-						searchActive={ searchActive }
-						customButtonLang={ "Add Icon" }
-						setAttributes={ setAttributes }
-						color={ '#F79A6C' }
-						totalIcons={ 100 }
-						activeText={ true }
-						setIconList={ setIconList }
-					/>
 					<InnerBlocks 
-						allowedBlocks={ ['core/buttons'] }
+						allowedBlocks={ allowBlocks }
 						template={ template }
 					/>
 				</div>

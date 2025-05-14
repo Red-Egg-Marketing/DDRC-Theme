@@ -73,6 +73,7 @@ const SaveSelectedProjects = ( {donor, append} ) => {
 										resourceTitle={ resource.title  }
 										resourceExcerpt={ resource.excerpt }
 										resourceClass="swiper-slide"
+										displayButton={ false }
 									/>
 								</Fragment>
 							)

@@ -44,6 +44,7 @@
 
 .single .post-thumbnail.small-image picture {
 	max-width: 1200px;
+	height: 100%;
 	width: 100%;
 }
 
@@ -545,4 +546,8 @@ Single Video
 	display: block;
 	width: 100%;
 	height: auto;
+}
+
+.tribe-events-event-image picture {
+	width: 100%;
 }

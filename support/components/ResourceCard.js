@@ -10,6 +10,7 @@ const ResourceCard = (props) => {
 	let slideClass = props.resourceClass != null ? props.resourceClass : '';
 	let text = props.buttonText != null ? props.buttonText : 'Read More';
 	let displayType = props.displayType != null ? props.displayType : false;
+	let displayButton = props.displayButton != null ? props.displayButton : true;
 	let typeClass= '';
 	if (props.resourceType == 'Whitepaper') {
 		typeClass = 'whitepaper';
@@ -136,9 +137,11 @@ const ResourceCard = (props) => {
 								{ props.resourceExcerpt }
 							</p>
 						)}
-						<button className="wp-button">
-							{ text }
-						</button>
+						{displayButton == true && (
+							<button className="wp-button">
+								{ text }
+							</button>
+						)}
 					</div>	
 				</div>
 				</div>
@@ -152,6 +155,7 @@ ResourceCard.View = (props) => {
 	let slideClass = props.resourceClass != null ? props.resourceClass : '';
 	let text = props.buttonText != null ? props.buttonText : 'Read More';
 	let displayType = props.displayType != null ? props.displayType : false;
+	let displayButton = props.displayButton != null ? props.displayButton : true;
 	let typeClass= '';
 	if (props.resourceType == 'Whitepaper') {
 		typeClass = 'whitepaper';
@@ -201,9 +205,11 @@ ResourceCard.View = (props) => {
 								props.resourceExcerpt
 							}
 						/>
-						<button className="wp-button">
-							{ text }
-						</button>
+						{displayButton == true && (
+							<button className="wp-button">
+								{ text }
+							</button>
+						)}
 					</div>
 				</a>
 				</div>

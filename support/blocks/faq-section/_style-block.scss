@@ -98,6 +98,8 @@ html :where(.wp-block) {
 	background-color: white;
 	padding-left: calc(1.5rem - 12px);
 	padding-right: 1.5rem;
+	overflow-wrap: break-word;
+  	word-wrap: break-word;
 	@media screen and (min-width: $small-width) {
 		padding-left: calc(3.5rem - 33px);
 		padding-right: 2rem;

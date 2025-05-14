@@ -101,3 +101,8 @@ if (function_exists('get_field')) {
 		</div><!-- .wrapper -->
 		</div>
 	</header><!-- #masthead -->
+	<?php
+		get_template_part( 'template-parts/header-event' );
+
+	?>
+	
