@@ -51,10 +51,10 @@
 	margin-bottom: 0;
 	position: relative;
 	min-height: 450px;
-	height: 100vh;
+	height: calc(100vh - 150px);
 	@media screen and (min-width: $small-width) {
-		min-height: 800px;
-		height: 100vh;
+		min-height: 730px;
+		height: calc(100vh - 160px);
 	}
 }
 
@@ -69,10 +69,10 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: stretch;
-	height: 100vh;
+	height: calc(100vh - 150px);
 	@media screen and (min-width: $small-width) {
 		min-height: 730px;
-		height: 100vh;
+		height: calc(100vh - 160px);
 
 	}
 }
