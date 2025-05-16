@@ -30,6 +30,7 @@ const SaveSelectedProjects = ( {donor, append} ) => {
     			    selectResources(resourcelist);
     			    new Swiper(append, 
 						{
+							autoHeight: true,
 							loop: false,
 							slidesPerView: 1,
 							autoplay: true,
