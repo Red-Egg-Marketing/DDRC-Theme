@@ -1,7 +1,7 @@
 .page-template-page-boilerplate .entry-header,
 .single .entry-header {
 	width: 100%;
-	@extend .hero-block-image-wrap;
+/*	@extend .hero-block-image-wrap;*/
 	position: relative;
 	align-items: stretch;
 }
@@ -76,14 +76,22 @@
 	display: flex;
 	min-height: 325px;
 	max-width: $med-width;
+	margin: 0 auto;
+	height: 0;
+	padding-bottom: unquote("min(725px, 56.25%)");
 }
 
 .single .post-thumbnail img {
 	display: block;
-	width: 100%;
+	width: calc(100% - 2.5rem);
+	position: absolute;
 	max-width: 1200px;
 	height: 100%;
+	top: 0;
+	left: 0;
 	object-fit: cover;
+	margin-left: 1.25rem;
+	margin-right: 1.25rem;
 }
 
 .single .content-wrap.small-image .hero-block-content {
@@ -482,7 +490,6 @@ Single Video
 	align-content: center;
 	padding-bottom: 3.5rem;
 	width: 100%;
-
 	@media screen and (min-width: $small-width) {
 		position: relative;
 		padding-bottom: 8.25rem;
