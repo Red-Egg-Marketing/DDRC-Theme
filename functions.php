@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.5.3' );
+	define( '_S_VERSION', '1.5.4' );
 }
 
 if ( ! function_exists( 'ddrc_theme_setup' ) ) :
@@ -203,10 +203,14 @@ add_filter('body_class','ddrc_theme_browser_body_class');
 
 function providencelogin_logo() { ?>
     <style type="text/css">
-
+    	.login {
+    		background: #51B3A8 url(<?php echo get_stylesheet_directory_uri(); ?>/img/pinwheel-pattern.svg);
+    		background-size: 200px;
+    		background-repeat: repeat;
+    	}
         #login h1 a, .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/ddrc-theme-white-logo.svg);
-			height:195px;
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/ddrc-white-logo.svg);
+			height:140px;
 			width:300px;
 			background-size: 300px 195px;
 			background-repeat: no-repeat;

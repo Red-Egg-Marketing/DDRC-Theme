@@ -75,11 +75,13 @@
 	position: relative;
 	display: flex;
 	min-height: 325px;
+	max-width: $med-width;
 }
 
 .single .post-thumbnail img {
 	display: block;
 	width: 100%;
+	max-width: 1200px;
 	height: 100%;
 	object-fit: cover;
 }
