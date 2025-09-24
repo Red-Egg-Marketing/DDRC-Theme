@@ -2,7 +2,7 @@
  // enqueue custom blocks
 function ddrc_theme_enqueue_block_editor_assets() {
     wp_enqueue_style('ddrc-theme-fonts-editor', 'https://use.typekit.net/dly3nlz.css', [], null);
-    if (get_post_type() == 'case-studies' || get_post_type() == 'page' || get_post_type() == 'wp_block' && strpos(get_page_template(), 'page-boilerplate.php') == false) {
+    if (get_post_type() == 'post' || get_post_type() == 'case-studies' || get_post_type() == 'page' || get_post_type() == 'wp_block' && strpos(get_page_template(), 'page-boilerplate.php') == false) {
         $block_path = '/support/assets/js/editor.blocks.js';
 
         $dependencies = array( 'wp-blocks', 'wp-dom-ready' );

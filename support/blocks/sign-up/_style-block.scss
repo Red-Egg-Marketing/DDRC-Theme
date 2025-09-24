@@ -25,6 +25,17 @@
 	}
 }
 
+.single-post .sign-up {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.single-post .sign-up .block-wrapper {
+	max-width: 100%;
+}
+
 .sign-up .block-wrapper {
 	max-width: $med-small-width;
 	padding-left: 2.25rem;
