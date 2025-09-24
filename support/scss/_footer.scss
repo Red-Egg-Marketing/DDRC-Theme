@@ -446,6 +446,10 @@ a.footer-home {
 
 .site-footer div.gform_wrapper .gform_heading {
 	margin-top: 0;
+	justify-content: center;
+	@media screen and (min-width: $med-small-width) {
+		justify-content: flex-start;
+	}
 }
 
 .footer-copyright a {
