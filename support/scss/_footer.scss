@@ -21,8 +21,12 @@
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 		@media screen and (min-width: $small-width) {
-			align-items: flex-start
+			align-items: flex-start;
+			padding-left: 0;
+			padding-right: 0;
 		}
 }
 
@@ -405,6 +409,7 @@ a.footer-home {
 	border-top-left-radius: 38px;
 	border-bottom-left-radius: 38px;
 	font-size: 15px !important;
+	min-height: 45px;
 }
 
 .site-footer .gform_wrapper ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
