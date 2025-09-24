@@ -1,12 +1,12 @@
 .contact-section {
 	width: 100%;
 	padding-top: 4.2rem;
-	padding-bottom: 4.2rem;
+	padding-bottom: 1rem;
 	background-size: 225% 225%;
 	background-position: 0 125%;
 	@media screen and (min-width: $small-width) {
 		padding-top: 6.125rem;
-		padding-bottom: 6.125rem;
+		padding-bottom: 1rem;
 	}
 }
 
@@ -156,12 +156,6 @@ p.contact-item {
 	width: 100%;
 }
 
-.contact-section .content {
-	margin-bottom: 25px;
-	@media screen and (min-width: $small-width) {
-		margin-bottom: 45px;
-	}
-}
 
 .contact-section .content-column {
 	@media screen and (min-width: $small-width) {

@@ -59,6 +59,19 @@
 	padding: 0;
 }
 
+.site-footer .nav-menu li {
+	display: inline-block;
+}
+
+.site-footer .nav-menu li:after {
+	content: " | ";
+	color: white;
+}
+
+.site-footer .nav-menu li:last-of-type:after {
+	display: none;
+}
+
 .site-footer .menu-tertiary-footer-container .menu {
 	width: 100%;
 }
@@ -259,6 +272,8 @@ a.footer-home {
 
 .site-footer div.gform_wrapper h2.gform_title {
 	text-transform: none;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .site-footer div.gform_wrapper.gravity-theme .gform_fields {
@@ -270,7 +285,7 @@ a.footer-home {
 }
 
 .site .site-footer .site-desc {
-	font-size: 24px;
+	font-size: 22px;
 	line-height: 28px;
 	font-weight: 400;
 	font-style: italic;
@@ -278,7 +293,7 @@ a.footer-home {
 	margin-top: 0;
 	font-family: $font-head;
 	@media screen and (min-width: $small-width) {
-		font-size: 34px;
+		font-size: 32px;
 		line-height: 42px;
 		margin-bottom: 25px;
 	}
@@ -294,11 +309,19 @@ a.footer-home {
 	font-weight: 400;
 	text-decoration: none;
 	font-family: $font-body;
-	font-size: 18px;
+	font-size: 17px;
 	line-height: 26px;
+	text-align: left;
 	@media screen and (min-width: $med-small-width) {
-		font-size: 20px;
+		font-size: 19px;
 		line-height: 31px;
+	}
+}
+
+.site-footer div.gform_wrapper h2.gform_title {
+	font-size: 18px;
+	@media screen and (min-width: $med-small-width) {
+		font-size: 21px
 	}
 }
 
@@ -335,7 +358,85 @@ a.footer-home {
 	max-width: 100%;
 	padding-left: 0;
 	padding-right: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	width: 100%;
+	font-size: 15px;
+	min-height: 45px;
+}
+.site-footer div.gform_wrapper.gravity-theme .chosen-container-multi .chosen-choices,
+.site-footer div.gform_wrapper input[type=color],
+.site-footer .blue div.gform_wrapper input[type=color],
+.site-footer [class*="wp-block"].white div.gform_wrapper input[type=color],
+.site-footer div.gform_wrapper input[type=date],
+.site-footer .blue div.gform_wrapper input[type=date],
+.site-footer [class*="wp-block"].white div.gform_wrapper input[type=date],
+.site-footer div.gform_wrapper input[type=datetime-local],
+.site-footer .blue div.gform_wrapper input[type=datetime-local],
+.site-footer [class*="wp-block"].white div.gform_wrapper input[type=datetime-local],
+.site-footer div.gform_wrapper input[type=datetime],
+.site-footer .blue div.gform_wrapper input[type=datetime],
+.site-footer [class*="wp-block"].white div.gform_wrapper input[type=datetime],
+.site-footer div.gform_wrapper input[type=email],
+.site-footer .blue div.gform_wrapper input[type=email],
+.site-footer [class*="wp-block"].white div.gform_wrapper input[type=email],
+.site-footer div.gform_wrapper input[type=month],
+.site-footer .blue div.gform_wrapper input[type=month],
+.site-footer [class*="wp-block"].white div.gform_wrapper input[type=month],
+.site-footer div.gform_wrapper input[type=number],
+.site-footer .blue div.gform_wrapper input[type=number],
+.site-footer [class*="wp-block"].white div.gform_wrapper input[type=number],
+.site-footer div.gform_wrapper input[type=password],
+.site-footer .blue div.gform_wrapper input[type=password],
+.site-footer [class*="wp-block"].white div.gform_wrapper input[type=password],
+.site-footer div.gform_wrapper input[type=search],
+.site-footer div.gform_wrapper input[type=tel],
+.site-footer div.gform_wrapper input[type=text],
+.site-footer div.gform_wrapper input[type=time],
+.site-footer div.gform_wrapper input[type=url],
+.site-footer div.gform_wrapper input[type=week],
+.site-footer div.gform_wrapper select, div.gform_wrapper textarea,
+.site-footer div.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):not([class=chosen-search-input]) 
+{
+	border-top-left-radius: 38px;
+	border-bottom-left-radius: 38px;
+	font-size: 15px !important;
+}
+
+.site-footer .gform_wrapper ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 15px;
+ 	@media screen and (min-width: $form-width) {
+		font-size: 15px;
+		line-height: 36px;
+	}
+}
+
+.site-footer .gform_wrapper ::-moz-placeholder { /* Firefox 19+ */
+  font-size: 15px;
+  @media screen and (min-width: $form-width) {
+		font-size: 15px;
+		line-height: 36px;
+	}
+}
+
+.site-footer .gform_wrapper :-ms-input-placeholder { /* IE 10+ */
+  font-size: 15px;
+ 	@media screen and (min-width: $form-width) {
+		font-size: 15px;
+		line-height: 36px;
+	}
+}
+
+.site-footer .gform_wrapper :-moz-placeholder { /* Firefox 18- */
+  font-size: 15px;
+ 	@media screen and (min-width: $form-width) {
+		font-size: 15px;
+		line-height: 36px;
+	}
+}
+
+.site-footer div.gform_wrapper .gform_heading {
+	margin-top: 0;
 }
 
 .footer-copyright a {
@@ -350,4 +451,8 @@ a.footer-home {
 	padding-top: 25px;
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
+}
+
+.menu-footer-container {
+	margin-top: 15px;
 }

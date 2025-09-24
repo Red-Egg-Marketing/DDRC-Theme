@@ -60,7 +60,9 @@ if (function_exists('get_field')) {
                     </address>
                 </div>
                 <div class="col">
+                    
                     <?php
+                        echo do_shortcode('[gravityform id="' . $company_settings['form'] . '"]');
 
                         wp_nav_menu(
                             array(
@@ -71,14 +73,13 @@ if (function_exists('get_field')) {
                         );
                 
                     ?>
-                    <p>Copyright &copy; <?= date('Y'); ?> <?= $company_settings['name']; ?></p>
                 </div>
                 
             </div>
             
         </div><!-- .site-info -->
          <div class="footer-copyright">
-                <p>Website Design by <a href="https://redeggmarketing.com/" target="_blank">Red Egg Marketing</a> | <a href="<?= $company_settings['privacy']; ?>">Privacy Policy</a> </p>
+                <p>Website Design by <a href="https://redeggmarketing.com/" target="_blank">Red Egg Marketing</a> | <a href="<?= $company_settings['privacy']; ?>">Privacy Policy</a> | Copyright &copy; <?= date('Y'); ?> <?= $company_settings['name']; ?></p>
         </div>
     </footer><!-- #colophon -->
 </div><!-- #page -->
