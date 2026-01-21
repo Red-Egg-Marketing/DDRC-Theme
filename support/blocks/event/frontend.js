@@ -56,7 +56,19 @@ const SaveSelectedProjects = (posts) => {
 							</Fragment>
 						)
 					})
-				}
+				} { resources.length == 0 && (
+						<Fragment>
+							<div className="resource-card">
+								<div className="image-cont">
+									<img 
+										className="resource-img"
+										src={ `${ DDRC.template_directory }/img/event-calendar.jpg` }
+									/>
+								</div>
+								<h3 className="resource-title">There are no upcoming events at this time. Please check back later updates or subscribe to our newsletter!</h3>
+							</div>
+						</Fragment>
+					) }
 			</Fragment>
 		);
 }

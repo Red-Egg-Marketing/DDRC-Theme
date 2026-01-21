@@ -160,6 +160,14 @@ function ddrc_theme_dynamic_case_studies_grid_block() {
             'v1.0.1',
             true
        );
+
+        wp_localize_script(
+           'wp-main-js',
+           'DDRC',
+           [
+               'template_directory' => get_template_directory_uri()
+           ]
+        );
     }
 
     register_block_type( 'ddrc-theme-blocks/selected-case-studies', [
