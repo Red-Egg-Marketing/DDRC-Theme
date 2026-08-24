@@ -25,7 +25,7 @@ body.archive .entry-header .wrapper {
 
 body.blog #page .entry-header h1,
 body.archive #page .entry-header h1 {
-	@extend h1.header-title;
+	@extend h1, .header-title;
 	font-family: $font-head;
 	color: white;
 	margin-top: 0;
