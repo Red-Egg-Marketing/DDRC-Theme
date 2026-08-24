@@ -233,7 +233,7 @@ a.footer-home {
 
 .site-footer h4 {
 	margin-top: 0;
-	margin-bottom: 0;	
+	margin-bottom: 0;
 }
 
 .site-footer .inner-col {
@@ -306,7 +306,7 @@ a.footer-home {
 	}
 }
 
-.site .site-footer p, 
+.site .site-footer p,
 .site-footer div.gform_wrapper h2.gform_title,
 .site-footer address p,
 .site-footer .contact-link,
@@ -362,7 +362,7 @@ a.footer-home {
 	padding: 0
 }
 
-.site-footer div.gform_wrapper input[type="submit"]:not([type=checkbox]):not([type=image]):not([type=file]) {
+.site-footer div.gform_wrapper button[type="submit"]:not([type=checkbox]):not([type=image]):not([type=file]) {
 	max-width: 100%;
 	padding-left: 0;
 	padding-right: 0;
@@ -404,7 +404,7 @@ a.footer-home {
 .site-footer div.gform_wrapper input[type=url],
 .site-footer div.gform_wrapper input[type=week],
 .site-footer div.gform_wrapper select, div.gform_wrapper textarea,
-.site-footer div.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):not([class=chosen-search-input]) 
+.site-footer div.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):not([class=chosen-search-input])
 {
 	border-top-left-radius: 38px;
 	border-bottom-left-radius: 38px;

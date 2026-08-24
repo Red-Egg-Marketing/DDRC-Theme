@@ -31,7 +31,7 @@ div.gform_wrapper textarea {
 
 div.gform_wrapper div.ginput_complex {
 	@media screen and (min-width: $form-width) {
-		grid-column-gap: 35px;	
+		grid-column-gap: 35px;
 	}
 }
 
@@ -87,7 +87,7 @@ div.gform_wrapper input[type=email], .blue div.gform_wrapper input[type=email], 
 div.gform_wrapper input[type=month], .blue div.gform_wrapper input[type=month], [class*="wp-block"].white div.gform_wrapper input[type=month],
 div.gform_wrapper input[type=number], .blue div.gform_wrapper input[type=number], [class*="wp-block"].white div.gform_wrapper input[type=number],
 div.gform_wrapper input[type=password], .blue div.gform_wrapper input[type=password], [class*="wp-block"].white div.gform_wrapper input[type=password],
-div.gform_wrapper input[type=search], 
+div.gform_wrapper input[type=search],
 div.gform_wrapper input[type=tel],
 div.gform_wrapper input[type=text],
 div.gform_wrapper input[type=time],
@@ -307,7 +307,7 @@ div.gform_wrapper textarea {
 	resize: none;
 }
 
-div.gform_wrapper input[type="submit"]:not([type=checkbox]):not([type=image]):not([type=file])	
+div.gform_wrapper button[type="submit"]:not([type=checkbox]):not([type=image]):not([type=file])
  {
 	background: $light-orange;
 	border-top-left-radius: 0;
@@ -315,10 +315,12 @@ div.gform_wrapper input[type="submit"]:not([type=checkbox]):not([type=image]):no
 	border-top-right-radius: 38px !important;
 	border-bottom-right-radius: 38px !important;
 	padding: 10px;
+	border: none;
 	color: $green;
 	width: 100%;
 	min-height: 40px;
 	font-size: 19px;
+	text-transform: uppercase;
 	line-height: 27px;
 	@media screen and (min-width: $small-width) {
 		min-height: 62px;
@@ -580,7 +582,7 @@ div.gform_wrapper .gform_page_footer {
 
 .fancybox__container div.gform_wrapper .gform_heading:before,
 .fancybox__container div.gform_wrapper .gform_heading:after,
-.contact-section div.gform_wrapper .gform_heading:before, 
+.contact-section div.gform_wrapper .gform_heading:before,
 .contact-section div.gform_wrapper .gform_heading:after, {
 	display: none;
 }
@@ -622,7 +624,7 @@ div.gform_wrapper .gform_page_footer {
 .fancybox__container div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
 .fancybox__container div.gform_wrapper ul.gfield_checkbox li label, .fancybox__container div.gform_wrapper ul.gfield_radio li label,
 .contact-section div.gform_wrapper ul.gfield_checkbox li label, .contact-section div.gform_wrapper ul.gfield_radio li label,
-.contact-section div.gform_wrapper div.charleft.warningTextareaInfo, 
+.contact-section div.gform_wrapper div.charleft.warningTextareaInfo,
 .contact-section div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
 .contact-section div.gform_wrapper .top_label .gfield_label {
 	color: black;
@@ -647,7 +649,7 @@ div.gform_wrapper .gform_page_footer {
 .contact-section div.gform_wrapper input[type=month], .contact-section div.gform_wrapper input[type=month], [class*="wp-block"].contact-section div.gform_wrapper input[type=month],
 .contact-section div.gform_wrapper input[type=number], .contact-section div.gform_wrapper input[type=number], [class*="wp-block"].contact-section div.gform_wrapper input[type=number],
 .contact-section div.gform_wrapper input[type=password], .contact-section div.gform_wrapper input[type=password], [class*="wp-block"].contact-section div.gform_wrapper input[type=password],
-.contact-section div.gform_wrapper input[type=search], 
+.contact-section div.gform_wrapper input[type=search],
 .contact-section div.gform_wrapper input[type=tel],
 .contact-section div.gform_wrapper input[type=text],
 .contact-section div.gform_wrapper input[type=time],
@@ -759,7 +761,7 @@ div.gform_wrapper h4 {
 }
 
 .fancybox__container .gform_wrapper.gravity-theme .top_label .gsection_description,
-div.gform_wrapper p { 
+div.gform_wrapper p {
 	color: white;
 }
 
